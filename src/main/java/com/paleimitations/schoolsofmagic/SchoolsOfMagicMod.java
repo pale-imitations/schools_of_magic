@@ -34,7 +34,7 @@ public class SchoolsOfMagicMod {
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
-        //test 2
+        //test 3
 
         MinecraftForge.EVENT_BUS.register(this);
     }
