@@ -1,0 +1,2 @@
+  Splash Potions can be bottled with Glass Bottles and Glass Burst Flasks.<~><~>  When bottled with a Glass Bottle, you get a Splash Potion. When bottled with a Glass 
+Burst Flask, you get a Burst Potion.<~><~>  Burst Potions are placed in the world and triggered when a creature collides with it, releasing the potion inside.

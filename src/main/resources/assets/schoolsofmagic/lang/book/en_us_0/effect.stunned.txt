@@ -1,0 +1,3 @@
+  The Thunderstuck effect reduces a creature's movement and attack speed for a short period of time.
+<~><~>  This effect can be acheived using Storm Water.
+<~><~>  Thunderstuck is an Electromancy effect in the school of Evocation.

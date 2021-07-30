@@ -1,0 +1,1 @@
+  The Mining Fatigue effect reduces a creatures attack and tool use speed for 1 minute.<~><~>  This effect can be acheived using a Prismarine Shard or by corrupting a Haste potion with a Fermented Spider Eye.<~><~>  Mining Fatigue is a Cryomancy effect in the school of Evocation.

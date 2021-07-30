@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:glistering_melon_slice_mortar"
+    ]
+  },
+  "criteria": {
+    "has_glistering_melon_slice": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:glistering_melon_slice"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:glistering_melon_slice_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_glistering_melon_slice",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,1 @@
+  This spell pulls the breath directly out of the lungs of a creature causing suffocation damage.<~><~>  This spell has a 20 block radius, requires a direct line of sight from the caster to their victim, and effects only the creature the spell is focused on.<~><~>  Creatures which breath water are resistant to this spell.

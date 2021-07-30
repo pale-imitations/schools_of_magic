@@ -1,0 +1,5 @@
+  Fire Berries grow on the Pyracantha bush.
+<~><~>  Pyracantha is native to Autumn Woods and Strange Hills biomes growing among the Bastion Trees and Beanstalks.
+<~><~>  Fire Berries is connected to Abjuration magic. Though it is most useful when it is dried and crushed.
+<~><~>  Fire Berries can be harvested from Pyracantha and planted on Farmland to grow more of this herb.
+<~><~>  Fireberry Juice, a valuable ingredient in potion making, can be crafted by mashing Fire Berries in a Mortar and Pestle.

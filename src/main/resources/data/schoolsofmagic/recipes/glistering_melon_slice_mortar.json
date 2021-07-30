@@ -1,0 +1,15 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 8,
+  "ingredient": {
+    "item": "minecraft:glistering_melon_slice"
+  },
+  "result": {
+    "item": "minecraft:gold_nugget",
+    "count": 4
+  },
+  "resultSecondary": {
+    "item": "minecraft:melon_seeds",
+    "count": 2
+  }
+}

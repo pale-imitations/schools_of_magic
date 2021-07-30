@@ -1,0 +1,5 @@
+  Palm Leaves grow atop a Palm Tree.
+<~><~>  It is found in hot or sandy biomes along water such as Beaches and Deserts.
+<~><~>  Palm Leaves have a connection to Conjuration magic.
+<~><~>  Palm Leaves will regrow if there’s still a Palm Sapling atop the Palm Head.
+<~><~>  Palm Trees also grow Coconuts, which are useful in their own way.

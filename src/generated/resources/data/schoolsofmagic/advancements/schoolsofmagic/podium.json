@@ -1,0 +1,35 @@
+{
+  "parent": "schoolsofmagic:schoolsofmagic/basic_arcana",
+  "display": {
+    "icon": {
+      "item": "schoolsofmagic:andesite_podium"
+    },
+    "title": {
+      "translate": "advancements.schoolsofmagic.podium.title"
+    },
+    "description": {
+      "translate": "advancements.schoolsofmagic.podium.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "schoolsofmagic:podiums"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_item"
+    ]
+  ]
+}

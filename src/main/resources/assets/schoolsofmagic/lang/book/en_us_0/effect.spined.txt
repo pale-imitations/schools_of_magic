@@ -1,0 +1,3 @@
+  The Spined effect creates thorns on the skin of the effected creature that cause damage to creatures that touch them.
+<~><~>  This effect can be acheived using Crushed Roses.
+<~><~>  Paralysis is an Animancy effect in the school of Evocation.

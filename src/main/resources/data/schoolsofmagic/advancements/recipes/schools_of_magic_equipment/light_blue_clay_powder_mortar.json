@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:light_blue_clay_powder_mortar"
+    ]
+  },
+  "criteria": {
+    "has_light_blue_terracotta": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:light_blue_terracotta"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:light_blue_clay_powder_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_light_blue_terracotta",
+      "has_the_recipe"
+    ]
+  ]
+}

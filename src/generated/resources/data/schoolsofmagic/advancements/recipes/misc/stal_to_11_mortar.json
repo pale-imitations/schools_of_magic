@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:stal_to_11_mortar"
+    ]
+  },
+  "criteria": {
+    "has_music_disc_stal": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:music_disc_stal"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:stal_to_11_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_music_disc_stal",
+      "has_the_recipe"
+    ]
+  ]
+}

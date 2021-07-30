@@ -1,0 +1,4 @@
+  Carrots are a common farmable crop found in Villages, related to Hemlock.
+<~><~>  Carrots have a connection to Abjuration magic. Though it’s most useful when it has been dried and crushed.
+<~><~>  Carrots can be planted and cultivated on Farmland.
+<~><~>  They can be crafted into Rabbit Stew and Golden Carrots, a valuable potion ingredient.

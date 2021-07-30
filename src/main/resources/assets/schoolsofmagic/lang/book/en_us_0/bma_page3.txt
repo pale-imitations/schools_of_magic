@@ -1,0 +1,2 @@
+  The mundane Cauldron is unsuitable for the brewing of potions, so it must be charmed in a Charming Table to become an Arcane Cauldron.<~><~>  This process requires 
+Iron Ingots and Sticks as well as 100 Mana.

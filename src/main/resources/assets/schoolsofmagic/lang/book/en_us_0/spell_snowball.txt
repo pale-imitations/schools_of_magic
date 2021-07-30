@@ -1,0 +1,2 @@
+  This spell conjures snowballs, ten per spell charge level.
+<~><~>  Like all snowballs these projectiles will knockback enemies and deal special damage to fire elemental creatures.

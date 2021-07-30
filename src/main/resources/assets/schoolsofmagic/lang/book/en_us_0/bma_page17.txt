@@ -1,0 +1,3 @@
+<~><~>  The Duration of a Lingering Potion can be increased after adding Dragon's Breath. By default a Lingering Potion lasts 30 seconds.<~><~>  Shown here are all the 
+duration modifying Potion ingredients and their respective durations in seconds. Adding a Ball of Clay to your potion will increase the duration of a Lingering potion to 40 
+seconds.

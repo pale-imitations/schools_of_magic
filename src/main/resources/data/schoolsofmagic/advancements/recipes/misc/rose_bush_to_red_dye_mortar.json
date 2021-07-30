@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:rose_bush_to_red_dye_mortar"
+    ]
+  },
+  "criteria": {
+    "has_rose_bush": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:rose_bush"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:rose_bush_to_red_dye_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_rose_bush",
+      "has_the_recipe"
+    ]
+  ]
+}

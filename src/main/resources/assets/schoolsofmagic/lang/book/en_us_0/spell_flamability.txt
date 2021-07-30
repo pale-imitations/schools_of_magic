@@ -1,0 +1,1 @@
+  This spell shoots a magic projectile that, upon impact with a creature, causes that creature to become more flamable for ten seconds.<~><~> This transformation makes entities vulnerable to even the smallest spark to the point that standing within the radius of a torch, a fire, or lava can cause the creature to combust.

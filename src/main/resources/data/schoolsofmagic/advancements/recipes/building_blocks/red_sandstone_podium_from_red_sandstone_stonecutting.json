@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:red_sandstone_podium_from_red_sandstone_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_sandstone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:red_sandstone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:red_sandstone_podium_from_red_sandstone_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_sandstone",
+      "has_the_recipe"
+    ]
+  ]
+}

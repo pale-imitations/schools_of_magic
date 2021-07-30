@@ -1,0 +1,4 @@
+  Beanstalks are a tall, strong plant on which creatures can stand.
+<~><~>  Beanstalks can be found in Autumn Woods, Strange Hills, Sinister Swamps, River Lands, and Mountainous Jungles.
+<~><~>  Beanstalks have a natural affinity for Conjuration magic. Though it is most useful when it is dried and crushed.
+<~><~>  Beanstalks will naturally grow over time, making them an easy, farmable plant.

@@ -1,0 +1,27 @@
+{
+  "multipart": [
+    {
+      "apply": {
+        "model": "schoolsofmagic:block/herbal_twine"
+      }
+    },
+    {
+      "when": {
+        "age": "0|1|2|3|4"
+      },
+      "apply": {
+        "model": "minecraft:block/cornflower",
+        "x": 180
+      }
+    },
+    {
+      "when": {
+        "age": "5"
+      },
+      "apply": {
+        "model": "schoolsofmagic:block/dried_cornflower",
+        "x": 180
+      }
+    }
+  ]
+}

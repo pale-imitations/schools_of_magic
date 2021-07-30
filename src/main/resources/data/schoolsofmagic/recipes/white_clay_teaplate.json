@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "CCC"
+  ],
+  "key": {
+    "C": {
+      "item": "schoolsofmagic:white_clay"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:white_clay_teaplate"
+  }
+}

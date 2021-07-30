@@ -1,0 +1,3 @@
+<~><~><~>  Kiedy czarodziej spadnie poniżej 10% pojemności swojej many, ryzykuje utratę efektu Ekstensji Many, podczas gdy owy efekt jest aktywny, wtedy
+czarodziej ma mniej niż 10% pojemności swojej many a to powoduje gromadzenie martwej many.<~><~><~> Martwa mana to bezużyteczna forma jej postaci, która zmniejsza pojemność ogólnej many.<~><~><~>  Jeśli
+czarodziej zgromadzi więcej martwej

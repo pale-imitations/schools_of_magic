@@ -1,0 +1,1 @@
+  This spell has two effects.<~><~>  By right clicking, one can channel cryomantic energy into a bolt of ice, which upon impact with a creature conjures an iceshell around them.<~><~>  Or this spell can be focused inward by sneaking while holding right-click which will conjure the ice shell around the caster in a radius of seven blocks.

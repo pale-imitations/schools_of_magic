@@ -1,0 +1,3 @@
+  The Feebleness effect reduces a creature's max health, attack speed, and attack damage.
+<~><~>  This effect can be acheived using Redcap Mushroom Heads.
+<~><~>  Feebleness is an Umbramancy effect in the school of Evocation.

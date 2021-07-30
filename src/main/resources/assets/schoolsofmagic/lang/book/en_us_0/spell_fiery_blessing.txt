@@ -1,0 +1,1 @@
+  This spell blankets the effected creature in a protective charm which saves them from fire damage.<~><~>  It can be cast on either the caster by holding right-click or it can be cast on another creature by right clicking them.<~><~>  The Fire Resistance effect lasts for twenty seconds.

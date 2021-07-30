@@ -1,0 +1,11 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 10,
+  "ingredient": {
+    "item": "minecraft:glowstone"
+  },
+  "result": {
+    "item": "minecraft:glowstone_dust",
+    "count": 4
+  }
+}

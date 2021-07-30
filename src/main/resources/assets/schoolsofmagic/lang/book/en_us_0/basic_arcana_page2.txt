@@ -1,0 +1,5 @@
+  When a Magician drops to below 10% of their Mana Capacity they run the risk of incurring the status effect, Mana Exhaustion, while this effect is active and the Magician is below 10% of their Mana Capacity they accumulate Dead Mana.
+<~><~> Dead Mana is an unusable form of Mana which reduces one's Mana Capacity.
+<~><~>  If a magician accrues more Dead Mana than they have Mana Capacity they will lose a Magician's level and half of their Dead Mana.
+<~><~>  Dead Mana can be healed over time when the Magician sleeps or while the Magician is at full mana capacity. Resting replenishes up to 100 Mana, so be sure to get many nights rest.
+<~><~>  So long as one is not reckless, Dead Mana is fairly easy to manage.

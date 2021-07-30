@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:pink_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:pink_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:pink_clay_powder"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:pink_clay",
+    "count": 3
+  }
+}

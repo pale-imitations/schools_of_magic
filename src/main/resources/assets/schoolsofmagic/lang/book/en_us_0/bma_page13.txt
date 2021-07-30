@@ -1,0 +1,3 @@
+  Particle Suppressants can be applied after a focal ingredient or after another potion effect modifier.<~><~>  It is used to hide potion effects within a brew, 
+when applied to a potion effect it suppresses the creation of particles, hides the duration counter and potion icon from the effected entity, and removes the potion 
+effect from the potion's name.<~><~>  There is only one known particle suppressant ingredient, the seeds of a Sage bush.<~><~>  It is a material highly coveted by assassins seeking to hide their poisons.

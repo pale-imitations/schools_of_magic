@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:red_tulip_to_red_dye_mortar"
+    ]
+  },
+  "criteria": {
+    "has_red_tulip": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:red_tulip"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:red_tulip_to_red_dye_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_red_tulip",
+      "has_the_recipe"
+    ]
+  ]
+}

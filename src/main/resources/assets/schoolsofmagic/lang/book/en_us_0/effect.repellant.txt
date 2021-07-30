@@ -1,0 +1,4 @@
+  The Bug Repellant effect stops insects from touching the effected creature for a period of time.
+<~><~>  Insects inflicted with this effect take damage.
+<~><~>  This effect can be acheived using Crushed Venus Flytrap.
+<~><~>  Bug Repellant is an Animancy effect in the school of Abjuration.

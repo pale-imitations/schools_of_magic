@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie strzela strumieniem wody w kierunku wybranym przez rzucającego o promieniu 20 bloków.<~><~><~>  Istoty trafione zaklęciem są
+odrzucane i otrzymują 2 punkty obrażeń.

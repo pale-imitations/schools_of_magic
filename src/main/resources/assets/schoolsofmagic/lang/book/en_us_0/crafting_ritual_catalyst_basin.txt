@@ -1,0 +1,4 @@
+  The Catalyst Basin uses Transfiguration magic to transform items into more useful forms.
+<~><~>  This object is made using a Block of Steel and Crushed Sunflower in a Ritual Recipe.
+<~><~>  The Catalyst Basin utilizes a liquid catalyst, a solid catalyst, and two reactants that merge to form a product.
+<~><~>  Using this technique, you’ll be able to unlock intermediate metallurgy.

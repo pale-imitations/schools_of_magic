@@ -1,0 +1,1 @@
+  This spell creates a shielding charm around the skin of the effect creature improving their resistance to damage.<~><~> The charm can be cast on one's self by holding right click or can be cast on another creature by right clicking them.<~><~>  The Resistance effect lasts 20 seconds.

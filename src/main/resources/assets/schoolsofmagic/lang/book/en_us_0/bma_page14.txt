@@ -1,0 +1,3 @@
+  After adding all the focal ingredients and the potion effect modifiers, you can add the final potion modifiers.<~><~>  You will need to start with any potion type 
+modifiers, all potions are drinkable by default, adding Gunpowder after all the potion effects will create a Splash potion and adding Dragon's Breath after that will create a 
+Lingering potion.<~><~>  The drink speed of Drinkable Potions can be increased, the radius of Splash and Lingering potions can be lengthened, and the duration of a Lingering potion can be extended.

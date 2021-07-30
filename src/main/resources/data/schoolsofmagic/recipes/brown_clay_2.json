@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:brown_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:brown_clay_powder"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:brown_clay",
+    "count": 2
+  }
+}

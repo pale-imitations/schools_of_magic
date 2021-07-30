@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie tworzy podmuch miotacza ognia, który zadaje 6 punktów obrażeń na rzucenie i ustawia je w promieniu
+wybuch ognia.<~><~><~>  Promień zaklęcia 

@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie usuwa liście z drzew w niesamowitym tempie, około 20 bloków na sekundę, w promieniu 20 bloków. <~><~><~>  
+Usunięte liście nadal dropią sadzonki

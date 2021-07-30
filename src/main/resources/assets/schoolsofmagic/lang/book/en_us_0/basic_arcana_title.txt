@@ -1,0 +1,7 @@
+  Welcome to your beginners course in magic.
+<~><~>  In a well trained magician's bag of tricks are a variety of wonderful tools: Spells, Potions, and Rituals. This humble guide will instruct you on the path of the Magician; a path that begins with Spell casting.
+<~><~>  Spells are a magician's bread and butter, their first and most useful tool.
+<~><~>  To get started you'll need an Apprentice Wand, crafted of a stick, gold, and a diamond and a podium, crafted of a stone type using a stone cutter.
+<~><~>  Place the book on the podium and turn to a spell you wish to learn. Open your spell slots using the spell key (Y by default), hold shift, and right click the podium.
+<~><~>  Spells are powered by spell charges, which range in power. A beginner starts with 2 first level spell charges.
+<~><~>  When a charge is expended it will slowly replenish over time. Stronger charges take longer to replenish, but can cast more powerful spells.

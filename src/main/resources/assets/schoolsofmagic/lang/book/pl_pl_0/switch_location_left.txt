@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  Zaklęcie to służy do celowania na konkretną istotę w promieniu 20 bloków w zasięgu wzroku rzucającego.<~><~>  Rzucający i cel zamienią się
+lokalizacją w kosmosie.

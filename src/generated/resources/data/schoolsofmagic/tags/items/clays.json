@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:red_clay",
+    "schoolsofmagic:orange_clay",
+    "schoolsofmagic:yellow_clay",
+    "schoolsofmagic:lime_clay",
+    "schoolsofmagic:green_clay",
+    "schoolsofmagic:cyan_clay",
+    "schoolsofmagic:light_blue_clay",
+    "schoolsofmagic:blue_clay",
+    "schoolsofmagic:purple_clay",
+    "schoolsofmagic:magenta_clay",
+    "schoolsofmagic:pink_clay",
+    "schoolsofmagic:white_clay",
+    "schoolsofmagic:light_gray_clay",
+    "schoolsofmagic:gray_clay",
+    "schoolsofmagic:black_clay",
+    "schoolsofmagic:brown_clay",
+    "schoolsofmagic:terracotta_clay"
+  ]
+}

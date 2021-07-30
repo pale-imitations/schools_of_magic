@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:red_sandstone"
+  },
+  "result": "schoolsofmagic:red_sandstone_podium",
+  "count": 1
+}

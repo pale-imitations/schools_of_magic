@@ -1,0 +1,3 @@
+  The Slowness effect reduces a creature's movement speed for a short time.
+<~><~>  This effect can be acheived using some Web, not to be confused with Cobweb.
+<~><~>  Slowness is a Cryomancy effect in the school of Transfiguration.

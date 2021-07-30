@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie określa położenie najbliższego bloku rudy węgla w promieniu 20 bloków.<~><~>  Jeśli nie ma węgla, rzucający usłyszysz syczący dźwięk, w przeciwnym 
+razie dym wystrzeli z rzucającego 

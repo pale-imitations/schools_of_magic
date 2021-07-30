@@ -1,0 +1,1 @@
+  This spell lifts entities, including items, within the radius of the spell in a cone around the caster's line of sight off the ground.<~><~>  This spell has a radius of 10 blocks.

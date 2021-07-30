@@ -1,0 +1,1 @@
+  This is a recipe for a Splash Potion with two effects: a Weakness effect, at power level II and duration level III, and a Slowness effect, at power level III and duration level II. This potion also has a modified radius of 5 blocks.<~><~>  This potion could be used to create three Splash Potions or three Burst Potions.

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:poppy_seeds_mortar"
+    ]
+  },
+  "criteria": {
+    "has_dried_poppy": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:dried_poppy"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:poppy_seeds_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dried_poppy",
+      "has_the_recipe"
+    ]
+  ]
+}

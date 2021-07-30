@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie tworzy okrąg zaklęcia, które emituje iluzoryczne dźwięki o aktywnym promieniu 20 bloków a czas trwania to 2 minuty.<~><~>  
+Klikając zaklęcie prawym przyciskiem myszy, możesz przełączać emitowany dźwięk. 

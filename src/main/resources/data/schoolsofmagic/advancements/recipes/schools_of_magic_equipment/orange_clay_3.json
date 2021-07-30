@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:orange_clay_3"
+    ]
+  },
+  "criteria": {
+    "has_orange_clay_powder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:orange_clay_powder"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:orange_clay_3"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_orange_clay_powder",
+      "has_the_recipe"
+    ]
+  ]
+}

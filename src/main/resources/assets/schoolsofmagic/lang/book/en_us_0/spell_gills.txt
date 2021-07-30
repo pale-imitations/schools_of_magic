@@ -1,0 +1,1 @@
+  This spell gives a creature the ability to breath water for 20 seconds.<~><~> This effect can be performed on the caster by holding right click, and can be performed on another by right clicking the target.

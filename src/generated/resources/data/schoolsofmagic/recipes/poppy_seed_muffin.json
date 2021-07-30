@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:sugar"
+    },
+    {
+      "item": "minecraft:egg"
+    },
+    {
+      "item": "schoolsofmagic:poppy_seeds"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:poppy_seed_muffin"
+  }
+}

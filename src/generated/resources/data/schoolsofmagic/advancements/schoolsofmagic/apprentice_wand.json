@@ -1,0 +1,35 @@
+{
+  "parent": "schoolsofmagic:schoolsofmagic/basic_arcana",
+  "display": {
+    "icon": {
+      "item": "schoolsofmagic:apprentice_wand_1"
+    },
+    "title": {
+      "translate": "advancements.schoolsofmagic.apprentice_wand.title"
+    },
+    "description": {
+      "translate": "advancements.schoolsofmagic.apprentice_wand.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:apprentice_wand_1"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_item"
+    ]
+  ]
+}

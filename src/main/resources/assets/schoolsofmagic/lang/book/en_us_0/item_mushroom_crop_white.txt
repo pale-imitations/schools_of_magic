@@ -1,0 +1,4 @@
+  These white mushrooms are found in Acolyte Woods.
+<~><~>  These mushrooms can be planted on Wood, Dirt, Grass, Mycelium, and Podzol, or on any solid block in low light levels.
+<~><~>  Fairystool Mushroom Heads will regrow their stalks over time becoming larger over time. Both the mushroom head and mushroom stalks are a valuable potion ingredient.
+<~><~>  Fairystool Mushroom Heads can be crafted into Fairystool Spores, which can be planted and grown.

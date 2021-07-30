@@ -1,0 +1,3 @@
+  The Speed effect improves a creature's movement speed for a short period of time.
+<~><~>  This effect can be acheived using Crushed Lily of the Valley.
+<~><~>  Speed is an Electromancy effect in the school of Abjuration.

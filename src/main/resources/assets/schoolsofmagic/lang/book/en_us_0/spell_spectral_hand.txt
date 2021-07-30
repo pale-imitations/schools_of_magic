@@ -1,0 +1,1 @@
+  This spell conjures a ghostly hand capable of picking up items, using tools, activating levers and buttons, and accessing chests.<~><~>  The hand will move in the direction of your crosshairs, at a distance you can manipulate using your scroll wheel.<~><~>  The hand is limited to certain tools and interactions but the possibilities are endless.

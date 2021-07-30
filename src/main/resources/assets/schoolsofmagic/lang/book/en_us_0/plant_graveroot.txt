@@ -1,0 +1,5 @@
+  Grave Root, also called Corpse Root, grows from Grave Grass, typically over the graves of creatures.
+<~><~>  Grave Grass is found in Sinister Swamps, Banded Deserts, Desert Canyons, and Desert Uplands.
+<~><~>  Grave Root has a natural affinity for Illusion magic. Though they are most useful when they are dried and crushed.
+<~><~>  Grave Root can be harvested from Grave Grass and can be grown on Farmland.
+<~><~>  Grave Root can be mashed into Dead Man’s Blood or Grave Root Pulp, both are valuable ingredients.

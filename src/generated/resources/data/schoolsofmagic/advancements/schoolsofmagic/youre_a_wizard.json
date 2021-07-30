@@ -1,0 +1,35 @@
+{
+  "parent": "schoolsofmagic:schoolsofmagic/root",
+  "display": {
+    "icon": {
+      "item": "schoolsofmagic:letter_ccw"
+    },
+    "title": {
+      "translate": "advancements.schoolsofmagic.youre_a_wizard.title"
+    },
+    "description": {
+      "translate": "advancements.schoolsofmagic.youre_a_wizard.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:letter_ccw"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_item"
+    ]
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 5,
+  "ingredient": {
+    "item": "minecraft:cocoa_beans"
+  },
+  "result": {
+    "item": "minecraft:brown_dye",
+    "count": 2
+  }
+}

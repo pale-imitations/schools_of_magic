@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie określa położenie najbliższego bloku rudy miedzi w promieniu 20 bloków.<~><~>  Jeśli nie ma miedzi, rzucający
+usłyszy syczący dźwięk, w przeciwnym razie dym wystrzeli z rzucającego

@@ -1,0 +1,13 @@
+{
+    "forge_marker": 1,
+    "variants": {
+        "inventory": {
+            "model": "schoolsofmagic:basic_arcana",
+            "textures": {
+            },
+            "transform": "forge:default-item",
+            "custom": {
+            }
+        }
+    }
+}

@@ -1,0 +1,5 @@
+  Using Steel Ingots and a Stick one can create a Mortar & Pestle.
+<~><~>  A Mortar & Pestle can be used to process materials into a more useful form more efficiently than a Crafting Table can.
+<~><~>  For instance, Blaze Rods can be crushed in a Mortar & Pestle into 3 Blaze Powder instead of two.
+<~><~>  It can also process certain ores such as Lapis, Redstone, and Diamond Ore.
+<~><~>  Most importantly it can be used to turn Dried Herbs into Crushed Herbs and Gems into Gem Dust which are very useful in magic.

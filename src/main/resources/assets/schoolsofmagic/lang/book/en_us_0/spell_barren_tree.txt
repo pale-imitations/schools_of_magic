@@ -1,0 +1,1 @@
+  This spell removes leaves from trees at an amazing rate, about 20 blocks per second, and within a radius of 20 blocks.<~><~>  Translocated leaves will still leave their drops upon their banishment.<~><~>  This spell makes clearing a forest much, much easier.

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "D D",
+    " D "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "D": {
+      "item": "minecraft:diorite"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:diorite_mortar"
+  }
+}

@@ -1,0 +1,5 @@
+  Herbal Twine is used to hang herbs from the bottom of a block, which allows them to air dry over time.
+<~><~>  Removing the water from herbs concentrates the essence of the herbs, making them more suitable for magical uses.
+<~><~>  Herbal Twine is tied to the underside of a block, then right click the twine with an herb or plant to hang it.
+<~><~>  It takes 4 minutes to completely dry an herb.
+<~><~>  The following are herbs that can be dried, crushed, and used for magical purposes.

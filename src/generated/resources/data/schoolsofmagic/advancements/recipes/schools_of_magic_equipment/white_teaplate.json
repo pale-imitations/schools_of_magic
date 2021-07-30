@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:white_teaplate"
+    ]
+  },
+  "criteria": {
+    "has_white_terracotta_teaplate": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:white_terracotta_teapot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:white_teaplate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_terracotta_teaplate",
+      "has_the_recipe"
+    ]
+  ]
+}

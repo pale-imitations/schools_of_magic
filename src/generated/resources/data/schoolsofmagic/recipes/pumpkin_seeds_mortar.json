@@ -1,0 +1,11 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 10,
+  "ingredient": {
+    "item": "minecraft:pumpkin"
+  },
+  "result": {
+    "item": "minecraft:pumpkin_seeds",
+    "count": 8
+  }
+}

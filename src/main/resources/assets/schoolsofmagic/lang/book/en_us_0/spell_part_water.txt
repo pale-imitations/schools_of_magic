@@ -1,0 +1,1 @@
+  This spell is used to part large bodies of water for a short period of life, about ten seconds.<~><~>  The spell has a radius of about thirty blocks and creates a three block wide corridor in the direction the spell was cast.

@@ -1,0 +1,1 @@
+  This spell stores a location and upon casting, a lightning bolt will strike the location creating a short range beacon back to the stored location. <~><~> The lightning will cause no damage to the blocks or entities stuck.<~><~>  Additionally, this spell is only really effective at short range.

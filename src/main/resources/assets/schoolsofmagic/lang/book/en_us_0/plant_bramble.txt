@@ -1,0 +1,3 @@
+  Bramble Bush is a large multiblock bush that can grow berries called Brambleberries.
+<~><~>  They are found in Ancient Birch Forests, Vermilion Groves, Acolyte Woods, Strangle Hills, and Autumn Wood.
+<~><~>  Brambles connected to Evocation magic. Though it’s most useful when they are dried and crushed.

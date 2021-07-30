@@ -1,0 +1,1 @@
+  This spell causes a powerful knockback effect banishing the creatures within the radius of the spell using a gale of wind.<~><~>  This spell has a radius of 20 blocks, however it is more powerful the closer the creature is to the caster.

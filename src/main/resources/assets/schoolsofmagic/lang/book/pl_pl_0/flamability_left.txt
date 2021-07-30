@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  Zaklęcie wystrzeliwuje magiczny pocisk, który po uderzeniu w cel powoduje, że staje się on bardziej łatwopalny przez dziesięć sekund.
+<~><~> Ta transformacja powoduje, że moby są wrażliwe

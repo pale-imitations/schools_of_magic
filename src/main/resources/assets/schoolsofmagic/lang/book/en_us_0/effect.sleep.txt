@@ -1,0 +1,3 @@
+  The Sleep effect causes a creature to fall asleep for a short period of time, it is worth noting this effect is broken if the creature takes damage.
+<~><~>  This effect can be acheived using Nightberry Juice.
+<~><~>  Sleep is an Umbramancy effect in the school of Illusion.

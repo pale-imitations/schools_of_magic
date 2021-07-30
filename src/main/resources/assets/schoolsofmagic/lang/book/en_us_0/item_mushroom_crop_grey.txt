@@ -1,0 +1,4 @@
+  These dark grey mushrooms are found in Autumn Woods and Strange Hills.
+<~><~>  These mushrooms can be planted on Wood, Dirt, Grass, Mycelium, and Podzol, or on any solid block in low light levels.
+<~><~>  Dark Mushroom Heads will regrow their stalks over time becoming larger over time. Both the mushroom head and mushroom stalks are a valuable potion ingredient.
+<~><~>  Dark Mushroom Heads can be crafted into Dark Spores, which can be planted and grown.

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " S ",
+    "A A",
+    " A "
+  ],
+  "key": {
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "A": {
+      "item": "minecraft:andesite"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:andesite_mortar"
+  }
+}

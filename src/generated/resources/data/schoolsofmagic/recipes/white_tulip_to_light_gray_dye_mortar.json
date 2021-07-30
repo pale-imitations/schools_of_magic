@@ -1,0 +1,11 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 5,
+  "ingredient": {
+    "item": "minecraft:white_tulip"
+  },
+  "result": {
+    "item": "minecraft:light_gray_dye",
+    "count": 2
+  }
+}

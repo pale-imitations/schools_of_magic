@@ -1,0 +1,11 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 10,
+  "ingredient": {
+    "item": "minecraft:light_gray_terracotta"
+  },
+  "result": {
+    "item": "schoolsofmagic:light_gray_clay_powder",
+    "count": 4
+  }
+}

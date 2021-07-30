@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:brown_mushroom_soup_mortar"
+    ]
+  },
+  "criteria": {
+    "has_brown_mushroom": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:brown_mushroom"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:brown_mushroom_soup_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_brown_mushroom",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:gray_clay_3"
+    ]
+  },
+  "criteria": {
+    "has_gray_clay_powder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:gray_clay_powder"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:gray_clay_3"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gray_clay_powder",
+      "has_the_recipe"
+    ]
+  ]
+}

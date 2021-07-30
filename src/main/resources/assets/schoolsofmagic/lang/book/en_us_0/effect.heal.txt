@@ -1,0 +1,3 @@
+  Instant Health immediately regenerates 4 points of health.
+<~><~>  This effect can be acheived using Glistering Melon.
+<~><~>  Instant Health is an Auramancy effect in the school of Abjuration.

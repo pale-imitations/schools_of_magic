@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:yellow_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:yellow_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:yellow_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:yellow_clay_powder"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:yellow_clay",
+    "count": 4
+  }
+}

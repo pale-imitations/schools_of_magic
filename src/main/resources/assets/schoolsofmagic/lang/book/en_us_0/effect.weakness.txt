@@ -1,0 +1,3 @@
+  The Weakness effect reduces a creature's attack damage.
+<~><~>  This effect can be acheived using Umbrella Mushroom Heads.
+<~><~>  Weakness is an Infernal effect in the school of Evocation.

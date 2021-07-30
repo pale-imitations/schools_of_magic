@@ -1,0 +1,110 @@
+{
+
+    "spells.whisper":{
+        "subtitle": "spells.whisper",
+        "sounds": [ 
+        { "name": "schoolsofmagic:spells/whisper0", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper1", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper2", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper3", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper4", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper5", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper6", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper7", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper8", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper9", "stream": true},
+        { "name": "schoolsofmagic:spells/whisper10", "stream": true}
+        ]
+    },
+
+    "spells.lightning":{
+        "subtitle": "spells.lightning",
+        "sounds": [
+            { "name": "schoolsofmagic:spells/lightning1", "stream": true},
+            { "name": "schoolsofmagic:spells/lightning2", "stream": true},
+            { "name": "schoolsofmagic:spells/lightning3", "stream": true},
+            { "name": "schoolsofmagic:spells/lightning4", "stream": true}
+        ]
+    },
+
+    "spells.thorn_ring":{
+        "subtitle": "spells.thorn_ring",
+        "sounds": [ { "name": "schoolsofmagic:spells/thorn_ring", "stream": true} ]
+    },
+
+    "spells.furnace_fuel":{
+        "subtitle": "spells.furnace_fuel",
+        "sounds": [ { "name": "schoolsofmagic:spells/furnace_fuel", "stream": true} ]
+    },
+
+    "spells.phantom_fire":{
+        "subtitle": "spells.phantom_fire",
+        "sounds": [ { "name": "schoolsofmagic:spells/phantom_fire", "stream": true} ]
+    },
+
+    "spells.spectral_hand":{
+        "subtitle": "spells.spectral_hand",
+        "sounds": [ { "name": "schoolsofmagic:spells/spectral_hand", "stream": true} ]
+    },
+
+    "spells.fiery_blessing":{
+        "subtitle": "spells.fiery_blessing",
+        "sounds": [ { "name": "schoolsofmagic:spells/fiery_blessing", "stream": true} ]
+    },
+
+    "spells.blaze":{
+        "category": "player",
+        "subtitle": "spells.blaze",
+        "sounds": [ { "name": "schoolsofmagic:spells/blaze", "stream": true} ]
+    },
+
+    "spells.invisibility":{
+        "subtitle": "spells.invisibility",
+        "sounds": [ { "name": "schoolsofmagic:spells/invisibility", "stream": true} ]
+    },
+
+    "spells.wither_blight":{
+        "subtitle": "spells.wither_blight",
+        "sounds": [ { "name": "schoolsofmagic:spells/wither_blight", "stream": true} ]
+    },
+
+    "spells.energize":{
+        "subtitle": "spells.energize",
+        "sounds": [ { "name": "schoolsofmagic:spells/energize", "stream": true} ]
+    },
+
+    "spells.conjure_thorns":{
+        "subtitle": "spells.conjure_thorns",
+        "sounds": [ { "name": "schoolsofmagic:spells/conjure_thorns"} ]
+    },
+
+    "entity.sneeze":{
+        "subtitle": "entity.sneeze",
+        "sounds": [ { "name": "schoolsofmagic:entity/sneeze", "stream": true} ]
+    },
+
+    "blocks.page_flip":{
+        "subtitle": "blocks.page_flip",
+        "sounds": [
+            { "name": "schoolsofmagic:blocks/page_flip0", "stream": true},
+            { "name": "schoolsofmagic:blocks/page_flip1", "stream": true},
+            { "name": "schoolsofmagic:blocks/page_flip2", "stream": true}
+        ]
+    },
+
+    "blocks.book_open":{
+        "subtitle": "blocks.book_open",
+        "sounds": [ { "name": "schoolsofmagic:blocks/book_open", "stream": true} ]
+    },
+
+    "blocks.book_close":{
+        "subtitle": "blocks.book_close",
+        "sounds": [ { "name": "schoolsofmagic:blocks/book_close", "stream": true} ]
+    },
+
+    "blocks.heart":{
+        "subtitle": "blocks.heart",
+        "sounds": [ { "name": "schoolsofmagic:blocks/heart", "stream": true} ]
+    }
+
+}

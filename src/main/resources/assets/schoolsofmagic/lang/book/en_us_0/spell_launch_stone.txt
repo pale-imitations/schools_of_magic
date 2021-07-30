@@ -1,0 +1,2 @@
+  This spell propels a block of Cobblestone in the direction it is cast.<~><~>  Creatures hit by the block are dealt damage and can become buried by the blocks, 
+suffocating inside them.<~><~>  Be careful though, these high speed boulders can ricochet off of other blocks.

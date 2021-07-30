@@ -1,0 +1,17 @@
+  Magic can be further categorized by the elemental forms magic can take. These categories are called Elements of Magic, of which there are sixteen.
+<~><~>  Pyromancy is the magic of heat and fire.
+<~><~>  Heliomancy is the magic of light best embodied by the sun.
+<~><~>  Aeromancy is the magic of air and the atmosphere.
+<~><~>  Geomancy is the magic of the earth and its rocky depths.
+<~><~>  Animancy is the magic of the natural world and living things.
+<~><~>  Electromancy is the magic of electric energy and lightning.
+<~><~>  Hydromancy is the magic of water and the ocean.
+<~><~>  Cryomancy is the magic of ice and snow.
+<~><~>  Hieromancy is the magic of order, peace, and structure.
+<~><~>  Chaotics is the magic of disorder, entropy, and chaos.
+<~><~>  Auramancy is the magic of the fairies and fae.
+<~><~>  Astromancy is the magic of the celestial bodies, the stars, and planets beyond our own.
+<~><~>  Infernality is the demonic magic of the nether.
+<~><~>  Spectromancy is the magic of the soul and spirits.
+<~><~>  Umbramancy is the magic of darkness, shadows, and the void.
+<~><~>  Necromancy is the magic of death and dead things.

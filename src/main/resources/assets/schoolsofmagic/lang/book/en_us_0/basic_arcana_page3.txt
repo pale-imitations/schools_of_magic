@@ -1,0 +1,5 @@
+  Magic can be roughly categorized by what it does, these types of categories are called Schools of Magic.
+<~><~>  There are six Schools of Magic: Evocation, Transfiguration, Divination, Abjuration, Conjuration, and Illusion.
+<~><~>  Magic in the School of Evocation focuses on causing damage, whereas the School of Abjuration focuses on preventing Damage.
+<~><~>  The School of Conjuration focuses on summoning or creating objects, whereas the School of Transfiguration focuses on changing an existing object's properties.
+<~><~>  The School of Divination focuses on revealing truths whereas the School of Illusion focuses on contorting the truths.

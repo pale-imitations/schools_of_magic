@@ -1,0 +1,4 @@
+  This spell conjures a gentle breeze which lifts the caster off the ground and propels them in the direction the spell was cast in.
+<~><~>  Zephyr is an excellent traveling spell! However, it is important to note that it does not provide immunity to fall damage if directed at too low of an angle.
+<~><~>  One can avoid taking fall damage by using the spell while looking up before hitting the ground.
+<~><~>  This spell can be cast with a second level spell charge for 10 seconds, the use increases by 10 seconds per spell charge level above second.

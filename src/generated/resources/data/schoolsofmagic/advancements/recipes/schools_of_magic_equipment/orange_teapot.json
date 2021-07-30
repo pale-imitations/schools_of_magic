@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:orange_teapot"
+    ]
+  },
+  "criteria": {
+    "has_orange_terracotta_teapot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:orange_terracotta_teapot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:orange_teapot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_orange_terracotta_teapot",
+      "has_the_recipe"
+    ]
+  ]
+}

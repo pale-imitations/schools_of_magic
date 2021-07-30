@@ -1,0 +1,19 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:sandstone_podium",
+    "schoolsofmagic:red_sandstone_podium",
+    "schoolsofmagic:blackstone_podium",
+    "schoolsofmagic:basalt_podium",
+    "schoolsofmagic:endstone_podium",
+    "schoolsofmagic:purpur_podium",
+    "schoolsofmagic:obsidian_podium",
+    "schoolsofmagic:quartz_podium",
+    "schoolsofmagic:andesite_podium",
+    "schoolsofmagic:granite_podium",
+    "schoolsofmagic:diorite_podium",
+    "schoolsofmagic:prismarine_podium",
+    "schoolsofmagic:netherbrick_podium",
+    "schoolsofmagic:stone_podium"
+  ]
+}

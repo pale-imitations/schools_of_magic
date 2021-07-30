@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:peony_to_pink_dye_mortar"
+    ]
+  },
+  "criteria": {
+    "has_peony": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:peony"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:peony_to_pink_dye_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_peony",
+      "has_the_recipe"
+    ]
+  ]
+}

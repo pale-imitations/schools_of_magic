@@ -1,0 +1,1 @@
+  This spell monitors an area with a radius of 5 blocks for 2 minutes.<~><~>  By default the spell will alert the caster either when there are entities within the radius, however, by right clicking the spell you can change the setting so that it only alerts you when a creature enters or exits the radius.

@@ -1,0 +1,3 @@
+  The Flammability effect causes a creature to become vulnerable to catching on fire for 1 minute, which will occur is the creature is standing by a flame or by lava.
+<~><~>  This effect can be acheived in a Brewing Stand by corrupting a Fire Resistance potion with a Fermented Spider Eye or though a Bottle of Fireberry Juice.
+<~><~>  Flammability is a Pyromancy effect in the school of Transfiguration.

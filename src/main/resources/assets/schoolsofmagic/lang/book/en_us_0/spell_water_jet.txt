@@ -1,0 +1,1 @@
+  This spell shoots a jet of water in the look direction of the caster with a radius of 20 blocks.<~><~>  Entities hit by the spell are knocked back and takes 2 points of damage.<~><~>  Fire based entities take additional damage from this spell.

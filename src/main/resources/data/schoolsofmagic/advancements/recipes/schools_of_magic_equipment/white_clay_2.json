@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:white_clay_2"
+    ]
+  },
+  "criteria": {
+    "has_white_clay_powder": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:white_clay_powder"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:white_clay_2"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_white_clay_powder",
+      "has_the_recipe"
+    ]
+  ]
+}

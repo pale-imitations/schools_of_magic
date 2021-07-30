@@ -1,0 +1,3 @@
+  The Strength effect improves a creature's attack damage for a short period of time.
+<~><~>  This effect can be acheived using Blaze Powder.
+<~><~>  Strength is a Pyromancy effect in the school of Abjuration.

@@ -1,0 +1,1 @@
+  This spell causes thorned vines to burst from the ground slashing all in their path.<~><~>  These vines can be cast in the direction the magician is looking by right clicking, or around the magician in a ring by shift+right-clicking.<~><~>  These vines cause 6 points of damage to any creature in their way.

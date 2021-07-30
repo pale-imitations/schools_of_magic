@@ -1,0 +1,2 @@
+  Potion collection can be done with a Glass Bottle, a Glass Flask, or a Glass Burst Flask.<~><~>  Furthermore potions can be imbued directly into items by putting the item into the cauldron and right clicking the cauldron with a wand. However the process can only be 
+done with Lingering Potions. 

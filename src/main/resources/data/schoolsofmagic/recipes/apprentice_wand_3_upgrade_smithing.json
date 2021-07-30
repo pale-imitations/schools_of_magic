@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "schoolsofmagic:apprentice_wand_2"
+  },
+  "addition": {
+    "item": "minecraft:diamond"
+  },
+  "result": {
+    "item": "schoolsofmagic:apprentice_wand_3"
+  }
+}

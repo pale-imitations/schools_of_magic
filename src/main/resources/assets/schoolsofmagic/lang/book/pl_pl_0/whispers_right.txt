@@ -1,0 +1,3 @@
+  Zaklęcie może imitować stawianie kroków, pnącza, endermeny, zombie, szkielety, osadników, wiedźmy, koty, wilki, bicie serca, żaby lub stukanie.<~><~><~>  
+Podczas naśladowania kroków moby w danym promieniu przyciągają dźwięk, a naśladując wieśniaków, przyciągają zombie. <~><~>  Naśladując pełzającego kota
+creepery są odpychane, a naśladując wilka, szkielety będą odpychane.

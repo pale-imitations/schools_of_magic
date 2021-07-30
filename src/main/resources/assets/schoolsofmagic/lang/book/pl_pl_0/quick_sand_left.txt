@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie oddziałuje na mobie stojącemu w odległości 10 bloków od rzucającego, a istota ta musi stać na ziemi, błocie lub piasku. <~><~><~>  Bloki te 
+zaczną się skraplać pod celem, powodując jego 

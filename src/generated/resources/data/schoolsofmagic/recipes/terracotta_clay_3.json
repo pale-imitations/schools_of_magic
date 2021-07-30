@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:terracotta_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:terracotta_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:terracotta_clay_powder"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:terracotta_clay",
+    "count": 3
+  }
+}

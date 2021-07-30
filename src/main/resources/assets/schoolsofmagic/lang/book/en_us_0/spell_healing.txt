@@ -1,0 +1,2 @@
+  This spell infuses it's caster with life energy healing them a small amount each time it's used.
+<~><~>  The spell will grant four uses when a first level spell charge is used, and an additional two uses per charge level above first.

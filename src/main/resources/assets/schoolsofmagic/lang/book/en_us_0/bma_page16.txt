@@ -1,0 +1,3 @@
+  The Radius of a Splash or Lingering Potion can be increased after the Gunpowder if its a Splash Potion, or after the Dragon's Breath if its a Lingering Potion.
+<~><~>  Shown here are all the radius modifying Potion ingredients and their respective radiuses. Adding Quartz to your potion will increase the radius of effect of your 
+potion from 3 blocks from the center the potion's impact to 4 blocks. 

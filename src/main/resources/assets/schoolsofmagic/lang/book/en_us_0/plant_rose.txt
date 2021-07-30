@@ -1,0 +1,5 @@
+  Roses are a fragrant thorny bush with red flowers closely related to Brambles.
+<~><~>  They are found in Flowery Biomes and Dark Forests.
+<~><~>  Rose Bushes have a connection to Evocation magic. Though it’s most useful when they are dried and crushed.
+<~><~>  Rose Bushes can be cultivated by right clicking them with Bone Meal.
+<~><~>  Rose Bush can be mashed into Red Dye or Rose Extract in a Mortar and Pestle.

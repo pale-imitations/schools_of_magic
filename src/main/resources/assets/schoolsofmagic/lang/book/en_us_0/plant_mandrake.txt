@@ -1,0 +1,5 @@
+  Mandrake Root is the root of the Mandrake plant, unsurprisingly.
+<~><~>  Mandrakes can be found in Mountainous Jungles and Sinister Swamps among the ferns.
+<~><~>  Mandrake Root is connected to Transfiguration magic. Though it’s most useful when they are dried and crushed.
+<~><~>  Mandrake Roots can be harvested and planted on Farmland, it can also be placed on Mud.
+<~><~>  Mandrake Root can be mashed into Mud Man Juice and Mandrake Pulp.

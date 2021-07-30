@@ -1,0 +1,5 @@
+  The most basic metals a Magician must start with are Iron, Copper, Silver, and Gold.
+<~><~>  Iron Ore can be found at depths between 0 and 63; Copper Ore at depths between 20 and 60; Silver Ore at depths between 0 and 40; and finally Gold Ore at depths between 0 and 31. Gold Ore is more common in Badland biomes, a fact that drove our ancestors to build complicated mine systems in those hills.
+<~><~>  These are all adequate metals, however Steel, a far more durable metal, can be derived from the combination of Charcoal and Iron.
+<~><~>  Steel Amalgam can be created by crafting a block of Charcoal, placing it and heating it with Fire, Lava, or Magma, and then leaving an Iron Ingot to slowly melt into it.
+<~><~>  Steel Amalgam can then be smelted into Steel Ingots in a Furnace.

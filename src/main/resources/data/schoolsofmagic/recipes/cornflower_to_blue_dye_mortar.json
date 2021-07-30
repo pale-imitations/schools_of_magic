@@ -1,0 +1,11 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 5,
+  "ingredient": {
+    "item": "minecraft:cornflower"
+  },
+  "result": {
+    "item": "minecraft:blue_dye",
+    "count": 2
+  }
+}

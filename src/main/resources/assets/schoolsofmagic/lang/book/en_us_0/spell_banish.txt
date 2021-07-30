@@ -1,0 +1,1 @@
+  Banishment can translocate an entity at least 5 blocks or as far as 20 blocks away from their current location.<~><~>  The caster does this by making a melee attack with the spell.<~><~>  When this is used on an Enderman, the Enderman becomes overwhelmed with Enderic energy and is banished permanently back to the End.

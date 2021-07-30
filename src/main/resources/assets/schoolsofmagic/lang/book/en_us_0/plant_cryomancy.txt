@@ -1,0 +1,5 @@
+  Snowbells are a pale blue flower distantly related to Lavender.
+<~><~>  These flowers grow naturally in very cold Ancient biomes among the snow and Spruce trees.
+<~><~>  Snowbells are connected to Cryomancy magic, though they are most useful when they are dried and crushed.
+<~><~>  Snowbell Seeds can be crafted from Snowbells and can be planted on Farmland.
+<~><~>  Snowbells can be mashed into Snow Dew, a valuable potion ingredient.

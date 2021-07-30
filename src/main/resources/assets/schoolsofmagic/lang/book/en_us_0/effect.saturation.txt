@@ -1,0 +1,3 @@
+  The Saturation effect stops a creature from becoming hungry for a short period of time.
+<~><~>  This effect can be acheived using Crushed Wheat.
+<~><~>  Saturation is an Animancy effect in the school of Conjuration.

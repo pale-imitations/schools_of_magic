@@ -1,0 +1,5 @@
+  Peonies are a tall bush on which large pink flowers grow.
+<~><~>  They’re found in Flowery Biomes and in Dark Forests.
+<~><~>  Peonies have a connection to Conjuration magic. Though it’s most useful when it has been dried and crushed.
+<~><~>  They can be cultivated by right clicking them with Bone Meal.
+<~><~>  Peonies can be mashed into Pink Dye in a Mortar and Pestle.

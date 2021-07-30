@@ -1,0 +1,1 @@
+  Strength modifiers can be applied after a focal ingredient or after another potion effect modifier.<~><~>  By default potion effects have a Strength I, the diagram shown here depicts the strength of each modifier ingredient.<~><~> However, adding a strength modifier pentalizes duration by 20% for each addition level over Strength I.

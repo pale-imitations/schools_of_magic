@@ -1,0 +1,1 @@
+  This spell generates swirling particles which can be seen through solid blocks at any position in a radius of 20 blocks where there is lava.<~><~>  If there is no lava the caster will hear a hissing noise.

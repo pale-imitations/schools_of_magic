@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "schoolsofmagic:block/prismarine_podium",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "schoolsofmagic:block/prismarine_podium"
+    },
+    "facing=south": {
+      "model": "schoolsofmagic:block/prismarine_podium",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "schoolsofmagic:block/prismarine_podium",
+      "y": 270
+    }
+  }
+}

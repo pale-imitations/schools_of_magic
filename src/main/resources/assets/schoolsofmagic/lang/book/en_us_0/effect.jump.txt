@@ -1,0 +1,3 @@
+  The Jump Boost effect improves a creature's jump height for 3 minutes.
+<~><~>  This effect can be acheived using a Rabbit's Foot.
+<~><~>  Jump Boost is an Electromancy effect in the school of Abjuration.

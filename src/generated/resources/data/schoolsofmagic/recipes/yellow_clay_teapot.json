@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "C C",
+    "C C",
+    " C "
+  ],
+  "key": {
+    "C": {
+      "item": "schoolsofmagic:yellow_clay"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:yellow_clay_teapot"
+  }
+}

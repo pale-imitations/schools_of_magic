@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~> To zaklęcie określa położenie najbliższego bloku rudy lazurytu w promieniu 20 bloków.<~><~>  Jeśli nie ma lazurytu, rzucający
+usłyszysz syczący dźwięk, w przeciwnym razie dym wystrzeli z rzucającego 

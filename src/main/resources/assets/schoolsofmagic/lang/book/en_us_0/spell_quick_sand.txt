@@ -1,0 +1,1 @@
+  This spell targets a single entity within 10 blocks of the caster that is standing on dirt, mud or sand.<~><~>  These blocks are liquified beneath the target causing them to quickly sink into the earth the longer the spell is focused on them.

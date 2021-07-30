@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:crushed_cornflower_mortar"
+    ]
+  },
+  "criteria": {
+    "has_dried_cornflower": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:dried_cornflower"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:crushed_cornflower_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_dried_cornflower",
+      "has_the_recipe"
+    ]
+  ]
+}

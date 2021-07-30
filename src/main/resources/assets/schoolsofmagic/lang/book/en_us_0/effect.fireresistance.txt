@@ -1,0 +1,3 @@
+  The Fire Resistance effect makes a creature immune to fire damage for a short period of time.
+<~><~>  This effect can be acheived using Magma Cream.
+<~><~>  Fire Resistance is a Pyromancy effect in the school of Abjuration.

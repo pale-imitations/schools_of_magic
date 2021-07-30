@@ -1,0 +1,10 @@
+{
+	"loader": "forge:obj",
+	"flip-v": true,
+	"model": "schoolsofmagic:models/block/teaplate_3.obj",
+	"ambientocclusion": false,
+	"textures": {
+		"texture0": "schoolsofmagic:block/white_teaplate",
+		"particle": "minecraft:block/white_glazed_terracotta"
+	}
+}

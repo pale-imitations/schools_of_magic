@@ -1,0 +1,1 @@
+  This spell creates a spell circle with a radius of 5 blocks and which lasts 2 minutes.<~><~>  Whenever a creature enters or exits the radius of the spell, the spell emits a blood curdling scream.<~><~>  Each time the spell shrieks, animals within 8 blocks of the spell may become frightened and panic.

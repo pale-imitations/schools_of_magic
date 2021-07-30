@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie monitoruje obszar o promieniu 5 bloków przez 2 minuty.<~><~>  Domyślnie zaklęcie powiadamia rzucającego, kiedy
+w promieniu znajdują się inne istoty, klikając prawym przyciskiem owy czar 

@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie określa lokalizację najbliższego bloku rudy złota w promieniu 20 bloków.<~><~>  Jeśli nie ma złota, rzucający
+usłyszysz syczący dźwięk, w przeciwnym razie dym wystrzeli z rzucającego 

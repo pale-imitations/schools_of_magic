@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie przechowuje lokalizację, a po rzuceniu błyskawica uderza w wybrane miejsce, tworząc 
+powrotną zapisaną lokalizację. <~><~> Błyskawica nie uszkodzi bloków

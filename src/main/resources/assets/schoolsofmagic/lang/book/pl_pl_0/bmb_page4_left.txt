@@ -1,0 +1,3 @@
+<~><~><~>  Magię można podzielić na różne kategorie. Kategorie te nazywane są Smakami Magii, istnieje 16 znanych Smaków Magii.<~><~>
+-Pyromancja: Magia Ognia.<~>-Hydromancja: Magia Wody<~>-Geomancja: Magia Ziemi<~>-Aeromancja: Magia Powietrza<~>-Elektromancja: Magia Piorunów<~>-Zielarstwo: Magia Roślin<~>
+-Zoologia: Magia Zwierząt<~>-Kriomancja: Magia Lodu<~>-Lunarmancja: Magia Księżyca<~>-Heliomancja: Magia Słońca<~>

@@ -1,0 +1,3 @@
+  Cauldron brewing is divided into four phases.<~><~>  In phase 1, the Ingredient Phase, one can add ingredients to the Cauldron by either dropping ingredients into 
+the top or by using the interface.<~><~>  Once you have mapped out your potion recipe and put the ingredients into the cauldron you can progress into the next phase 
+by right-clicking the cauldron with a Wand.

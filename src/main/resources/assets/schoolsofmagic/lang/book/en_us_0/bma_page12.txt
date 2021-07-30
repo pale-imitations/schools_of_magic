@@ -1,0 +1,2 @@
+  Duration modifiers can be applied after a focal ingredient or after another potion effect modifier.<~><~>  Different potion effects have a different default 
+durations, Duration I. Duration II, increases duration by 50%, Duration III by 100%, Duration IV by 150%, and Duration V by 200%.

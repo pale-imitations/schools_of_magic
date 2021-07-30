@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:lime_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:lime_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:lime_clay_powder"
+    },
+    {
+      "item": "schoolsofmagic:lime_clay_powder"
+    },
+    {
+      "item": "minecraft:water_bucket"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:lime_clay",
+    "count": 4
+  }
+}

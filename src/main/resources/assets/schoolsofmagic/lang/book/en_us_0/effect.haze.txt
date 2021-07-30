@@ -1,0 +1,3 @@
+  The Haze effect mildly impairs a creature's vision 45 seconds.
+<~><~>  This effect can be acheived using spores from the Fairystool Mushroom.
+<~><~>  Haze is an Infernal effect in the school of Illusion.

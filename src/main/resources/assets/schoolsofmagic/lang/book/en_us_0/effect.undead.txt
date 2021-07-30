@@ -1,0 +1,4 @@
+  The Undead effect causes an effected creature to become undead for a short period of time.
+<~><~>  While under this effect fellow undead will ingore you unless provoked.
+<~><~>  This effect can be acheived using Dead Man's Blood.
+<~><~>  Undead is a Necromantic effect in the school of Transfiguration.

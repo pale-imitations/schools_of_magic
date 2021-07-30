@@ -1,0 +1,4 @@
+{
+    "loader": "schoolsofmagic:book",
+    "parent": "forge:item/default"
+}

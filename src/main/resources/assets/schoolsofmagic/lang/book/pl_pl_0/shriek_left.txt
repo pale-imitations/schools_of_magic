@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  Zaklęcie to tworzy czar o promieniu 5 bloków, które trwa 2 minuty.<~><~>  Ilekroć istota wchodzi lub wychodzi z
+promienia zaklęcia, czar emituje krwawy

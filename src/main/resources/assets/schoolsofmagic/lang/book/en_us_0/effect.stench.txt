@@ -1,0 +1,3 @@
+  The Terrible Stench effect causes a creature to smell like a corpse for a short period of time, the smell attracts flies.
+<~><~>  This effect can be acheived using Grave Root Pulp.
+<~><~>  Terrible Stench is a Necromantic effect in the school of Transfiguration.

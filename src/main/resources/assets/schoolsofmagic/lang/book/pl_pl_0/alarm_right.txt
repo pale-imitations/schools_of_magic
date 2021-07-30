@@ -1,0 +1,1 @@
+możesz zmienić to ustawienie, aby ostrzegało cię tylko, gdy stworzenie wchodzi lub wychodzi z promienia.

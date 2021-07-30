@@ -1,0 +1,1 @@
+  The Drinkable Potions can be bottled with Glass Bottles and Glass Flasks.<~><~>  When bottled with a Glass Bottle, you get a regular potion. You can bottle an entire filled cauldron inside a Glass Flask, which will contain three drinks of a potion.

@@ -1,0 +1,1 @@
+  This spell channels pure power into a crackling beam of electricity which shocks all creatures within the radius of the spell in the direction the spell is cast.<~><~>  With a radius of 10 blocks and damage of about 6 points per casting, this spell can do a hefty amount of damage. 

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:yellow_teapot"
+    ]
+  },
+  "criteria": {
+    "has_yellow_terracotta_teapot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:yellow_terracotta_teapot"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:yellow_teapot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_yellow_terracotta_teapot",
+      "has_the_recipe"
+    ]
+  ]
+}

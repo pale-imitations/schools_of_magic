@@ -1,0 +1,10 @@
+{
+	"loader": "forge:obj",
+	"flip-v": true,
+	"model": "schoolsofmagic:models/block/teapot.obj",
+	"ambientocclusion": false,
+	"textures": {
+		"texture0": "schoolsofmagic:block/orange_terracotta_teapot",
+		"particle": "minecraft:block/orange_terracotta"
+	}
+}

@@ -1,0 +1,1 @@
+  This spell channels a bolt of mystic energy that is shot in the direction the caster is looking.<~><~> Upon impact with a Sand block, a cactus is grown. Upon impact with a creature standing on sand, cactus is grown around the creature.<~><~>  The cactus created by this spell will eventually disappear.

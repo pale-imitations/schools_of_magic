@@ -1,0 +1,3 @@
+  Lingering Potions can be bottled with Glass Bottles and Glass Burst Flasks and can be imbued into Diamonds and Arrows.<~><~>  When bottled with a Glass Bottle, 
+you get a Lingering Potion. When bottled with a Glass Burst Flask, you get a Burst Potion.<~><~>  When imbued onto a Diamond, you get a Potion Crystal. When imbued onto 9 
+Arrows, you get 9 Potion Tipped Arrows.

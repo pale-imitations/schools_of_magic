@@ -1,0 +1,3 @@
+  The Water Breathing effect allows a creature to breath underwater for a short period of time.
+<~><~>  This effect can be acheived using a Pufferfish.
+<~><~>  Water Breathing is a Hydromancy effect in the school of Transfiguration.

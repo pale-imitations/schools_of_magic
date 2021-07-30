@@ -1,0 +1,64 @@
+{
+  "variants": {
+    "count=1,facing=north": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_1"
+    },
+    "count=2,facing=north": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_2"
+    },
+    "count=3,facing=north": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_3"
+    },
+    "count=4,facing=north": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_4"
+    },
+    "count=5,facing=north": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_5"
+    },
+    "count=1,facing=south": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_1"
+    },
+    "count=2,facing=south": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_2"
+    },
+    "count=3,facing=south": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_3"
+    },
+    "count=4,facing=south": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_4"
+    },
+    "count=5,facing=south": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_5"
+    },
+    "count=1,facing=west": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_1"
+    },
+    "count=2,facing=west": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_2"
+    },
+    "count=3,facing=west": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_3"
+    },
+    "count=4,facing=west": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_4"
+    },
+    "count=5,facing=west": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_5"
+    },
+    "count=1,facing=east": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_1"
+    },
+    "count=2,facing=east": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_2"
+    },
+    "count=3,facing=east": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_3"
+    },
+    "count=4,facing=east": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_4"
+    },
+    "count=5,facing=east": {
+      "model": "schoolsofmagic:block/white_terracotta_teaplate_5"
+    }
+  }
+}

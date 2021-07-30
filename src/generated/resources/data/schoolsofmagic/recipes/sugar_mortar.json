@@ -1,0 +1,11 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 8,
+  "ingredient": {
+    "item": "minecraft:sugar_cane"
+  },
+  "result": {
+    "item": "minecraft:sugar",
+    "count": 2
+  }
+}

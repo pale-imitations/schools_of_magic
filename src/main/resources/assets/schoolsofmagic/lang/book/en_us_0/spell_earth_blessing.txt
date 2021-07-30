@@ -1,0 +1,1 @@
+  This spell grants a creature a one time protection from fall damage if they fall on earth.<~><~>  It can be cast on either the caster by holding right-click or it can be cast on another creature by right clicking them.<~><~>  The Earth Protection effect lasts for a minute or until the protection is used.

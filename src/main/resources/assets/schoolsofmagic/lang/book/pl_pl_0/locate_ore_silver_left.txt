@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie określa położenie najbliższego bloku rudy srebra w promieniu 20 bloków.<~><~>  Jeśli nie ma srebra, rzucający
+usłyszysz syczący dźwięk, w przeciwnym razie dym wystrzeli z rzucającego 

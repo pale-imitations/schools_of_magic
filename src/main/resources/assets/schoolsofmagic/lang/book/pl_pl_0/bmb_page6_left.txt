@@ -1,0 +1,3 @@
+na zaklęcie z ksiąg zaklęć, podczas gdy bardziej zaawansowane różdżki mają dostęp do wielu miejsc na zaklęcia co zależy od poziomu czarodzieja.<~><~>  Na przykład czarodziej poziomu 1 używa
+dębowej różdżki więć będzie miał dostęp do trzech miejsc na zaklęcia.<~><~>  Interfejs zaklęć otworzysz za pomocą przycisku (domyślnie klawisz R), trzymając jednocześnie różdżkę.<~><~>  Aby
+zapisać zaklęcie w miejscu na to przeznaczonym, najpierw wybierz miejsce na zaklęcie, a następnie zajrzyj do księgi zaklęć

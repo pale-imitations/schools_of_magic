@@ -1,0 +1,3 @@
+  The Wither effect saps the lifeforce from a creature using necrotic energy.
+<~><~>  This effect can be acheived using Dark Mushroom Heads.
+<~><~>  Wither is a Necromantic effect in the school of Evocation.

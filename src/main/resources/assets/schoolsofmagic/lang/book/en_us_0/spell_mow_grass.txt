@@ -1,0 +1,1 @@
+  This spell removes tall grass at an amazing rate, about 20 blocks per second, and within a radius of 20 blocks.<~><~>  Translocated grass will still leave its drops upon its banishment.<~><~>  This spell makes clearing grasslands much, much easier.

@@ -1,0 +1,1 @@
+  This spell fills an undead thrall with dark power, providing them strength for 20 seconds.<~><~>  If Strength is already active, they will get speed, if thats already active they will gain resistance to damage, afterwhich they will get fire resistance, then a health boost, haste, and finally feather fall.

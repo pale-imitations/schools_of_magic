@@ -1,0 +1,5 @@
+  The Mana of a Magician is intimately tied to their being; it is within them and a part of them.
+<~><~>  As a Magician gains more Magical Experience, they are able to increase their Mana capacity and the rate at which they can regenerate Mana expended while casting magic.
+<~><~>  At level 1, an Apprentice Magician has a capacity of about 120 Mana and a passive  Mana generation rate of about 1 Mana every 2 seconds.
+<~><~>  As this guide has emphasized, Mana isn't just a resource, it's an extension of a creature’s being. This means that overexertion of one's Mana can have some repercussions for the wellbeing of a Magician.
+<~><~>  The main consequence of overexerting one's Mana, is Mana exhaustion and the accumulation of Dead Mana.

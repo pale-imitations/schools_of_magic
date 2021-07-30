@@ -1,0 +1,3 @@
+  The Frostbite effect causes cold damage to a creature over time.
+<~><~>  This effect can be acheived using an Ice Shard.
+<~><~>  Frostbite is a Cryomancy effect in the school of Evocation.

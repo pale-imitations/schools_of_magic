@@ -1,0 +1,35 @@
+{
+  "parent": "schoolsofmagic:schoolsofmagic/root",
+  "display": {
+    "icon": {
+      "item": "schoolsofmagic:white_terracotta_teapot"
+    },
+    "title": {
+      "translate": "advancements.schoolsofmagic.make_tea.title"
+    },
+    "description": {
+      "translate": "advancements.schoolsofmagic.make_tea.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "schoolsofmagic:filled_cups"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_item"
+    ]
+  ]
+}

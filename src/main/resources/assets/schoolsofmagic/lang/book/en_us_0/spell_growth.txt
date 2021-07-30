@@ -1,0 +1,2 @@
+  This spell grants the caster the ability to magically grow plants, similar to the use of bonemeal, in a 3x3 area per second level spell charge.
+<~><~>  The area of effect increases by 1 in each direction per spell charge level above second.

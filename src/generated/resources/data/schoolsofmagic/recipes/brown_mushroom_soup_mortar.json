@@ -1,0 +1,14 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 8,
+  "ingredient": {
+    "item": "minecraft:brown_mushroom"
+  },
+  "ingredientSecondary": {
+    "item": "minecraft:bowl"
+  },
+  "result": {
+    "item": "minecraft:mushroom_stew",
+    "count": 1
+  }
+}

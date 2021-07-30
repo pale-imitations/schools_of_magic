@@ -1,0 +1,1 @@
+  Kiedy owe zaklęcie zostanie użyte na endermanie, enderman zostaje przytłoczony energią endera i zostaje trwale wygnany z powrotem do Kresu.

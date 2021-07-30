@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "schoolsofmagic:block/yellow_teapot"
+    },
+    "facing=south": {
+      "model": "schoolsofmagic:block/yellow_teapot",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "schoolsofmagic:block/yellow_teapot",
+      "y": 270
+    },
+    "facing=east": {
+      "model": "schoolsofmagic:block/yellow_teapot",
+      "y": 90
+    }
+  }
+}

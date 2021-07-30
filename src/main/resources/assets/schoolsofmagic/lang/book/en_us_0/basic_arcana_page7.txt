@@ -1,0 +1,5 @@
+  Steel can be used to create the Brazier, a block central to the casting of a variety of rituals.
+<~><~>  The Brazier is made in a Crafting Table using two Steel Ingots, two Steel Fences, and a Charcoal Block. The recipe for the Steel Fence is shown on the next page.
+<~><~>  Items can be placed inside the Brazier by dropping them inside or by right clicking the Brazier. To cast a ritual the Brazier must be lit with a Flint and Steel and then right clicked with a Wand or Stick.
+<~><~>  Most rituals will require a pattern of blocks around the Brazier. The Crafting Ritual has the simplest Ritual Configuration, which can be achieved by placing the Brazier on top of a Crafting Table.
+<~><~>  The Arcane Cauldron, the Catalyst Basin, the Crystal Ball, and all wand upgrades are made using the Crafting Ritual.

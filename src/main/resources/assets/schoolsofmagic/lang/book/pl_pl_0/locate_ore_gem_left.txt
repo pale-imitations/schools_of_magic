@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie określa lokalizację najbliższego bloku rudy klejnotów w promieniu 20 bloków.<~><~>  Jeśli nie ma klejnotów, rzucający
+usłyszy syczący dźwięk, w przeciwnym razie dym wystrzeli z rzucającego 

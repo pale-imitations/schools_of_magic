@@ -1,0 +1,22 @@
+{
+	"credit": "Made with Blockbench",
+	"parent": "block/block",
+	"textures": {
+		"1": "schoolsofmagic:block/herbal_twine",
+		"particle": "schoolsofmagic:block/herbal_twine"
+	},
+	"elements": [
+		{
+			"from": [7.5, 12, 7.5],
+			"to": [8.5, 16, 8.5],
+			"faces": {
+				"north": {"uv": [0, 0, 1, 4], "texture": "#1"},
+				"east": {"uv": [3, 0, 4, 4], "texture": "#1"},
+				"south": {"uv": [1, 0, 2, 4], "texture": "#1"},
+				"west": {"uv": [2, 0, 3, 4], "texture": "#1"},
+				"up": {"uv": [0, 0, 1, 1], "texture": "#1"},
+				"down": {"uv": [0, 0, 1, 1], "texture": "#1"}
+			}
+		}
+	]
+}

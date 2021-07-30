@@ -1,0 +1,3 @@
+  Potion recipes may be complex, but are similar to the simple recipes used with a Brewing Stand.<~><~>  The first ingredient in any potion is Nether Wart. 
+The next is the first Focal Ingredient, these are ingredients which add Potion Effects.<~><~>  Next one can add Potion Effect Modifiers for duration, power, and 
+particle suppression.<~><~>  After these modifiers you can repeat this with potion effects and modifiers.<~><~>  Once one has all the desired effects are added, you can choose the potion type. Potions are Drinkable by defaults but adding Gunpowder will create a Splash potion, and adding Dragon's Breath after that will create a Lingering Potion.<~><~>  Finally, one can add potion modifiers, different potion types can use different modifiers.

@@ -1,0 +1,2 @@
+  Cauldron brewing is more involved than Brewing Stand brewing, requiring stirring and simmering before the potion is complete.<~><~>  Shown here is a charming 
+recipe for transforming an Arcane Cauldron into a Gilded Cauldron, which requires 15% less stirring and simmering, using Gold Ingots, Gold Nuggets, and 200 Mana.

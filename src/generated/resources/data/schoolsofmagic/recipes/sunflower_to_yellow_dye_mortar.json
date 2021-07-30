@@ -1,0 +1,11 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 8,
+  "ingredient": {
+    "item": "minecraft:sunflower"
+  },
+  "result": {
+    "item": "minecraft:yellow_dye",
+    "count": 4
+  }
+}

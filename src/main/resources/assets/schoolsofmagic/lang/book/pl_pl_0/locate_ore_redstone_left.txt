@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie określa położenie najbliższego bloku rudy redstone w promieniu 20 bloków.<~><~>  Jeśli nie ma redstona, rzucający
+usłyszysz syczący dźwięk, w przeciwnym razie dym wystrzeli z rzucającego

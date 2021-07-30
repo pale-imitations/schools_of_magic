@@ -1,0 +1,3 @@
+  The Feather Light effect slows a creature's fall speed for a short period of time.
+<~><~>  This effect can be acheived using a Bird Heart, a rare drop from chickens and parrots.
+<~><~>  Feather Light is a Aromancy effect in the school of Transfiguration.

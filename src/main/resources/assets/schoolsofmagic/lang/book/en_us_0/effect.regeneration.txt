@@ -1,0 +1,3 @@
+  The Regeneration effect heals a creature continuously for a short period of time.
+<~><~>  This effect can be acheived using a Ghast Tear.
+<~><~>  Regeneration is an Auramancy effect in the school of Abjuration.

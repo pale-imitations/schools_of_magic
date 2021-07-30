@@ -1,0 +1,3 @@
+  This spell channels lunar energy into a cloak of darkness which obscures the effected entity from view.
+<~><~>  This spell can be cast on one's self by holding right click and can be cast on another creature by right clicking them.
+<~><~>  This illusion will last about 20 seconds per third level spell charge however will last an addition 10 seconds per spell charge level over third.

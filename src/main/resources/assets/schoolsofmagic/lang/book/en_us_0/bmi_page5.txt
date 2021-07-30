@@ -1,0 +1,4 @@
+  Gems are an integral component to magic. They can be polished and incorporated into wands; They can be crushed into gem dust and burned in a Spell Forge to potentially improve one’s understanding of magic; And they can be used in all manner of spells and rituals.
+<~><~>  Gem Dust can be created by crushing a gem in a Mortar & Pestle.
+<~><~>  A Polished Gem can be crafted by polishing a gem with Sandpaper in a Crafting Table. Sandpaper is crafted using Paper, Sand, and Diamond Dust.
+<~><~>  Gems, Polished Gems, Gem Blocks, and Polished Gem Blocks are also excellent decorative materials.

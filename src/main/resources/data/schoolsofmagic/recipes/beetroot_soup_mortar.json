@@ -1,0 +1,14 @@
+{
+  "type": "schoolsofmagic:mortar",
+  "crush": 8,
+  "ingredient": {
+    "item": "minecraft:beetroot"
+  },
+  "ingredientSecondary": {
+    "item": "minecraft:bowl"
+  },
+  "result": {
+    "item": "minecraft:beetroot_soup",
+    "count": 1
+  }
+}

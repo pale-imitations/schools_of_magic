@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  To zaklęcie wypełnia nieumarłego niewolnika ciemną mocą, zapewniając mu zwiększoną siłę na 20 sekund.<~><~>  Jeśli siła jest już aktywna, to nieumarły
+nabierze prędkości, dalej dostanie efekt odporności

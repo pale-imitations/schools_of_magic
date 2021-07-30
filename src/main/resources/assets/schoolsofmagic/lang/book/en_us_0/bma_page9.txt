@@ -1,0 +1,3 @@
+  To imbue Arrows with a completed Lingering Potion, place 9 arrows into the cauldron and right click the cauldron with your wand, exhausting one part of 
+your potion.<~><~>  To create Potion Crystals with a completed Lingering Potion place a diamond into the cauldron and right click the cauldron with your 
+wand, exhausting one part of your potion.<~><~>  Now that it's been explained the process of brewing a potion, we will explore the process of creating a potion recipe.

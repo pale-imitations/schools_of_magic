@@ -1,0 +1,3 @@
+  The speed at which a Drinkable potion can be drunk is modified after all the potion effects and potion effect modifiers are added to the potion recipe.<~><~>  
+Shown here are all the drink speed modifying Potion ingredients and their speed modifiers. Adding an Egg to your Drinkable potion increases the drink speed to x1.33 the 
+original speed.

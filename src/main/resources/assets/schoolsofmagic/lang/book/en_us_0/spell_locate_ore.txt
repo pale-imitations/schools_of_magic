@@ -1,0 +1,2 @@
+  This spell generates swirling particles that can be seen through solid blocks on every block of ore in a radius of 20 blocks.<~><~>  If there is no ore, the caster 
+will hear a hissing noise. 

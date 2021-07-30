@@ -1,0 +1,5 @@
+  Lotuses are a blue flower closely related to Water Lilies.
+<~><~>  These flowers grow naturally in the waters of the Mountainous Jungles.
+<~><~>  The Lotus is perfectly suited for Hydromancy magic. Though it is most useful when it is dried and crushed.
+<~><~>  Lotus Seeds can be crafted from Lotuses and can be grown on Water with a block of Dirt below or on Mud.
+<~><~>  Lotuses can be mashed into Lake Dew, a valuable potion ingredient.

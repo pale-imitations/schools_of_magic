@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:cocoa_beans_to_brown_dye_mortar"
+    ]
+  },
+  "criteria": {
+    "has_cocoa_beans": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:cocoa_beans"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:cocoa_beans_to_brown_dye_mortar"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_cocoa_beans",
+      "has_the_recipe"
+    ]
+  ]
+}

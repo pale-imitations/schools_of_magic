@@ -1,0 +1,3 @@
+  If the potion is a Splash Potion you add an additional 30 seconds and if it's a Lingering Potion you add an extra 60 seconds.<~><~>  To simmer the potion you must put 
+the lid on the cauldron by right-clicking the cauldron with a wand or by using the interface. Once simmered the potion is complete and ready for the final phase.<~><~>  The 
+final phase of brewing is the Completion Phase. During this phase you can collect your potion with bottles or imbue it onto Arrows and Diamonds if it is a lingering potion.

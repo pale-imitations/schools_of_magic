@@ -1,0 +1,1 @@
+  This spell creates a flamethrower-like blast which causes a 6.0 points of damage per casting and sets those within its radius of the blast on fire.<~><~>  The radius of the spell is about 10 blocks and is fired in the direction the caster is looking.

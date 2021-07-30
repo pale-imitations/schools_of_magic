@@ -1,0 +1,2 @@
+<~><~><~><~><~><~><~><~><~><~><~><~>  Wygnanie może przenieść cel co najmniej 5 bloków lub nawet 20 bloków od ich bieżącej lokalizacji.<~><~>  Rzucający
+robi to, wykonując atak w zwarciu zaklęciem.

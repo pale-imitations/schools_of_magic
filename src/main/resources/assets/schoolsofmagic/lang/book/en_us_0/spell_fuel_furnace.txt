@@ -1,0 +1,1 @@
+  A magician skilled in pyromancy can use this spell to generate fuel for a furnace from pure mana.<~><~>  Repeated castings of the spell adds fuel to the furnace.

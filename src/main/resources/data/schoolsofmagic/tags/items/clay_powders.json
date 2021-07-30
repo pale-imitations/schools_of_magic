@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:red_clay_powder",
+    "schoolsofmagic:orange_clay_powder",
+    "schoolsofmagic:yellow_clay_powder",
+    "schoolsofmagic:lime_clay_powder",
+    "schoolsofmagic:green_clay_powder",
+    "schoolsofmagic:cyan_clay_powder",
+    "schoolsofmagic:light_blue_clay_powder",
+    "schoolsofmagic:blue_clay_powder",
+    "schoolsofmagic:purple_clay_powder",
+    "schoolsofmagic:magenta_clay_powder",
+    "schoolsofmagic:pink_clay_powder",
+    "schoolsofmagic:white_clay_powder",
+    "schoolsofmagic:light_gray_clay_powder",
+    "schoolsofmagic:gray_clay_powder",
+    "schoolsofmagic:black_clay_powder",
+    "schoolsofmagic:brown_clay_powder",
+    "schoolsofmagic:terracotta_clay_powder"
+  ]
+}
