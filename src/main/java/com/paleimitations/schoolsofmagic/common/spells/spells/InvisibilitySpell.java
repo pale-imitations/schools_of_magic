@@ -34,13 +34,24 @@ public class InvisibilitySpell extends Spell implements IHasDuration, IHasAdjust
     private int duration = 0;
 
     public InvisibilitySpell() {
-        super(new ResourceLocation(References.MODID,"invisibility"), 2, 0, generateSchoolMap(), generateElementMap(),
-                Lists.newArrayList(MagicSchoolRegistry.ILLUSION), Lists.newArrayList(MagicElementRegistry.UMBRAMANCY),
-                Lists.newArrayList());
+        super();
     }
 
-    public InvisibilitySpell(CompoundNBT nbt){
-        this.deserializeNBT(nbt);
+    @Override
+    public ResourceLocation getResourceLocation() {
+        return new ResourceLocation(References.MODID,"invisibility");
+    }
+
+    @Override
+    public int getMinimumSpellChargeLevel() {
+        return 2;
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        this.associations.add(MagicSchoolRegistry.ILLUSION);
+        this.associations.add(MagicElementRegistry.UMBRAMANCY);
     }
 
     @Override
@@ -53,7 +64,7 @@ public class InvisibilitySpell extends Spell implements IHasDuration, IHasAdjust
     public ActionResultType interactLivingEntity(ItemStack stack, PlayerEntity player, LivingEntity living, Hand hand) {
         if (this.castSpell(player) && !living.hasEffect(Effects.INVISIBILITY)) {
             SpellEvent.Duration event = new SpellEvent.Duration(this);
-            event.setMultiplier(1f + 0.5f * (this.currentSpellChargeLevel-minSpellChargeLevel));
+            event.setMultiplier(1f + 0.5f * (this.currentSpellChargeLevel-getMinimumSpellChargeLevel()));
             MinecraftForge.EVENT_BUS.post(event);
             living.addEffect(new EffectInstance(Effects.INVISIBILITY, Math.round(400f*event.getMultiplier())));
             player.playSound(SoundRegistry.INVISIBILITY, 0.5f, player.getRandom().nextFloat() * 0.4F + 0.8F);
@@ -83,7 +94,7 @@ public class InvisibilitySpell extends Spell implements IHasDuration, IHasAdjust
         if (living instanceof PlayerEntity && this.castSpell((PlayerEntity) living) && !living.hasEffect(Effects.INVISIBILITY)) {
             PlayerEntity player = (PlayerEntity) living;
             SpellEvent.Duration event = new SpellEvent.Duration(this);
-            event.setMultiplier(1f + 0.5f * (this.currentSpellChargeLevel-minSpellChargeLevel));
+            event.setMultiplier(1f + 0.5f * (this.currentSpellChargeLevel-getMinimumSpellChargeLevel()));
             MinecraftForge.EVENT_BUS.post(event);
             this.maxDuration = Math.round(400f*event.getMultiplier());
             this.duration = maxDuration;

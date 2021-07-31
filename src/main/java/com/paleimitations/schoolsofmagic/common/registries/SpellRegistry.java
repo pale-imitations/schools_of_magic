@@ -1,31 +1,34 @@
 package com.paleimitations.schoolsofmagic.common.registries;
 
 import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
 import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.MagicElement;
+import com.paleimitations.schoolsofmagic.common.data.books.BookPageSpell;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
-import com.paleimitations.schoolsofmagic.common.spells.SpellHelper;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.*;
 import com.paleimitations.schoolsofmagic.common.spells.spells.*;
 import net.minecraft.util.ResourceLocation;
 
 import java.util.List;
+import java.util.Map;
+import java.util.function.Supplier;
 
 public class SpellRegistry {
 
-    public static final List<Spell> SPELLS = Lists.newArrayList();
+    public static final Map<ResourceLocation, Supplier<Spell>> SPELL_SUPPLIERS = Maps.newHashMap();
     public static final List<Modifier> MODIFIERS = Lists.newArrayList();
 
     public static void init() {
-        SpellHelper.registerSpellHelpers(new BlazeSpell());
-        SpellHelper.registerSpellHelpers(new ZephyrSpell());
-        SpellHelper.registerSpellHelpers(new GrowthSpell());
-        SpellHelper.registerSpellHelpers(new SnowballSpell());
-        SpellHelper.registerSpellHelpers(new ShulkerBulletSpell());
-        SpellHelper.registerSpellHelpers(new TranslocationSpell());
-        SpellHelper.registerSpellHelpers(new FangMangleSpell());
-        SpellHelper.registerSpellHelpers(new InvisibilitySpell());
-        SpellHelper.registerSpellHelpers(new HealingSpell());
+        registerSpell(() -> new BlazeSpell());
+        registerSpell(() -> new ZephyrSpell());
+        registerSpell(() -> new GrowthSpell());
+        registerSpell(() -> new SnowballSpell());
+        registerSpell(() -> new ShulkerBulletSpell());
+        registerSpell(() -> new TranslocationSpell());
+        registerSpell(() -> new FangMangleSpell());
+        registerSpell(() -> new InvisibilitySpell());
+        registerSpell(() -> new HealingSpell());
         //Increases Power
         new Modifier(new ResourceLocation(References.MODID, "potent_1"), spell -> spell instanceof IHasPower, true); //modest potency
         new Modifier(new ResourceLocation(References.MODID, "potent_2"), spell -> spell instanceof IHasPower, true); //strong potency
@@ -62,14 +65,21 @@ public class SpellRegistry {
                     spell -> (spell instanceof IHasAdjustableElements && ((IHasAdjustableElements)spell).isAcceptableElement(element)), true);
     }
 
-    /**
-     * Returns the registry instance of a spell. THIS SHOULD ONLY BE USED FOR REFERENCING STATIC VALUES WITHIN A SPELL AND SHOULD NOT BE MODIFIED!
-     * @param name
-     */
-    public static Spell getDefaultSpell(String name) {
-        for(Spell spell : SPELLS) {
-            if(spell.getResourceLocation().toString().equals(name))
-                return spell;
+    public static void registerSpell(Supplier<Spell> spellSupplier) {
+        Spell spell = spellSupplier.get();
+        BookPageRegistry.PAGES.add(new BookPageSpell(spell));
+        SPELL_SUPPLIERS.put(spell.getResourceLocation(), spellSupplier);
+    }
+
+    public static Spell getSpell(String name) {
+        Supplier<Spell> supplier = SPELL_SUPPLIERS.get(new ResourceLocation(name));
+        return supplier!=null? supplier.get() : null;
+    }
+
+    public static Modifier getModifier(String location) {
+        for(Modifier mod : MODIFIERS) {
+            if(mod.getLocation().toString().equals(location))
+                return mod;
         }
         return null;
     }

@@ -23,16 +23,27 @@ import net.minecraftforge.common.MinecraftForge;
 
 import java.util.Random;
 
-public class ShulkerBulletSpell extends Spell implements IHasPower, IHasMultiUses {
+public class ShulkerBulletSpell extends MultiUseSpell implements IHasPower {
 
     public ShulkerBulletSpell() {
-        super(new ResourceLocation(References.MODID,"shulker_bullet"), 1, 0, generateSchoolMap(), generateElementMap(),
-                Lists.newArrayList(MagicSchoolRegistry.EVOCATION), Lists.newArrayList(MagicElementRegistry.CHAOTICS),
-                Lists.newArrayList());
+        super();
     }
 
-    public ShulkerBulletSpell(CompoundNBT nbt){
-        this.deserializeNBT(nbt);
+    @Override
+    public ResourceLocation getResourceLocation() {
+        return new ResourceLocation(References.MODID,"shulker_bullet");
+    }
+
+    @Override
+    public int getMinimumSpellChargeLevel() {
+        return 1;
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        this.associations.add(MagicSchoolRegistry.EVOCATION);
+        this.associations.add(MagicElementRegistry.CHAOTICS);
     }
 
     @Override
@@ -57,18 +68,8 @@ public class ShulkerBulletSpell extends Spell implements IHasPower, IHasMultiUse
 
     @Override
     public int getUsesPerCharge(int chargeLevel) {
-        SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 1 + (chargeLevel - minSpellChargeLevel) * 2);
+        SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 1 + (chargeLevel - getMinimumSpellChargeLevel()) * 2);
         MinecraftForge.EVENT_BUS.post(event);
         return event.getUses();
-    }
-
-    @Override
-    public int getMaxUses(int chargeLevel) {
-        return this.maxUses;
-    }
-
-    @Override
-    public int getUses() {
-        return this.remainingUses;
     }
 }

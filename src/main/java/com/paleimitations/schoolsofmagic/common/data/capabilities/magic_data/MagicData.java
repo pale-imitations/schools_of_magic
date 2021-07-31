@@ -4,10 +4,11 @@ import com.google.common.collect.Lists;
 import com.paleimitations.schoolsofmagic.common.config.Config;
 import com.paleimitations.schoolsofmagic.common.MagicElement;
 import com.paleimitations.schoolsofmagic.common.MagicSchool;
+import com.paleimitations.schoolsofmagic.common.data.books.BookPageSpell;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
+import com.paleimitations.schoolsofmagic.common.registries.SpellRegistry;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
-import com.paleimitations.schoolsofmagic.common.spells.SpellHelper;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
@@ -574,7 +575,11 @@ public class MagicData implements IMagicData, INBTSerializable<CompoundNBT> {
         this.spellSlot = nbt.getInt("spellSlot");
         for(int i=0; i<MAX_SPELLS;++i)
             if(nbt.contains("spell"+i) && nbt.contains("spellData"+i)) {
-                this.spells[i] = SpellHelper.getSpellInstance(new ResourceLocation(nbt.getString("spell" + i)), nbt.getCompound("spellData"+i));
+                Spell spell = SpellRegistry.getSpell(nbt.getString("spell"+i));
+                if(spell!=null) {
+                    spell.deserializeNBT(nbt.getCompound("spellData"+i));
+                    this.spells[i] = spell;
+                }
             }
         this.charges = nbt.getIntArray("charges");
         this.countdowns = nbt.getIntArray("countdowns");

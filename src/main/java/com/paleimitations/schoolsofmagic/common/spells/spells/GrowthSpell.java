@@ -34,13 +34,24 @@ import java.util.stream.Collectors;
 public class GrowthSpell extends Spell implements IHasPower, IHasArea, IHasAdjustableElements {
 
 	public GrowthSpell() {
-		super(new ResourceLocation(References.MODID,"growth"), 1, 0, generateSchoolMap(), generateElementMap(),
-				Lists.newArrayList(MagicSchoolRegistry.ABJURATION), Lists.newArrayList(MagicElementRegistry.ANIMANCY),
-				Lists.newArrayList());
+		super();
 	}
 
-	public GrowthSpell(CompoundNBT nbt){
-		this.deserializeNBT(nbt);
+	@Override
+	public ResourceLocation getResourceLocation() {
+		return new ResourceLocation(References.MODID,"growth");
+	}
+
+	@Override
+	public int getMinimumSpellChargeLevel() {
+		return 1;
+	}
+
+	@Override
+	public void init() {
+		super.init();
+		this.associations.add(MagicSchoolRegistry.TRANSFIGURATION);
+		this.associations.add(MagicElementRegistry.ANIMANCY);
 	}
 
 	@Override

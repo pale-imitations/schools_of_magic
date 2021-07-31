@@ -11,7 +11,6 @@ import com.paleimitations.schoolsofmagic.common.network.SetSpellPacket;
 import com.paleimitations.schoolsofmagic.common.registries.ItemRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.SpellRegistry;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
-import com.paleimitations.schoolsofmagic.common.spells.SpellHelper;
 import com.paleimitations.schoolsofmagic.common.tileentities.PodiumTileEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.client.Minecraft;
@@ -159,7 +158,8 @@ public class WandBaseItem extends Item {
                 int page = nbt.contains("page")? nbt.getInt("page") : 0;
                 BookPage bookPage = data.getBookPage(page);
                 if(bookPage instanceof BookPageSpell && ((BookPageSpell) bookPage).spell!=null) {
-                    Spell spell1 = SpellHelper.getSpellInstance(((BookPageSpell) bookPage).spell.getResourceLocation(), ((BookPageSpell) bookPage).spell.serializeNBT());
+                    Spell spell1 = SpellRegistry.getSpell(((BookPageSpell) bookPage).spell.getResourceLocation().toString());
+                    spell1.deserializeNBT(((BookPageSpell) bookPage).spell.serializeNBT());
                     magic.setCurrentSpell(spell1);
                     PacketHandler.INSTANCE.sendToServer(new SetSpellPacket(spell1.getResourceLocation(), spell1.serializeNBT(), Minecraft.getInstance().player.getId(), magic.getCurrentSpellSlot()));
                 }

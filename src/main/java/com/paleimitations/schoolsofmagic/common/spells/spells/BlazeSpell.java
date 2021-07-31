@@ -20,16 +20,22 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
-public class BlazeSpell extends Spell implements IHasPower, IHasMultiUses, IHasAdjustableElements {
+public class BlazeSpell extends MultiUseSpell implements IHasPower, IHasAdjustableElements {
 
 	public BlazeSpell() {
-		super(new ResourceLocation(References.MODID,"blaze"), 0, 0, generateSchoolMap(), generateElementMap(),
-				Lists.newArrayList(MagicSchoolRegistry.EVOCATION), Lists.newArrayList(MagicElementRegistry.PYROMANCY),
-				Lists.newArrayList());
+		super();
 	}
 
-	public BlazeSpell(CompoundNBT nbt){
-		this.deserializeNBT(nbt);
+	@Override
+	public ResourceLocation getResourceLocation() {
+		return new ResourceLocation(References.MODID,"blaze");
+	}
+
+	@Override
+	public void init() {
+		super.init();
+		this.associations.add(MagicSchoolRegistry.EVOCATION);
+		this.associations.add(MagicElementRegistry.PYROMANCY);
 	}
 
 	@Override

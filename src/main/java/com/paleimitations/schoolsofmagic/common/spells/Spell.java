@@ -3,13 +3,19 @@ package com.paleimitations.schoolsofmagic.common.spells;
 import com.google.common.collect.Lists;
 import com.google.common.collect.Maps;
 import com.paleimitations.schoolsofmagic.References;
+import com.paleimitations.schoolsofmagic.common.IMagicType;
 import com.paleimitations.schoolsofmagic.common.MagicElement;
 import com.paleimitations.schoolsofmagic.common.MagicSchool;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.IMagicData;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.MagicDataProvider;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
+import com.paleimitations.schoolsofmagic.common.registries.SpellRegistry;
 import com.paleimitations.schoolsofmagic.common.spells.events.SpellEvent;
+import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMaterialComponents;
+import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMultiUses;
+import com.paleimitations.schoolsofmagic.common.spells.modifiers.Modifier;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -18,6 +24,9 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.UseAction;
 import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.nbt.IntNBT;
+import net.minecraft.nbt.ListNBT;
+import net.minecraft.nbt.StringNBT;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.StringTextComponent;
@@ -28,102 +37,63 @@ import net.minecraftforge.common.util.INBTSerializable;
 import java.util.List;
 import java.util.Map;
 import java.util.Random;
+import java.util.function.Predicate;
 
 public class Spell implements INBTSerializable<CompoundNBT> {
 
-    private ResourceLocation resourceLocation;
     public int currentSpellChargeLevel;
     public int lastSpellChargeLevel;
-    public int remainingUses;
-    public int maxUses;
-    public int minSpellChargeLevel;
-    public int minSpellLevel;
-    public int[] minSchoolLevels = new int[MagicSchoolRegistry.SCHOOLS.size()];
-    public int[] minElementLevels = new int[MagicElementRegistry.ELEMENTS.size()];
-    public boolean[] schools = new boolean[MagicSchoolRegistry.SCHOOLS.size()];
-    public boolean[] elements = new boolean[MagicElementRegistry.ELEMENTS.size()];
-    public List<ItemStack> materialComponents;
+    public List<SpellRequirement> requirements = Lists.newArrayList();
+    public List<IMagicType> associations = Lists.newArrayList();
+    public List<Modifier> modifiers = Lists.newArrayList();
 
-    public Spell(ResourceLocation resourceLocationIn, int minSpellChargeLevelIn, int minSpellLevelIn, Map<MagicSchool, Integer> minSchoolLevelsIn,
-                 Map<MagicElement, Integer> minElementLevelsIn, List<MagicSchool> schoolsIn, List<MagicElement> elementsIn, List<ItemStack> materialComponentsIn) {
-        this.resourceLocation = resourceLocationIn;
-        this.minSpellChargeLevel = minSpellChargeLevelIn;
-        this.currentSpellChargeLevel = minSpellChargeLevelIn;
-        this.lastSpellChargeLevel = minSpellChargeLevelIn;
-        this.maxUses = this.getUsesPerCharge(this.lastSpellChargeLevel);
-        this.remainingUses = 0;
-        this.minSpellLevel = minSpellLevelIn;
-        for(MagicSchool school : minSchoolLevelsIn.keySet())
-            minSchoolLevels[school.getId()] = minSchoolLevelsIn.get(school);
-        for(MagicElement element : minElementLevelsIn.keySet())
-            minElementLevels[element.getId()] = minElementLevelsIn.get(element);
-        for(int i = 0; i < MagicSchoolRegistry.SCHOOLS.size(); ++i)
-            schools[i] = schoolsIn.contains(MagicSchoolRegistry.getSchoolFromId(i));
-        for(int i = 0; i < MagicElementRegistry.ELEMENTS.size(); ++i)
-            elements[i] = elementsIn.contains(MagicElementRegistry.getElementFromId(i));
-        this.materialComponents = materialComponentsIn==null? Lists.newArrayList() : materialComponentsIn;
+    public Spell() {
+        this.init();
     }
 
-    public Spell(CompoundNBT nbt) {
-        this.deserializeNBT(nbt);
+    public void init() {
+        this.currentSpellChargeLevel = this.getMinimumSpellChargeLevel();
+        this.lastSpellChargeLevel = this.getMinimumSpellChargeLevel();
     }
 
-    public Spell(){
-        this(new ResourceLocation(References.MODID, "none"), 0, 0, generateSchoolMap(), generateElementMap(), Lists.newArrayList(), Lists.newArrayList(), Lists.newArrayList());
+    public int getMinimumSpellChargeLevel() {
+        return 0;
+    }
+
+    public int getMaximumSpellChargeLevel() {
+        return 8;
     }
 
     public ResourceLocation getResourceLocation() {
-        return resourceLocation;
-    }
-
-    public static Map<MagicSchool, Integer> generateSchoolMap(Map.Entry<MagicSchool, Integer>... entries){
-        Map<MagicSchool, Integer> map = Maps.newHashMap();
-        for(MagicSchool school : MagicSchoolRegistry.SCHOOLS)
-            map.put(school, 0);
-        for(Map.Entry<MagicSchool, Integer> entry : entries)
-            map.put(entry.getKey(), entry.getValue());
-        return map;
-    }
-
-    public static Map<MagicElement, Integer> generateElementMap(Map.Entry<MagicElement, Integer>... entries){
-        Map<MagicElement, Integer> map = Maps.newHashMap();
-        for(MagicElement element : MagicElementRegistry.ELEMENTS)
-            map.put(element, 0);
-        for(Map.Entry<MagicElement, Integer> entry : entries)
-            map.put(entry.getKey(), entry.getValue());
-        return map;
+        return new ResourceLocation(References.MODID, "none");
     }
 
     public List<MagicSchool> getSchools() {
         List<MagicSchool> schoolList = Lists.newArrayList();
-        for(int i = 0; i<MagicSchoolRegistry.SCHOOLS.size(); ++i)
-            if(schools[i])
-                schoolList.add(MagicSchoolRegistry.getSchoolFromId(i));
+        for(IMagicType type : this.associations)
+            if(type instanceof MagicSchool)
+                schoolList.add((MagicSchool) type);
         return schoolList;
     }
 
     public List<MagicElement> getElements() {
         List<MagicElement> elementList = Lists.newArrayList();
-        for(int i = 0; i<MagicElementRegistry.ELEMENTS.size(); ++i)
-            if(elements[i])
-                elementList.add(MagicElementRegistry.getElementFromId(i));
+        for(IMagicType type : this.associations)
+            if(type instanceof MagicElement)
+                elementList.add((MagicElement) type);
         return elementList;
     }
 
     public String getName() {
-        return resourceLocation.getPath();
+        return this.getResourceLocation().getPath();
     }
 
     public ResourceLocation getSpellIcon() {
-        return new ResourceLocation(resourceLocation.getNamespace(), "textures/gui/spell_icons/"+getName()+".png");
+        return new ResourceLocation(this.getResourceLocation().getNamespace(), "textures/gui/spell_icons/"+getName()+".png");
     }
 
     public IMagicData getMagicData(PlayerEntity player) {
         return player.getCapability(MagicDataProvider.MAGIC_DATA_CAPABILITY, null).orElseThrow(IllegalStateException::new);
-    }
-
-    public int getUsesPerCharge(int chargeLevel) {
-        return 0;
     }
 
     public boolean canCast(PlayerEntity player) {
@@ -133,27 +103,14 @@ public class Spell implements INBTSerializable<CompoundNBT> {
             return false;
         if(player.isCreative())
             return true;
-        if(this.remainingUses>0 || data.hasChargeLevel(currentSpellChargeLevel)) {
-            for(int i = 0; i < MagicElementRegistry.ELEMENTS.size(); i ++)
-                if(data.getElementLevel(MagicElementRegistry.getElementFromId(i))<this.minElementLevels[i]) {
-                    if(!player.getCommandSenderWorld().isClientSide)
-                        player.sendMessage(new StringTextComponent("You aren't high enough level to use this spell."), Util.NIL_UUID);
+        if(data.hasChargeLevel(currentSpellChargeLevel) || (this instanceof IHasMultiUses && ((IHasMultiUses)this).getUses()>0)) {
+            for(SpellRequirement requirement : requirements) {
+                if(!requirement.test(player, data))
                     return false;
-                }
-            for(int i = 0; i < MagicSchoolRegistry.SCHOOLS.size(); i ++)
-                if(data.getSchoolLevel(MagicSchoolRegistry.getSchoolFromId(i))<this.minSchoolLevels[i]) {
-                    if(!player.getCommandSenderWorld().isClientSide)
-                        player.sendMessage(new StringTextComponent("You aren't high enough level to use this spell."), Util.NIL_UUID);
+            }
+            if(this instanceof IHasMaterialComponents) {
+                if(!((IHasMaterialComponents) this).hasComponents(player, data))
                     return false;
-                }
-            if(!materialComponents.isEmpty()) {
-                for(ItemStack stack : materialComponents){
-                    if(!player.inventory.contains(stack)) {
-                        if(!player.getCommandSenderWorld().isClientSide)
-                            player.sendMessage(new StringTextComponent("You're missing a material component."), Util.NIL_UUID);
-                        return false;
-                    }
-                }
             }
             return true;
         }
@@ -163,7 +120,7 @@ public class Spell implements INBTSerializable<CompoundNBT> {
     public boolean castSpell(PlayerEntity player) {
         if(canCast(player)) {
             IMagicData data = this.getMagicData(player);
-            if (!materialComponents.isEmpty()) {
+            /*if (!materialComponents.isEmpty()) {
                 SpellEvent.MaterialCost costEvent = new SpellEvent.MaterialCost(this);
                 MinecraftForge.EVENT_BUS.post(costEvent);
                 Random rand = new Random();
@@ -180,16 +137,17 @@ public class Spell implements INBTSerializable<CompoundNBT> {
                         }
                     }
                 }
+            }*/
+            if(this instanceof IHasMaterialComponents)
+                ((IHasMaterialComponents) this).useMaterialComponent();
+            if(this instanceof IHasMultiUses) {
+                ((IHasMultiUses) this).castMultiUseSpell(player, data);
             }
-            if(this.remainingUses==0) {
+            else {
                 if(!player.isCreative() || data.hasChargeLevel(this.currentSpellChargeLevel))
                     data.useCharge(this.currentSpellChargeLevel, this.getElements(), this.getSchools(), IMagicData.EnumMagicTool.SPELL);
-                this.remainingUses = this.getUsesPerCharge(this.currentSpellChargeLevel);
-                this.maxUses = this.remainingUses;
                 this.lastSpellChargeLevel = this.currentSpellChargeLevel;
             }
-            else
-                this.remainingUses--;
             return true;
         }
         return false;
@@ -252,68 +210,33 @@ public class Spell implements INBTSerializable<CompoundNBT> {
         return 0;
     }
 
-    public int[] getMinimumSchoolLevels() {
-        return minSchoolLevels;
-    }
-
-    public int[] getMinimumElementLevels() {
-        return minElementLevels;
-    }
-
-    public List<ItemStack> getMaterialComponents() {
-        return materialComponents;
-    }
-
     @Override
     public CompoundNBT serializeNBT() {
         CompoundNBT nbt = new CompoundNBT();
-        nbt.putString("resourceLocation", this.resourceLocation.toString());
-
-        nbt.putInt("remainingUses", this.remainingUses);
-        nbt.putInt("maxUses", this.maxUses);
-        nbt.putInt("minSpellChargeLevel", this.minSpellChargeLevel);
+        nbt.putString("resourceLocation", this.getResourceLocation().toString());
         nbt.putInt("currentSpellChargeLevel", this.currentSpellChargeLevel);
         nbt.putInt("lastSpellChargeLevel", this.lastSpellChargeLevel);
-        nbt.putInt("minSpellLevel", this.minSpellLevel);
-        nbt.putIntArray("minSchoolLevels", this.minSchoolLevels);
-        nbt.putIntArray("minElementLevels", this.minElementLevels);
-        for(int i = 0; i < MagicSchoolRegistry.SCHOOLS.size(); ++i)
-            nbt.putBoolean("school"+i, schools[i]);
-        for(int i = 0; i < MagicElementRegistry.ELEMENTS.size(); ++i)
-            nbt.putBoolean("element"+i, elements[i]);
-
-        nbt.putInt("materialComponents_size",materialComponents.size());
-        int m = 0;
-        for(ItemStack stack : materialComponents){
-            nbt.put("materialComponent"+m, stack.serializeNBT());
-            ++m;
+        if(!modifiers.isEmpty()) {
+            ListNBT list = new ListNBT();
+            for(int i = 0; i < modifiers.size(); i ++)
+                list.add(i, StringNBT.valueOf(modifiers.get(i).getLocation().toString()));
+            nbt.put("modifiers", list);
         }
         return nbt;
     }
 
     @Override
     public void deserializeNBT(CompoundNBT nbt) {
-        this.resourceLocation = new ResourceLocation(nbt.getString("resourceLocation"));
-        this.remainingUses = nbt.getInt("remainingUses");
-        this.maxUses = nbt.getInt("maxUses");
-        this.minSpellChargeLevel = nbt.getInt("minSpellChargeLevel");
         this.currentSpellChargeLevel = nbt.getInt("currentSpellChargeLevel");
         this.lastSpellChargeLevel = nbt.getInt("lastSpellChargeLevel");
-        this.minSpellLevel = nbt.getInt("minSpellLevel");
-        this.minSchoolLevels = nbt.getIntArray("minSchoolLevels");
-        this.minElementLevels = nbt.getIntArray("minElementLevels");
-        for(int i = 0; i < MagicSchoolRegistry.SCHOOLS.size(); ++ i)
-            schools[i] = nbt.getBoolean("school"+i);
-        for(int i = 0; i < MagicElementRegistry.ELEMENTS.size(); ++ i)
-            elements[i] = nbt.getBoolean("element"+i);
-        List<ItemStack> materialComponentsIn = Lists.newArrayList();
-
-        for(int i = 0; i < nbt.getInt("materialComponents_size"); ++ i)
-            materialComponentsIn.add(ItemStack.of(nbt.getCompound("materialComponent"+i)));
-        this.materialComponents = materialComponentsIn;
-    }
-
-    enum SpellType {
-
+        this.modifiers.clear();
+        if(nbt.contains("modifiers")) {
+            ListNBT list = (ListNBT) nbt.get("modifiers");
+            list.forEach(inbt -> {
+                Modifier mod = SpellRegistry.getModifier(inbt.getAsString());
+                if(mod!=null)
+                    modifiers.add(mod);
+            });
+        }
     }
 }

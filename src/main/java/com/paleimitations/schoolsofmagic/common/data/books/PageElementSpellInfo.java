@@ -6,6 +6,7 @@ import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.MagicElement;
 import com.paleimitations.schoolsofmagic.common.MagicSchool;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
+import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMaterialComponents;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.client.renderer.IRenderTypeBuffer;
@@ -59,7 +60,7 @@ public class PageElementSpellInfo extends PageElement {
 		int boxHeight = 22;
 		int boxX = 24;
 		int boxY = 77;
-		int minSpell = spell.minSpellChargeLevel;
+		int minSpell = spell.getMinimumSpellChargeLevel();
 		int maxSpell = 8;
 		int totalWidth = (maxSpell + 1 - minSpell) * 33;
 		float scaleHeight = (float)boxHeight / 32f;
@@ -145,18 +146,18 @@ public class PageElementSpellInfo extends PageElement {
 	}
 
 	public int drawMaterialComponentTab(MatrixStack matrixStack, int x, int y, float zLevel, boolean gui, int light){
-		if(!spell.getMaterialComponents().isEmpty()) {
+		/*if(spell instanceof IHasMaterialComponents && !((IHasMaterialComponents) spell).getMaterialComponents().isEmpty()) {
 			matrixStack.pushPose();
 			Minecraft mc = Minecraft.getInstance();
-			int j = (mc.player.tickCount/60) % spell.getMaterialComponents().size();
-			ItemStack stack = spell.getMaterialComponents().get(j);
+			int j = (mc.player.tickCount/60) % ((IHasMaterialComponents) spell).getMaterialComponents().size();
+			ItemStack stack = ((IHasMaterialComponents) spell).getMaterialComponents().get(j);
 			mc.getTextureManager().bind(SPELL_ICONS);
 			this.drawTexturedModalRect(matrixStack, x, y, 0, 165, 73, 18, zLevel, light);
 			this.drawItemStack(matrixStack, stack, x+1, y+1, gui);
 			drawStandardText(matrixStack, stack.getDisplayName().getContents(), 51, 8, x+45.5f, y+10f, 0, true, false, gui, light);
 			matrixStack.popPose();
 			return y + 18;
-		}
+		}*/
 		return y;
 	}
 
@@ -176,12 +177,12 @@ public class PageElementSpellInfo extends PageElement {
 			this.drawTexturedModalRect(matrixStack,0, 0, school.getId()*30, 60, 30, 30, zLevel, light);
 			matrixStack.popPose();
 
-			boolean flag = spell.getMinimumSchoolLevels()[school.getId()]>0;
+			/*boolean flag = spell.getMinimumSchoolLevels()[school.getId()]>0;
 			if(flag) {
 				drawStandardText(matrixStack, I18n.get("school." + school.getName() + ".name"), 53, 6, x + 18, y + 2, 0, false, false, gui, light);
 				drawStandardText(matrixStack, I18n.get("page.level.element") + ": "+ (spell.getMinimumSchoolLevels()[school.getId()]+1), 53, 6, x + 18, y + 9, 0, false, false, gui, light);
 			}
-			else
+			else*/
 				drawStandardText(matrixStack, I18n.get("school."+school.getName()+".name"), 53,8, x+44, y+10, 0, true, false, gui, light);
 
 			matrixStack.popPose();
@@ -206,12 +207,12 @@ public class PageElementSpellInfo extends PageElement {
 			this.drawTexturedModalRect(matrixStack, 0, 0, (element.getId()%8)*30, element.getId()/8*30, 30, 30, zLevel, light);
 			matrixStack.popPose();
 
-			boolean flag = spell.getMinimumElementLevels()[element.getId()]>0;
+			/*boolean flag = spell.getMinimumElementLevels()[element.getId()]>0;
 			if(flag) {
 				drawStandardText(matrixStack, I18n.get("element." + element.getName() + ".name"), 53, 6, x + 18, y + 2, 0, false, false, gui, light);
 				drawStandardText(matrixStack, I18n.get("page.level.element") + ": "+ (spell.getMinimumElementLevels()[element.getId()]+1), 53, 6, x + 18, y + 9, 0, false, false, gui, light);
 			}
-			else
+			else*/
 				drawStandardText(matrixStack, I18n.get("element."+element.getName()+".name"), 53,8, x+44, y+10, 0, true, false, gui, light);
 
 			matrixStack.popPose();

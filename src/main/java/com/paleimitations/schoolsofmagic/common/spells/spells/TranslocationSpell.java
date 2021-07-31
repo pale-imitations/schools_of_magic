@@ -20,16 +20,27 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
-public class TranslocationSpell extends Spell implements IHasPower, IHasMultiUses {
+public class TranslocationSpell extends MultiUseSpell implements IHasPower {
 
     public TranslocationSpell() {
-        super(new ResourceLocation(References.MODID,"translocation"), 3, 0, generateSchoolMap(), generateElementMap(),
-                Lists.newArrayList(MagicSchoolRegistry.CONJURATION), Lists.newArrayList(MagicElementRegistry.HIEROMANCY),
-                Lists.newArrayList());
+        super();
     }
 
-    public TranslocationSpell(CompoundNBT nbt){
-        this.deserializeNBT(nbt);
+    @Override
+    public ResourceLocation getResourceLocation() {
+        return new ResourceLocation(References.MODID,"translocation");
+    }
+
+    @Override
+    public int getMinimumSpellChargeLevel() {
+        return 3;
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        this.associations.add(MagicSchoolRegistry.CONJURATION);
+        this.associations.add(MagicElementRegistry.HIEROMANCY);
     }
 
     @Override
@@ -38,7 +49,7 @@ public class TranslocationSpell extends Spell implements IHasPower, IHasMultiUse
         SpellEvent.Power event = new SpellEvent.Power(this);
         MinecraftForge.EVENT_BUS.post(event);
 
-        LivingEntity base = Utils.getEntityOnVec(world, player, 20 + event.getAddition() + (lastSpellChargeLevel - minSpellChargeLevel) * 5);
+        LivingEntity base = Utils.getEntityOnVec(world, player, 20 + event.getAddition() + (lastSpellChargeLevel - getMinimumSpellChargeLevel()) * 5);
         if(base != null && this.castSpell(player)) {
             double plX = player.getX();
             double plY = player.getY();
@@ -76,15 +87,5 @@ public class TranslocationSpell extends Spell implements IHasPower, IHasMultiUse
         SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 1 + (chargeLevel - 3) * 2);
         MinecraftForge.EVENT_BUS.post(event);
         return event.getUses();
-    }
-
-    @Override
-    public int getMaxUses(int chargeLevel) {
-        return this.maxUses;
-    }
-
-    @Override
-    public int getUses() {
-        return this.remainingUses;
     }
 }

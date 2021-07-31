@@ -21,16 +21,22 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
-public class SnowballSpell extends Spell implements IHasPower, IHasMultiUses {
+public class SnowballSpell extends MultiUseSpell implements IHasPower {
 
 	public SnowballSpell() {
-		super(new ResourceLocation(References.MODID,"snowball"), 0, 0, generateSchoolMap(), generateElementMap(),
-				Lists.newArrayList(MagicSchoolRegistry.EVOCATION), Lists.newArrayList(MagicElementRegistry.CRYOMANCY),
-				Lists.newArrayList());
+		super();
 	}
 
-	public SnowballSpell(CompoundNBT nbt){
-		this.deserializeNBT(nbt);
+	@Override
+	public ResourceLocation getResourceLocation() {
+		return new ResourceLocation(References.MODID,"snowball");
+	}
+
+	@Override
+	public void init() {
+		super.init();
+		this.associations.add(MagicSchoolRegistry.EVOCATION);
+		this.associations.add(MagicElementRegistry.CRYOMANCY);
 	}
 
 	@Override
@@ -38,16 +44,6 @@ public class SnowballSpell extends Spell implements IHasPower, IHasMultiUses {
 		SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 9 + 10 * chargeLevel);
 		MinecraftForge.EVENT_BUS.post(event);
 		return event.getUses();
-	}
-
-	@Override
-	public int getMaxUses(int chargeLevel) {
-		return this.getUsesPerCharge(chargeLevel);
-	}
-
-	@Override
-	public int getUses() {
-		return this.remainingUses;
 	}
 
 	@Override

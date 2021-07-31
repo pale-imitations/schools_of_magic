@@ -25,29 +25,35 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
-public class FangMangleSpell extends Spell implements IHasMultiUses, IHasArea {
-
+public class FangMangleSpell extends MultiUseSpell implements IHasArea {
 
     public FangMangleSpell() {
-        super(new ResourceLocation(References.MODID,"fang_mangle"), 2, 0, generateSchoolMap(), generateElementMap(),
-                Lists.newArrayList(MagicSchoolRegistry.EVOCATION, MagicSchoolRegistry.CONJURATION), Lists.newArrayList(MagicElementRegistry.INFERNALITY),
-                Lists.newArrayList());
+        super();
     }
 
-    public FangMangleSpell(CompoundNBT nbt){
-        this.deserializeNBT(nbt);
+    @Override
+    public ResourceLocation getResourceLocation() {
+        return new ResourceLocation(References.MODID,"fang_mangle");
+    }
+
+    @Override
+    public int getMinimumSpellChargeLevel() {
+        return 2;
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        this.associations.add(MagicSchoolRegistry.EVOCATION);
+        this.associations.add(MagicSchoolRegistry.CONJURATION);
+        this.associations.add(MagicElementRegistry.INFERNALITY);
     }
 
     @Override
     public int getUsesPerCharge(int chargeLevel) {
-        SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 3 + (chargeLevel-minSpellChargeLevel)*2);
+        SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 3 + (chargeLevel-getMinimumSpellChargeLevel())*2);
         MinecraftForge.EVENT_BUS.post(event);
         return event.getUses();
-    }
-
-    @Override
-    public int getMaxUses(int chargeLevel) {
-        return maxUses;
     }
 
     @Override

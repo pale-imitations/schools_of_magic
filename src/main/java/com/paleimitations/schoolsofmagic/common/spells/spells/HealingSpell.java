@@ -26,16 +26,22 @@ import net.minecraftforge.common.MinecraftForge;
 
 import java.util.Random;
 
-public class HealingSpell extends Spell implements IHasMultiUses {
+public class HealingSpell extends MultiUseSpell {
 
     public HealingSpell() {
-        super(new ResourceLocation(References.MODID,"healing"), 0, 0, generateSchoolMap(), generateElementMap(),
-                Lists.newArrayList(MagicSchoolRegistry.ABJURATION), Lists.newArrayList(MagicElementRegistry.ANIMANCY),
-                Lists.newArrayList());
+        super();
     }
 
-    public HealingSpell(CompoundNBT nbt){
-        this.deserializeNBT(nbt);
+    @Override
+    public ResourceLocation getResourceLocation() {
+        return new ResourceLocation(References.MODID,"healing");
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        this.associations.add(MagicSchoolRegistry.ABJURATION);
+        this.associations.add(MagicElementRegistry.ANIMANCY);
     }
 
     @Override
@@ -65,18 +71,8 @@ public class HealingSpell extends Spell implements IHasMultiUses {
     }
 
     @Override
-    public int getMaxUses(int chargeLevel) {
-        return maxUses;
-    }
-
-    @Override
-    public int getUses() {
-        return remainingUses;
-    }
-
-    @Override
     public int getUsesPerCharge(int chargeLevel) {
-        SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 3 + (chargeLevel-minSpellChargeLevel)*2);
+        SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 3 + (chargeLevel-getMinimumSpellChargeLevel())*2);
         MinecraftForge.EVENT_BUS.post(event);
         return event.getUses();
     }

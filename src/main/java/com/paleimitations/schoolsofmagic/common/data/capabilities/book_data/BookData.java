@@ -6,17 +6,15 @@ import com.paleimitations.schoolsofmagic.common.data.BindingType;
 import com.paleimitations.schoolsofmagic.common.data.books.*;
 import com.paleimitations.schoolsofmagic.common.registries.BookPageRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
+import com.paleimitations.schoolsofmagic.common.registries.SpellRegistry;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
-import com.paleimitations.schoolsofmagic.common.spells.SpellHelper;
 import net.minecraft.item.DyeColor;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.tileentity.BannerPattern;
 import net.minecraft.util.IStringSerializable;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Tuple;
 import net.minecraft.world.storage.WorldSavedData;
 import net.minecraftforge.common.IExtensibleEnum;
-import org.omg.DynamicAny.DynEnumHelper;
 
 import java.util.List;
 
@@ -139,9 +137,11 @@ public class BookData extends WorldSavedData implements IBookPageHolder {
         this.pages.clear();
         for(int i = 0; i < nbt.getInt("pages_size"); ++i) {
             if(nbt.contains("is_spell_page_"+i)) {
-                Spell spell = SpellHelper.getSpellInstance(new ResourceLocation(nbt.getString("spell_location_"+i)), nbt.getCompound("spell_data_"+i));
-                if(spell!=null)
+                Spell spell = SpellRegistry.getSpell(nbt.getString("spell_location_"+i));
+                if(spell!=null) {
+                    spell.deserializeNBT(nbt.getCompound("spell_data_"+i));
                     this.pages.add(new BookPageSpell(spell));
+                }
             }
             else {
                 BookPage p = BookPageRegistry.getBookPage(nbt.getString("page_" + i));

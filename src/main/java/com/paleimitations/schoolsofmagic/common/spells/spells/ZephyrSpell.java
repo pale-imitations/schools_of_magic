@@ -21,33 +21,34 @@ import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 
-public class ZephyrSpell extends Spell implements IHasMultiUses, IHasPower, IHasAdjustableElements {
+public class ZephyrSpell extends MultiUseSpell implements IHasPower, IHasAdjustableElements {
 
     public ZephyrSpell() {
-        super(new ResourceLocation(References.MODID,"zephyr"), 1, 0, generateSchoolMap(), generateElementMap(),
-                Lists.newArrayList(MagicSchoolRegistry.CONJURATION), Lists.newArrayList(MagicElementRegistry.AEROMANCY),
-                Lists.newArrayList());
+        super();
     }
 
-    public ZephyrSpell(CompoundNBT nbt){
-        this.deserializeNBT(nbt);
+    @Override
+    public ResourceLocation getResourceLocation() {
+        return new ResourceLocation(References.MODID,"zephyr");
+    }
+
+    @Override
+    public int getMinimumSpellChargeLevel() {
+        return 1;
+    }
+
+    @Override
+    public void init() {
+        super.init();
+        this.associations.add(MagicSchoolRegistry.CONJURATION);
+        this.associations.add(MagicElementRegistry.AEROMANCY);
     }
 
     @Override
     public int getUsesPerCharge(int chargeLevel) {
-        SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 200 + (chargeLevel-minSpellChargeLevel)*200);
+        SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 200 + (chargeLevel-getMinimumSpellChargeLevel())*200);
         MinecraftForge.EVENT_BUS.post(event);
         return event.getUses();
-    }
-
-    @Override
-    public int getMaxUses(int chargeLevel) {
-        return maxUses;
-    }
-
-    @Override
-    public int getUses() {
-        return this.remainingUses;
     }
 
     @Override

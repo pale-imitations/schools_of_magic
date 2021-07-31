@@ -2,16 +2,12 @@ package com.paleimitations.schoolsofmagic.common.network;
 
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.IMagicData;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.MagicDataProvider;
-import com.paleimitations.schoolsofmagic.common.items.BookBaseItem;
-import com.paleimitations.schoolsofmagic.common.registries.CapabilityRegistry;
+import com.paleimitations.schoolsofmagic.common.registries.SpellRegistry;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
-import com.paleimitations.schoolsofmagic.common.spells.SpellHelper;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.network.PacketBuffer;
-import net.minecraft.util.Hand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.network.NetworkEvent;
 
@@ -48,8 +44,9 @@ public class SetSpellPacket<MSG> {
             if(entity instanceof PlayerEntity) {
                 PlayerEntity player = (PlayerEntity) entity;
                 IMagicData data = player.getCapability(MagicDataProvider.MAGIC_DATA_CAPABILITY, null).orElseThrow(IllegalStateException::new);
-                Spell spell = SpellHelper.getSpellInstance(pkt.spellLocation, pkt.spellData);
+                Spell spell = SpellRegistry.getSpell(pkt.spellLocation.toString());
                 if(spell!=null) {
+                    spell.deserializeNBT(pkt.spellData);
                     data.setSpell(pkt.spellSlot, spell);
                 }
             }

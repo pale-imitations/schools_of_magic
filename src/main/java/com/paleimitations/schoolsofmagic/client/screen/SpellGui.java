@@ -77,7 +77,7 @@ public class SpellGui extends AbstractGui {
                         if(spell!=null) {
                             int j = spell.currentSpellChargeLevel + (int) dW;
                             int a = data.getLargestChargeLevel();
-                            int level = MathHelper.clamp(j, spell.minSpellChargeLevel, a);
+                            int level = MathHelper.clamp(j, spell.getMinimumSpellChargeLevel(), a);
                             if(level != spell.currentSpellChargeLevel) {
                                 PacketHandler.INSTANCE.sendToServer(new SwapSpellChargePacket(player.getId(), data.getCurrentSpellSlot(), level));
                                 spell.currentSpellChargeLevel = level;
@@ -114,7 +114,7 @@ public class SpellGui extends AbstractGui {
                     if (data.getCurrentSpell() != null) {
                         Spell spell = data.getCurrentSpell();
                         int i = spell.currentSpellChargeLevel;
-                        boolean usable = i >= spell.minSpellChargeLevel;
+                        boolean usable = i >= spell.getMinimumSpellChargeLevel();
                         float countdown = data.getCountdowns()[i];
                         float maxCountdown = MagicData.MAX_COUNTDOWNS[i];
                         float cooldown = (maxCountdown - countdown) / maxCountdown;
@@ -213,9 +213,9 @@ public class SpellGui extends AbstractGui {
                         }
                         matrix.popPose();
 
-                        if ((spell instanceof IHasDuration && ((IHasDuration) spell).getDefaultDuration(spell.lastSpellChargeLevel) > 0) || spell.getUsesPerCharge(spell.lastSpellChargeLevel) >= 100) {
+                        if ((spell instanceof IHasDuration && ((IHasDuration) spell).getDefaultDuration(spell.lastSpellChargeLevel) > 0) || (spell instanceof IHasMultiUses && ((IHasMultiUses)spell).getUsesPerCharge(spell.lastSpellChargeLevel) >= 100)) {
                             int width = spell instanceof IHasDuration ? Math.round((float) ((IHasDuration) spell).getDuration() / (float) ((IHasDuration) spell).getDefaultDuration(spell.lastSpellChargeLevel) * 64f) :
-                                    Math.round((float) spell.remainingUses / (spell instanceof IHasMultiUses ? (float) ((IHasMultiUses) spell).getMaxUses(spell.lastSpellChargeLevel) : spell.getUsesPerCharge(spell.lastSpellChargeLevel)) * 64f);
+                                    spell instanceof IHasMultiUses ? Math.round((float) ((IHasMultiUses) spell).getUses() / (float) ((IHasMultiUses) spell).getMaxUses(spell.lastSpellChargeLevel) * 64f) : 64;
 
                             matrix.pushPose();
                             float scaleDur = 0.65f;
@@ -275,8 +275,8 @@ public class SpellGui extends AbstractGui {
                                     matrix.popPose();
                                     break;
                             }
-                        } else if (spell.getUsesPerCharge(spell.lastSpellChargeLevel) > 0) {
-                            String remUses = String.valueOf(spell.remainingUses);
+                        } else if (spell instanceof IHasMultiUses) {
+                            String remUses = String.valueOf(((IHasMultiUses) spell).getUses());
                             minecraft.getTextureManager().bind(getTexture(player.getMainHandItem()));
                             float scaleUses = Math.min(11f / (float) this.font.width(remUses), 10f / (float) this.font.lineHeight);
                             switch(Config.getSpellGuiPostion()) {
@@ -348,7 +348,7 @@ public class SpellGui extends AbstractGui {
                     for (int i = 0; i < maxSpellCharge; ++i) {
                         boolean hasSpell = data.getCurrentSpell() != null;
                         boolean isSelected = hasSpell && data.getCurrentSpell().currentSpellChargeLevel == i;
-                        boolean usable = hasSpell && i >= data.getCurrentSpell().minSpellChargeLevel;
+                        boolean usable = hasSpell && i >= data.getCurrentSpell().getMinimumSpellChargeLevel();
                         float countdown = data.getCountdowns()[i];
                         float maxCountdown = MagicData.MAX_COUNTDOWNS[i];
                         float cooldown = (maxCountdown - countdown) / maxCountdown;
