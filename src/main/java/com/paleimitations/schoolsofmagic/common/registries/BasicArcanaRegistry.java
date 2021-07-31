@@ -30,5 +30,6 @@ public class BasicArcanaRegistry {
         new BookPageSpell(new FangMangleSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new InvisibilitySpell()).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new HealingSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
+        new BookPageSpell(new SummonBeeSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
     }
 }

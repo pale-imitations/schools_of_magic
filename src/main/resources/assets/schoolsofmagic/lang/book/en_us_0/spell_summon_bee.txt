@@ -1,0 +1,3 @@
+  This spell conjures angry bees to attack a target the caster is looking at.
+<~><~>  The target must be within 20 blocks of the caster and the conjured bees last for 25 seconds before disappearing once again.
+<~><~>  The spell will requires a second level spell charge and conjure two bees, plus one for each spell charge level above second.

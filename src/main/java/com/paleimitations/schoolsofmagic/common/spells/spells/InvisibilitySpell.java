@@ -104,13 +104,21 @@ public class InvisibilitySpell extends Spell implements IHasDuration, IHasAdjust
     }
 
     @Override
-    public int getDefaultDuration(int chargeLevel) {
-        return maxDuration;
+    public int getDurationForCharge(int chargeLevel) {
+        SpellEvent.Duration event = new SpellEvent.Duration(this);
+        event.setMultiplier(1f + 0.5f * (this.currentSpellChargeLevel-getMinimumSpellChargeLevel()));
+        MinecraftForge.EVENT_BUS.post(event);
+        return Math.round(400f*event.getMultiplier());
     }
 
     @Override
     public int getDuration() {
         return duration;
+    }
+
+    @Override
+    public int getMaxDuration() {
+        return maxDuration;
     }
 
     @Override

@@ -1,20 +1,16 @@
 package com.paleimitations.schoolsofmagic.common.spells.spells;
 
-import com.google.common.collect.Lists;
 import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.MagicElement;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.SoundRegistry;
-import com.paleimitations.schoolsofmagic.common.spells.Spell;
 import com.paleimitations.schoolsofmagic.common.spells.events.SpellEvent;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasAdjustableElements;
-import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMultiUses;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasPower;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.SmallFireballEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.*;
 import net.minecraft.util.math.vector.Vector3d;
 import net.minecraft.world.World;
@@ -62,11 +58,6 @@ public class BlazeSpell extends MultiUseSpell implements IHasPower, IHasAdjustab
 	}
 
 	@Override
-	public int getUses() {
-		return this.remainingUses;
-	}
-
-	@Override
 	public ActionResult<ItemStack> use(World world, PlayerEntity player, Hand hand, ItemStack stack) {
 		if(this.castSpell(player)) {
 			Vector3d vec = player.getLookAngle();
@@ -96,6 +87,6 @@ public class BlazeSpell extends MultiUseSpell implements IHasPower, IHasAdjustab
 
 	@Override
 	public boolean isAcceptableElement(MagicElement element) {
-		return element == MagicElementRegistry.CHAOTICS || element == MagicElementRegistry.INFERNALITY;
+		return element == MagicElementRegistry.CHAOTIMANCY || element == MagicElementRegistry.CHRONOMANCY;
 	}
 }

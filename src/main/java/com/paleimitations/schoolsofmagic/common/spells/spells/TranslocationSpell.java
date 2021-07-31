@@ -50,7 +50,7 @@ public class TranslocationSpell extends MultiUseSpell implements IHasPower {
         MinecraftForge.EVENT_BUS.post(event);
 
         LivingEntity base = Utils.getEntityOnVec(world, player, 20 + event.getAddition() + (lastSpellChargeLevel - getMinimumSpellChargeLevel()) * 5);
-        if(base != null && this.castSpell(player)) {
+        if(base != null && base!=player && this.castSpell(player)) {
             double plX = player.getX();
             double plY = player.getY();
             double plZ = player.getZ();

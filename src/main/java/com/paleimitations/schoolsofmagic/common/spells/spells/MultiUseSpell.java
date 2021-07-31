@@ -14,7 +14,7 @@ public abstract class MultiUseSpell extends Spell implements IHasMultiUses {
     public MultiUseSpell() {
         super();
         this.remainingUses = 0;
-        this.maxUses = 0;
+        this.maxUses = this.getUsesPerCharge(this.getMinimumSpellChargeLevel());
     }
 
     @Override
@@ -29,7 +29,7 @@ public abstract class MultiUseSpell extends Spell implements IHasMultiUses {
 
     @Override
     public int getUses() {
-        return 0;
+        return this.remainingUses;
     }
 
     @Override

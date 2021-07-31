@@ -213,8 +213,8 @@ public class SpellGui extends AbstractGui {
                         }
                         matrix.popPose();
 
-                        if ((spell instanceof IHasDuration && ((IHasDuration) spell).getDefaultDuration(spell.lastSpellChargeLevel) > 0) || (spell instanceof IHasMultiUses && ((IHasMultiUses)spell).getUsesPerCharge(spell.lastSpellChargeLevel) >= 100)) {
-                            int width = spell instanceof IHasDuration ? Math.round((float) ((IHasDuration) spell).getDuration() / (float) ((IHasDuration) spell).getDefaultDuration(spell.lastSpellChargeLevel) * 64f) :
+                        if ((spell instanceof IHasDuration && ((IHasDuration) spell).getMaxDuration() > 0) || (spell instanceof IHasMultiUses && ((IHasMultiUses)spell).getUsesPerCharge(spell.lastSpellChargeLevel) >= 100)) {
+                            int width = spell instanceof IHasDuration ? Math.round((float) ((IHasDuration) spell).getDuration() / (float) ((IHasDuration) spell).getMaxDuration() * 64f) :
                                     spell instanceof IHasMultiUses ? Math.round((float) ((IHasMultiUses) spell).getUses() / (float) ((IHasMultiUses) spell).getMaxUses(spell.lastSpellChargeLevel) * 64f) : 64;
 
                             matrix.pushPose();

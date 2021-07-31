@@ -1,23 +1,15 @@
 package com.paleimitations.schoolsofmagic.common.spells.spells;
 
-import com.google.common.collect.Lists;
 import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
-import com.paleimitations.schoolsofmagic.common.spells.Spell;
 import com.paleimitations.schoolsofmagic.common.spells.events.SpellEvent;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasArea;
-import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMultiUses;
-import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasPower;
 import net.minecraft.block.BlockState;
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.monster.EvokerEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.EvokerFangsEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.*;
-import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.shapes.VoxelShape;
@@ -46,7 +38,8 @@ public class FangMangleSpell extends MultiUseSpell implements IHasArea {
         super.init();
         this.associations.add(MagicSchoolRegistry.EVOCATION);
         this.associations.add(MagicSchoolRegistry.CONJURATION);
-        this.associations.add(MagicElementRegistry.INFERNALITY);
+        this.associations.add(MagicElementRegistry.UMBRAMANCY);
+        this.associations.add(MagicElementRegistry.CHAOTIMANCY);
     }
 
     @Override
@@ -54,11 +47,6 @@ public class FangMangleSpell extends MultiUseSpell implements IHasArea {
         SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 3 + (chargeLevel-getMinimumSpellChargeLevel())*2);
         MinecraftForge.EVENT_BUS.post(event);
         return event.getUses();
-    }
-
-    @Override
-    public int getUses() {
-        return this.remainingUses;
     }
 
     @Override

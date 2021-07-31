@@ -1,24 +1,12 @@
 package com.paleimitations.schoolsofmagic.common.spells.spells;
 
-import com.google.common.collect.Lists;
 import com.paleimitations.schoolsofmagic.References;
-import com.paleimitations.schoolsofmagic.common.MagicElement;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
-import com.paleimitations.schoolsofmagic.common.registries.SoundRegistry;
-import com.paleimitations.schoolsofmagic.common.spells.Spell;
 import com.paleimitations.schoolsofmagic.common.spells.events.SpellEvent;
-import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasAdjustableElements;
-import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasDuration;
-import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMultiUses;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.particles.ParticleTypes;
-import net.minecraft.potion.EffectInstance;
-import net.minecraft.potion.Effects;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
@@ -41,7 +29,7 @@ public class HealingSpell extends MultiUseSpell {
     public void init() {
         super.init();
         this.associations.add(MagicSchoolRegistry.ABJURATION);
-        this.associations.add(MagicElementRegistry.ANIMANCY);
+        this.associations.add(MagicElementRegistry.HERBALMANCY);
     }
 
     @Override

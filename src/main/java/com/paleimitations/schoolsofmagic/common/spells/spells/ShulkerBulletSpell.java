@@ -1,27 +1,21 @@
 package com.paleimitations.schoolsofmagic.common.spells.spells;
 
-import com.google.common.collect.Lists;
 import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.data.Utils;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
-import com.paleimitations.schoolsofmagic.common.spells.Spell;
 import com.paleimitations.schoolsofmagic.common.spells.events.SpellEvent;
-import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMultiUses;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasPower;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.projectile.ShulkerBulletEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.SoundEvents;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
-
-import java.util.Random;
 
 public class ShulkerBulletSpell extends MultiUseSpell implements IHasPower {
 
@@ -43,7 +37,7 @@ public class ShulkerBulletSpell extends MultiUseSpell implements IHasPower {
     public void init() {
         super.init();
         this.associations.add(MagicSchoolRegistry.EVOCATION);
-        this.associations.add(MagicElementRegistry.CHAOTICS);
+        this.associations.add(MagicElementRegistry.CHAOTIMANCY);
     }
 
     @Override
