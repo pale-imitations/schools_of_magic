@@ -48,12 +48,12 @@ public class Spell implements INBTSerializable<CompoundNBT> {
     public List<Modifier> modifiers = Lists.newArrayList();
 
     public Spell() {
+        this.currentSpellChargeLevel = this.getMinimumSpellChargeLevel();
+        this.lastSpellChargeLevel = this.getMinimumSpellChargeLevel();
         this.init();
     }
 
     public void init() {
-        this.currentSpellChargeLevel = this.getMinimumSpellChargeLevel();
-        this.lastSpellChargeLevel = this.getMinimumSpellChargeLevel();
     }
 
     public int getMinimumSpellChargeLevel() {

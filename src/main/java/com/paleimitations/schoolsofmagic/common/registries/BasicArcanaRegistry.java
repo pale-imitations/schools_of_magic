@@ -22,14 +22,17 @@ public class BasicArcanaRegistry {
                         new ParagraphBox(134,50, 4, 99, 140))
         )).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new BlazeSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
+        new BookPageSpell(new FurnaceFuelSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new ZephyrSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new GrowthSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new SnowballSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
-        new BookPageSpell(new ShulkerBulletSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new TranslocationSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
-        new BookPageSpell(new FangMangleSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
-        new BookPageSpell(new InvisibilitySpell()).addToList(BookPageRegistry.BASIC_ARCANA);
+        new BookPageSpell(new ShulkerBulletSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
+        new BookPageSpell(new RumorSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new HealingSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
         new BookPageSpell(new SummonBeeSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
+        new BookPageSpell(new FastForwardSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
+        new BookPageSpell(new FangMangleSpell()).addToList(BookPageRegistry.BASIC_ARCANA);
+        new BookPageSpell(new InvisibilitySpell()).addToList(BookPageRegistry.BASIC_ARCANA);
     }
 }

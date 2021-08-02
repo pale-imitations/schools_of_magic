@@ -1,0 +1,4 @@
+  This spell infuses a furnace with magical fire.
+<~><~>  The burn time for a 1st level spell charge is equivalent to 2 Wood Planks; a 3rd level spell charge = a piece of Coal; a 4th level spell charge = a Blaze Rod;
+an 7th level spell charge = a Block of Coal; a 8th level spell charge = a bucket of Lava.
+<~><~>  Simply shift right click the Furnace, Smoker, Blast Furnace, or other potential Furnace like block to activate the spell.

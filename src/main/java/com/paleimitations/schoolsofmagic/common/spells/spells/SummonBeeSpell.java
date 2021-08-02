@@ -11,6 +11,7 @@ import com.paleimitations.schoolsofmagic.common.spells.events.SpellEvent;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasArea;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasDuration;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasPower;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.passive.BeeEntity;
@@ -49,7 +50,9 @@ public class SummonBeeSpell extends Spell implements IHasDuration, IHasPower, IH
 
     @Override
     public int getDurationForCharge(int chargeLevel) {
-        return 500;
+        SpellEvent.Duration event = new SpellEvent.Duration(this);
+        MinecraftForge.EVENT_BUS.post(event);
+        return Math.round(event.getMultiplier() * (500f + chargeLevel * 60f));
     }
 
     @Override
@@ -60,6 +63,14 @@ public class SummonBeeSpell extends Spell implements IHasDuration, IHasPower, IH
     @Override
     public int getMaxDuration() {
         return maxDuration;
+    }
+
+    @Override
+    public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+        super.inventoryTick(stack, world, entity, slot, selected);
+        if(duration>0) {
+            --duration;
+        }
     }
 
     @Override
@@ -75,6 +86,7 @@ public class SummonBeeSpell extends Spell implements IHasDuration, IHasPower, IH
         if(base != null && base!=player && this.castSpell(player)) {
             this.maxDuration = this.getDurationForCharge(currentSpellChargeLevel);
             this.duration = this.maxDuration;
+            player.playSound(SoundEvents.BEE_LOOP_AGGRESSIVE, 1f, 1f);
             for(int i = 0; i <= currentSpellChargeLevel + powerEvent.getAddition(); ++ i) {
                 BeeEntity bee = new BeeEntity(EntityType.BEE, player.level);
                 Random random = player.getRandom();

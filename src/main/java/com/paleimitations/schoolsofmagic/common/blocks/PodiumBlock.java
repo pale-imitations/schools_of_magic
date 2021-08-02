@@ -56,7 +56,7 @@ public class PodiumBlock extends ContainerBlock {
                 podium.setItem(player.getItemInHand(hand).split(1));
                 return ActionResultType.SUCCESS;
             }
-            else if(player.isCrouching() && player.getItemInHand(hand).isEmpty() && !podium.getItem().isEmpty()) {
+            else if(player.isShiftKeyDown() && player.getItemInHand(hand).isEmpty() && !podium.getItem().isEmpty()) {
                 player.setItemInHand(hand, podium.getItem().split(1));
                 PiglinTasks.angerNearbyPiglins(player, true);
                 return ActionResultType.SUCCESS;

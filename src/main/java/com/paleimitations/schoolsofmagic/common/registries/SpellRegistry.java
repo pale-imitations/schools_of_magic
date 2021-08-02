@@ -30,6 +30,9 @@ public class SpellRegistry {
         registerSpell(() -> new InvisibilitySpell());
         registerSpell(() -> new HealingSpell());
         registerSpell(() -> new SummonBeeSpell());
+        registerSpell(() -> new RumorSpell());
+        registerSpell(() -> new FastForwardSpell());
+        registerSpell(() -> new FurnaceFuelSpell());
         //Increases Power
         new Modifier(new ResourceLocation(References.MODID, "potent_1"), spell -> spell instanceof IHasPower, true); //modest potency
         new Modifier(new ResourceLocation(References.MODID, "potent_2"), spell -> spell instanceof IHasPower, true); //strong potency

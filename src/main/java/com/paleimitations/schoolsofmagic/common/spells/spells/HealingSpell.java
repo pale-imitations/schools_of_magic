@@ -29,7 +29,7 @@ public class HealingSpell extends MultiUseSpell {
     public void init() {
         super.init();
         this.associations.add(MagicSchoolRegistry.ABJURATION);
-        this.associations.add(MagicElementRegistry.HERBALMANCY);
+        this.associations.add(MagicElementRegistry.ANIMANCY);
     }
 
     @Override

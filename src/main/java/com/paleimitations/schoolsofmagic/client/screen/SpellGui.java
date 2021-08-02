@@ -77,7 +77,7 @@ public class SpellGui extends AbstractGui {
                         if(spell!=null) {
                             int j = spell.currentSpellChargeLevel + (int) dW;
                             int a = data.getLargestChargeLevel();
-                            int level = MathHelper.clamp(j, spell.getMinimumSpellChargeLevel(), a);
+                            int level = MathHelper.clamp(j, spell.getMinimumSpellChargeLevel(), Math.min(a, spell.getMaximumSpellChargeLevel()));
                             if(level != spell.currentSpellChargeLevel) {
                                 PacketHandler.INSTANCE.sendToServer(new SwapSpellChargePacket(player.getId(), data.getCurrentSpellSlot(), level));
                                 spell.currentSpellChargeLevel = level;
@@ -348,7 +348,7 @@ public class SpellGui extends AbstractGui {
                     for (int i = 0; i < maxSpellCharge; ++i) {
                         boolean hasSpell = data.getCurrentSpell() != null;
                         boolean isSelected = hasSpell && data.getCurrentSpell().currentSpellChargeLevel == i;
-                        boolean usable = hasSpell && i >= data.getCurrentSpell().getMinimumSpellChargeLevel();
+                        boolean usable = hasSpell && i >= data.getCurrentSpell().getMinimumSpellChargeLevel() && i <= data.getCurrentSpell().getMaximumSpellChargeLevel();
                         float countdown = data.getCountdowns()[i];
                         float maxCountdown = MagicData.MAX_COUNTDOWNS[i];
                         float cooldown = (maxCountdown - countdown) / maxCountdown;

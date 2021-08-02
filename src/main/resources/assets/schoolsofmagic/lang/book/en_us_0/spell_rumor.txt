@@ -1,0 +1,14 @@
+  The caster of this spell corrupts the mind of a creature using an insidious rumor.
+<~><~>  To cast this spell select an attacker you wish to enchant, this can be done from a distance of up to 20 blocks. Next select the target of the rumor.
+<~><~>  Once both are selected the spell is cast and the enchanted creature will be drawn to attack the target.
+<~><~>  This spell cannot enchant all creatures, passive creatures are naturally immune. Additionally, creatures of high health require higher spell charges to enchant.
+<~><~>  Refer here for the minimum spell charge required to enchant a mob based on it's health:
+<~>     1st level: 8 health
+<~>     2nd level: 16 health
+<~>     3rd level: 32 health
+<~>     4th level: 48 health
+<~>     5th level: 64 health
+<~>     6th level: 100 health
+<~>     7th level: 150 health
+<~>     8th level: 200 health
+<~>     9th level: Any health

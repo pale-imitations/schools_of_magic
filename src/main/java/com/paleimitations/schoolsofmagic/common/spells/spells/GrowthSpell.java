@@ -42,7 +42,9 @@ public class GrowthSpell extends MultiUseSpell implements IHasPower, IHasAdjusta
 
 	@Override
 	public int getUsesPerCharge(int chargeLevel) {
-		return 5 + chargeLevel * 5;
+		SpellEvent.UsesPerCharge event = new SpellEvent.UsesPerCharge(this, chargeLevel, 5 + chargeLevel * 5);
+		MinecraftForge.EVENT_BUS.post(event);
+		return event.getUses();
 	}
 
 	@Override

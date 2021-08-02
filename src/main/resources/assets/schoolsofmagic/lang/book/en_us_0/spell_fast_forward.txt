@@ -1,0 +1,5 @@
+  This spell channels time through a block or non-player creature.
+<~><~>  This spell targets one subject within a range of 10 blocks that the caster must focus on continuously, this can be difficult to use on creatures as they become faster.
+<~><~>  The subject experiences time three times as fast as normal by default, however they can be further sped up by upcasting the spell with higher level spell charges.
+<~><~>  By default the spell lasts 5 seconds but upcasting also increases the use length.
+<~><~>  This spell works especially well on crops and furnaces. Aging animals still takes a significant amount of time, perhaps a better spell exists for such a purpose.

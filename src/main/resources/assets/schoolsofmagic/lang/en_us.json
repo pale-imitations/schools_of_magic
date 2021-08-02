@@ -176,6 +176,12 @@
   "page.spell_healing.desc": "Grants it's caster health",
   "spell.summon_bee.name": "Summon Bees",
   "page.summon_bee.desc": "Summons bees to attack a target",
+  "spell.rumor.name": "Rumor",
+  "page.rumor.desc": "Corrupt a mind with a rumor",
+  "spell.fast_forward.name": "Fast Forward",
+  "page.fast_forward.desc": "Channels time through a subject",
+  "spell.furnace_fuel.name": "Fuel Furnace",
+  "page.furnace_fuel.desc": "Adds fuel time to a furnace",
 
   "_comment": "spell categories",
   "school.evocation.name": "Evocation",

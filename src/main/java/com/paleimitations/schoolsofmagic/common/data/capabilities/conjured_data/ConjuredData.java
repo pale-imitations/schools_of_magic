@@ -1,9 +1,6 @@
 package com.paleimitations.schoolsofmagic.common.data.capabilities.conjured_data;
 
-import com.paleimitations.schoolsofmagic.common.quests.Quest;
-import com.paleimitations.schoolsofmagic.common.quests.QuestHelper;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.util.INBTSerializable;
 
 public class ConjuredData implements IConjuredData, INBTSerializable<CompoundNBT> {
