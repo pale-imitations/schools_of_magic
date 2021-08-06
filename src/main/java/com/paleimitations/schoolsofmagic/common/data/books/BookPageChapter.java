@@ -64,7 +64,7 @@ public class BookPageChapter extends BookPage {
                     String[] text = new String[2];
                     text[0] = "page.chapter.element";
                     text[1] = String.valueOf(chapterNumber);
-                    this.elements.add(new PageElementTitle(text, 72, 58, 99, 16, 0, true));
+                    this.elements.add(new TitlePageElement(text, 72, 58, 99, 16, 0, true));
                 }
                 for(int i = 0; i <= chapterEnd-chapterStart; ++ i) {
                     BookPage page = book.getBookPage(chapterStart+i);
@@ -77,19 +77,19 @@ public class BookPageChapter extends BookPage {
                                 title[0] = ((PageElementStandardText) element).textLocation;
                                 break;
                             }*/
-                            if(element instanceof PageElementTitle) {
-                                title = ((PageElementTitle) element).text;
+                            if(element instanceof TitlePageElement) {
+                                title = ((TitlePageElement) element).text;
                                 break;
                             }
-                            if(element instanceof PageElementSpellInfo) {
-                                title[0] = "spell."+((PageElementSpellInfo)element).spell.getName()+".name";
+                            if(element instanceof SpellInfoPageElement) {
+                                title[0] = "spell."+((SpellInfoPageElement)element).spell.getName()+".name";
                                 title[1] = "title.spell_page.name";
                                 break;
                             }
                         }
                         for(PageElement element : page.elements){
-                            if(element instanceof PageElementDescription) {
-                                desc = ((PageElementDescription) element).description;
+                            if(element instanceof DescriptionPageElement) {
+                                desc = ((DescriptionPageElement) element).description;
                                 break;
                             }
                         }
@@ -102,7 +102,7 @@ public class BookPageChapter extends BookPage {
                     int xi = (i / segment) % 2 == 0 ? 23 : 134;
                     int yi = 65 + (i % segment)*18;
                     int targeti = i / (segment*2);
-                    this.elements.add(new PageElementChapterEntry(title, desc,chapterStart+i, xi, yi, targeti,99, 8));
+                    this.elements.add(new ChapterEntryPageElement(title, desc,chapterStart+i, xi, yi, targeti,99, 8));
                 }
             }
         }

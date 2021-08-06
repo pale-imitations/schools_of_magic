@@ -2,7 +2,7 @@ package com.paleimitations.schoolsofmagic.client.data;
 
 import com.paleimitations.schoolsofmagic.common.data.books.BookPage;
 import com.paleimitations.schoolsofmagic.common.data.books.PageElement;
-import com.paleimitations.schoolsofmagic.common.data.books.PageElementParagraphs;
+import com.paleimitations.schoolsofmagic.common.data.books.ParagraphsPageElement;
 import com.paleimitations.schoolsofmagic.common.registries.BookPageRegistry;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.IResource;
@@ -78,14 +78,14 @@ public enum BookTextManager implements ISelectiveResourceReloadListener {
     public static void loadText() {
         for(BookPage page : BookPageRegistry.PAGES){
             for(PageElement element : page.elements)
-                if(element instanceof PageElementParagraphs)
-                    ((PageElementParagraphs)element).loadText();
+                if(element instanceof ParagraphsPageElement)
+                    ((ParagraphsPageElement)element).loadText();
         }
     }
 
     public static void loadText(BookPage page) {
         for(PageElement element : page.elements)
-            if(element instanceof PageElementParagraphs)
-                ((PageElementParagraphs)element).loadText();
+            if(element instanceof ParagraphsPageElement)
+                ((ParagraphsPageElement)element).loadText();
     }
 }

@@ -5,11 +5,14 @@ import com.paleimitations.schoolsofmagic.common.config.Config;
 import com.paleimitations.schoolsofmagic.common.MagicElement;
 import com.paleimitations.schoolsofmagic.common.MagicSchool;
 import com.paleimitations.schoolsofmagic.common.data.books.BookPageSpell;
+import com.paleimitations.schoolsofmagic.common.network.PacketHandler;
+import com.paleimitations.schoolsofmagic.common.network.UpdateMagicDataPacket;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.SpellRegistry;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.ResourceLocation;
@@ -40,6 +43,7 @@ public class MagicData implements IMagicData, INBTSerializable<CompoundNBT> {
     private float potionXP;
     private float ritualXP;
     private int[] countdowns;
+    private boolean dirty = false;
 
     public MagicData() {
         this.charges = new int[MAX_CHARGE_LEVEL];
@@ -82,6 +86,11 @@ public class MagicData implements IMagicData, INBTSerializable<CompoundNBT> {
     @Override
     public List<Spell> getSpells() {
         return Lists.newArrayList(spells);
+    }
+
+    @Override
+    public void markDirty() {
+        this.dirty = true;
     }
 
     @Override
@@ -131,6 +140,12 @@ public class MagicData implements IMagicData, INBTSerializable<CompoundNBT> {
                     }
                 }
             }
+        }
+        if(dirty) {
+            if(player instanceof ServerPlayerEntity) {
+                PacketHandler.sendToTracking(new UpdateMagicDataPacket(player.getId(), this.serializeNBT()), (ServerPlayerEntity) player);
+            }
+            dirty = false;
         }
     }
 

@@ -1,12 +1,16 @@
 package com.paleimitations.schoolsofmagic.common.registries;
 
+import com.mojang.brigadier.CommandDispatcher;
 import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.SchoolsOfMagicMod;
+import com.paleimitations.schoolsofmagic.common.command.MagicXPCommand;
+import com.paleimitations.schoolsofmagic.common.command.RegisterCommandEvent;
 import com.paleimitations.schoolsofmagic.common.config.Config;
 import com.paleimitations.schoolsofmagic.common.data.loottables.LootInjecter;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.book_data.BookDataProvider;
 import com.paleimitations.schoolsofmagic.common.network.*;
 import net.minecraft.block.Block;
+import net.minecraft.command.CommandSource;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -17,6 +21,7 @@ import net.minecraft.util.SoundEvent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -47,6 +52,7 @@ public class Registry {
         MinecraftForge.EVENT_BUS.register(new Registry());
         MinecraftForge.EVENT_BUS.register(new BookDataProvider.Events());
         MinecraftForge.EVENT_BUS.register(new LootInjecter());
+        MinecraftForge.EVENT_BUS.register(RegisterCommandEvent.class);
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         MagicSchoolRegistry.init();
         MagicElementRegistry.init();
@@ -62,12 +68,12 @@ public class Registry {
         RecipeRegistry.register();
         ContainerRegistry.register();
         SpellRegistry.init();
-        BookPageRegistry.init();
         PacketHandler.registerMessages();
         TeaRegistry.register();
     }
 
     public static void init() {
+        BookPageRegistry.init();
         TeaIngredientRegistry.register();
         CapabilityRegistry.init();
         QuestRegistry.init();

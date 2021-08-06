@@ -2,62 +2,60 @@ package com.paleimitations.schoolsofmagic.common.data.books;
 
 import com.google.common.collect.Lists;
 import com.mojang.blaze3d.matrix.MatrixStack;
-import com.paleimitations.schoolsofmagic.References;
-import com.paleimitations.schoolsofmagic.client.data.BookTextManager;
+import com.paleimitations.schoolsofmagic.common.config.Config;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.FontRenderer;
-import net.minecraft.resources.IResource;
-import net.minecraft.util.ResourceLocation;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
+import net.minecraft.client.renderer.Tessellator;
+import net.minecraft.util.IReorderingProcessor;
+import net.minecraft.util.math.vector.Matrix4f;
+import net.minecraft.util.math.vector.TransformationMatrix;
+import net.minecraft.util.text.*;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import org.apache.commons.io.IOUtils;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.concurrent.atomic.AtomicReference;
 
-public class PageElementParagraphs extends PageElement {
+public class ParagraphPageElement extends PageElement {
 
-	public final String textLocation;
-	public final int fontColor;
+	public final TranslationTextComponent textLocation;
 	public final float scale;
+    public final int fontColor;
 	public final List<ParagraphBox> boxes;
-	public List<String> text = Lists.newArrayList();
+    public List<String> text = Lists.newArrayList();
 	public boolean tryLoad = true;
 
-	public PageElementParagraphs(String textLocation, float scale, int fontColor, int target, ParagraphBox... boxes) {
-		super(0, 0, target);
+	public ParagraphPageElement(TranslationTextComponent textLocation, float scale, int fontColor, int target, ParagraphBox... boxes) {
+		super(0,0, target);
 		this.textLocation = textLocation;
 		this.scale = scale;
-		this.fontColor = fontColor;
+        this.fontColor = fontColor;
 		this.boxes = Lists.newArrayList(boxes);
 	}
 
-    @OnlyIn(Dist.CLIENT)
-    public void loadText() {
-        text.clear();
-        Minecraft mc = Minecraft.getInstance();
-        ResourceLocation fileLoc = new ResourceLocation(References.MODID +":lang/book/" + mc.options.languageCode + "_0/" + textLocation + ".txt");
-        ResourceLocation backupLoc = new ResourceLocation(References.MODID +":lang/book/en_us_0/" + textLocation + ".txt");
-        BookTextManager bookTextManager = BookTextManager.INSTANCE;
-        IResource resource = bookTextManager.loadTextFile(fileLoc, backupLoc);
-        if(resource!=null) {
-            try {
-                String line = "";
-                for (String lineAddition : IOUtils.readLines(resource.getInputStream(), StandardCharsets.UTF_8))
-                    line += lineAddition;
-                String[] strings = line.split("<~>");
-                this.text = Lists.newArrayList(strings);
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }
-        System.out.println("loaded " + fileLoc.toString());
+    public float fontScale() {
+        return scale<=0? Config.Client.BOOK_FONT_SCALE.get().floatValue() : scale;
     }
 
     @Override
     public boolean isTarget(int i) {
         return i <= subpage;
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public void loadText() {
+	    ITextProperties properties = textLocation;
+	    FontRenderer font = Minecraft.getInstance().font;
+	    properties.visit((style, s) -> {
+            if (!s.isEmpty()) {
+                String[] strings = s.split("<~>");
+                this.text = Lists.newArrayList(strings);
+            }
+            return Optional.empty();
+        }, Style.EMPTY);
     }
 
     @Override
@@ -103,13 +101,13 @@ public class PageElementParagraphs extends PageElement {
 
     @Override
     @OnlyIn(Dist.CLIENT)
-	public void drawElement(MatrixStack matrixStack, float mouseX, float mouseY, int xIn, int yIn, float zLevel, boolean isGUI, int subpage, int light) {
-		Minecraft mc = Minecraft.getInstance();
-		FontRenderer font = mc.font;
+    public void drawElement(MatrixStack matrixStack, float mouseX, float mouseY, int xIn, int yIn, float zLevel, boolean isGUI, int subpage, int light) {
+        Minecraft mc = Minecraft.getInstance();
+        FontRenderer font = mc.font;
 
-		if(tryLoad && this.text.isEmpty()) {
-		    this.tryLoad = false;
-		    this.loadText();
+        if(tryLoad && this.text.isEmpty()) {
+            this.tryLoad = false;
+            this.loadText();
         }
 
         matrixStack.pushPose();
@@ -152,7 +150,7 @@ public class PageElementParagraphs extends PageElement {
         }
 
         matrixStack.popPose();
-	}
+    }
 
     public static List<String> listFormattedStringToWidth(String str, int wrapWidth) {
         return Arrays.asList(wrapFormattedStringToWidth(str, wrapWidth).split("\n"));

@@ -49,7 +49,7 @@ public class TeapotTileEntity extends LockableTileEntity implements ITickableTil
 
     private NonNullList<ItemStack> items = NonNullList.withSize(5, ItemStack.EMPTY);
     private LiquidType liquidType = LiquidType.EMPTY;
-    private int liquidLevel = 3;
+    private int liquidLevel = 0;
     private TeaBrewResult brew = null;
     private int countdown = 100;
     public final IIntArray dataAccess = new IIntArray() {

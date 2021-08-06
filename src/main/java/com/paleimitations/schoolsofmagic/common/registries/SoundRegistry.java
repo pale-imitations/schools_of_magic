@@ -23,6 +23,7 @@ public class SoundRegistry {
     public final static SoundEvent FIERY_BLESSING = createSoundEvent("spells.fiery_blessing");
     public final static SoundEvent PHANTOM_FIRE = createSoundEvent("spells.phantom_fire");
     public final static SoundEvent SPECTRAL_HAND = createSoundEvent("spells.spectral_hand");
+    public final static SoundEvent CLICKS = createSoundEvent("spells.clicks");
 
     /*public static SoundEvent PAGE_FLIP, BOOK_OPEN, BOOK_CLOSE;
     public static SoundEvent HEART_AMBIENT, SNEEZE, THORN_RING, WHISPER;

@@ -6,7 +6,7 @@ import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.data.BindingType;
 import com.paleimitations.schoolsofmagic.common.data.BookUtils;
 import com.paleimitations.schoolsofmagic.common.data.books.PageElement;
-import com.paleimitations.schoolsofmagic.common.data.books.PageElementPageButton;
+import com.paleimitations.schoolsofmagic.common.data.books.ButtonPageElement;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.book_data.BookData;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.book_data.BookDataProvider;
 import net.minecraft.client.Minecraft;
@@ -235,8 +235,8 @@ public class GrimoireScreen extends Screen {
         int subpage = nbt.getInt("subpage");
         if(data!=null && data.getBookPage(page)!=null) {
             for(PageElement element : data.getBookPage(page).elements){
-                if(element instanceof PageElementPageButton){
-                    if(((PageElementPageButton)element).click((float)mouseX - leftPos, (float)mouseY - topPos, subpage, stack, null, player, hand)) {
+                if(element instanceof ButtonPageElement){
+                    if(((ButtonPageElement)element).click((float)mouseX - leftPos, (float)mouseY - topPos, subpage, stack, null, player, hand)) {
                         this.stack = player.getItemInHand(hand);
                         this.updateButtonVisibility();
                     }

@@ -1,0 +1,36 @@
+{
+  "parent": "schoolsofmagic:schoolsofmagic/youre_a_wizard",
+  "display": {
+    "icon": {
+      "item": "schoolsofmagic:basic_arcana",
+      "nbt": "{dye:15,book_data_s:\"schoolsofmagic_book_basic_arcana\",binding:\"bronze\"}"
+    },
+    "title": {
+      "translate": "advancements.schoolsofmagic.basic_arcana.title"
+    },
+    "description": {
+      "translate": "advancements.schoolsofmagic.basic_arcana.description"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "get_item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:basic_arcana"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "get_item"
+    ]
+  ]
+}

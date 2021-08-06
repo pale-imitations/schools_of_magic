@@ -7,14 +7,14 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class PageElementImage extends PageElement {
+public class ImagePageElement extends PageElement {
 
 	public final ResourceLocation imageLocation;
 	public final int xUV, yUV, width, height;
 	public final float scale;
 	public final boolean blend;
 	
-	public PageElementImage(ResourceLocation imageLocation, int x, int y, int xUV, int yUV, int width, int height, float scale, boolean blend) {
+	public ImagePageElement(ResourceLocation imageLocation, int x, int y, int xUV, int yUV, int width, int height, float scale, boolean blend) {
 		super(x, y);
 		this.imageLocation = imageLocation;
 		this.xUV = xUV;

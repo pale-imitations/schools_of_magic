@@ -107,14 +107,19 @@ public final class Config {
     public static final class Client {
         static final ForgeConfigSpec spec;
         public static final ForgeConfigSpec.EnumValue<SpellGuiPosition> SPELL_GUI_POSITION;
+        public static final ForgeConfigSpec.DoubleValue BOOK_FONT_SCALE;
 
         static {
             ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
             {
                 builder.comment("Position of the Spell casting gui");
                 builder.push("spellGuiPosition");
-                SPELL_GUI_POSITION = builder
-                        .defineEnum("spell_gui_position", SpellGuiPosition.BOTTOM_LEFT);
+                SPELL_GUI_POSITION = builder.defineEnum("spell_gui_position", SpellGuiPosition.BOTTOM_LEFT);
+                builder.pop();
+
+                builder.comment("Scale of the font in schools of magic books");
+                builder.push("bookFontScale");
+                BOOK_FONT_SCALE = builder.defineInRange("book_font_scale", 0.75d, 0.05d, 5d);
                 builder.pop();
             }
 

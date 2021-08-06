@@ -14,6 +14,7 @@ import java.util.List;
 
 public interface IMagicData {
 
+    void markDirty();
     int getCurrentSpellSlot();
     void setCurrentSpellSlot(int spellSlot);
     Spell getCurrentSpell();

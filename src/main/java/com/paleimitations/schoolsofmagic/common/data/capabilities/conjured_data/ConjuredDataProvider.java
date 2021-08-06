@@ -89,8 +89,8 @@ public class ConjuredDataProvider implements ICapabilitySerializable<INBT> {
 
         @SubscribeEvent
         public static void onUpdate(LivingEvent.LivingUpdateEvent event) {
-            if(!(event.getEntityLiving() instanceof PlayerEntity)) {
-                IConjuredData data = event.getEntityLiving().getCapability(ConjuredDataProvider.CONJURED_DATA_CAPABILITY).orElseThrow(IllegalStateException::new);
+            if(!(event.getEntityLiving() instanceof PlayerEntity) && event.getEntityLiving().getCapability(ConjuredDataProvider.CONJURED_DATA_CAPABILITY).isPresent()) {
+                IConjuredData data = event.getEntityLiving().getCapability(ConjuredDataProvider.CONJURED_DATA_CAPABILITY).orElse(null);
                 if (data.isConjured() && data.useCountdown()) {
                     int countdown = data.getCountdown() - 1;
                     data.setCountdown(countdown);

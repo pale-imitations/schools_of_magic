@@ -1,0 +1,8 @@
+  Most herbs must be dried then crushed to be used as tea ingredients. As of now, the herbs known to produce effects are Poppy, Allium, Dandelion, Cornflower, Blue Orchid, and Lily of the Valley.
+However it appears, Cocoa Beans and Sugar are also viable ingredients.
+<~><~>  Each tea ingredient has two potential effects, some of which are negative, to brew a strong enough tea to produce effects you will need three ingredients.
+<~><~>  The effects of the combination can appear random, but there is a pattern to why some effects appear more frequently than other depending on the combination.
+<~><~>  When two ingredients in a brew share a common effect, that effect is put into a new tier. Since an effect can be repeated up to three times there are three tiers of effect.
+<~><~>  Tier 1 effects are effects that only appear once in a brew combination. Tier 2 effects are effects that appear twice. And tier 3 effects appear three times.
+<~><~>  When a brew is drunk, one effect from each tier is randomly applied. If only one effect is in a tier that effect will always be applied.
+<~><~>  A master tea brewer can isolate one good effect in each tier, ensuring they will always get the same three good effects from that brew.

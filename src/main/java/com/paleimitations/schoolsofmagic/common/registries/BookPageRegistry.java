@@ -1,9 +1,7 @@
 package com.paleimitations.schoolsofmagic.common.registries;
 
 import com.google.common.collect.Lists;
-import com.paleimitations.schoolsofmagic.common.IMagicType;
 import com.paleimitations.schoolsofmagic.common.data.books.*;
-import net.minecraft.potion.Potion;
 
 import java.util.List;
 
@@ -14,7 +12,7 @@ public class BookPageRegistry {
 
     public static void init() {
         BasicArcanaRegistry.init();
-        new BookPage("ccw_letter_1", Lists.newArrayList(new PageElementParagraphs("ccw_letter_1", 0.55f, 0, 0, new ParagraphBox(16,28, 0, 124, 112))));
+        new BookPage("ccw_letter_1", Lists.newArrayList(new ParagraphsPageElement("ccw_letter_1", 0.55f, 0, 0, new ParagraphBox(16,28, 0, 124, 112))));
 
     }
 

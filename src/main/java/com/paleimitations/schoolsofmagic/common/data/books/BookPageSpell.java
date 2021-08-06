@@ -1,7 +1,6 @@
 package com.paleimitations.schoolsofmagic.common.data.books;
 
 import com.google.common.collect.Lists;
-import com.paleimitations.schoolsofmagic.SchoolsOfMagicMod;
 import com.paleimitations.schoolsofmagic.common.MagicElement;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
 
@@ -14,12 +13,12 @@ public class BookPageSpell extends BookPage {
 	
 	public BookPageSpell(Spell spell) {
 		super(spell.getName(), Lists.newArrayList(
-				new PageElementSpellInfo(spell),
-				new PageElementParagraphs("spell_"+spell.getName(), 0.75f, 0, 1,
+				new SpellInfoPageElement(spell),
+				new ParagraphsPageElement("spell_"+spell.getName(), 0.75f, 0, 1,
 						new ParagraphBox(134,50, 0, 99, 140),
 						new ParagraphBox(23,50, 1, 99, 140),
 						new ParagraphBox(134,50, 1, 99, 140)),
-				new PageElementDescription("page.spell_"+spell.getName()+".desc")
+				new DescriptionPageElement("page.spell_"+spell.getName()+".desc")
 				));
 		this.spell = spell;
 		/*for(Spell.EnumSpellModifier mod : spell.modifiers.keySet()){

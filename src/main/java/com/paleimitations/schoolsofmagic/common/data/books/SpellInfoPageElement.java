@@ -21,13 +21,13 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import java.awt.*;
 import java.util.Map;
 
-public class PageElementSpellInfo extends PageElement {
+public class SpellInfoPageElement extends PageElement {
 
 	public final Spell spell;
 	public static final ResourceLocation SPELL_ICONS = new ResourceLocation(References.MODID, "textures/gui/books/magic_icons.png");
 	public static final ResourceLocation SPELL_ICONS2 = new ResourceLocation(References.MODID, "textures/gui/spell_charge_icons.png");
 
-	public PageElementSpellInfo(Spell spell) {
+	public SpellInfoPageElement(Spell spell) {
 		super(0, 0);
 		this.spell = spell;
 	}

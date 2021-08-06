@@ -7,13 +7,13 @@ import net.minecraft.client.resources.I18n;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class PageElementString extends PageElement {
+public class StringPageElement extends PageElement {
 
 	public final String[] text;
 	public final int fontColor, height, width;
 	public final boolean centered;
 
-	public PageElementString(String text, int x, int y, int width, int height, int fontColor, boolean centered) {
+	public StringPageElement(String text, int x, int y, int width, int height, int fontColor, boolean centered) {
 		super(x, y);
 		this.text = new String[1];
 		this.text[0] = text;
@@ -23,7 +23,7 @@ public class PageElementString extends PageElement {
 		this.centered = centered;
 	}
 	
-	public PageElementString(String[] text, int x, int y, int width, int height, int fontColor, boolean centered) {
+	public StringPageElement(String[] text, int x, int y, int width, int height, int fontColor, boolean centered) {
 		super(x, y);
 		this.text = text;
 		this.width = width;
@@ -32,7 +32,7 @@ public class PageElementString extends PageElement {
 		this.centered = centered;
 	}
 
-	public PageElementString(String[] text, int x, int y, int target, int width, int height, int fontColor, boolean centered) {
+	public StringPageElement(String[] text, int x, int y, int target, int width, int height, int fontColor, boolean centered) {
 		super(x, y, target);
 		this.text = text;
 		this.width = width;

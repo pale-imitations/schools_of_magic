@@ -30,7 +30,11 @@ import java.util.List;
 public class PageElement {
 
 	public final int x, y, subpage;
-	
+
+	public PageElement() {
+		this(0,0,0);
+	}
+
 	public PageElement(int x, int y) {
 		this(x,y,0);
 	}
@@ -45,7 +49,7 @@ public class PageElement {
 		return subpage;
 	}
 
-	public boolean isTarget(int i){
+	public boolean isTarget(int i) {
 		return i == subpage;
 	}
 

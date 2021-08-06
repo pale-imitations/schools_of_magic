@@ -17,6 +17,52 @@
         ]
     },
 
+    "spells.clicks": {
+        "subtitle": "spells.clicks",
+        "sounds": [
+            {
+                "name": "ambient/nether/basalt_deltas/click1",
+                "weight": 20,
+                "volume": 0.19
+            },
+            {
+                "name": "ambient/nether/basalt_deltas/click2",
+                "weight": 20,
+                "volume": 0.19
+            },
+            {
+                "name": "ambient/nether/basalt_deltas/click3",
+                "weight": 20,
+                "volume": 0.19
+            },
+            {
+                "name": "ambient/nether/basalt_deltas/click4",
+                "weight": 20,
+                "volume": 0.25
+            },
+            {
+                "name": "ambient/nether/basalt_deltas/click5",
+                "weight": 20,
+                "volume": 0.25
+            },
+            {
+                "name": "ambient/nether/basalt_deltas/click6",
+                "weight": 20,
+                "volume": 0.01
+            },
+            {
+                "name": "ambient/nether/basalt_deltas/click7",
+                "weight": 25,
+                "volume": 0.01
+            },
+            {
+                "name": "ambient/nether/basalt_deltas/click8",
+                "weight": 25,
+                "volume": 0.01
+            }
+        ]
+    },
+
     "spells.lightning":{
         "subtitle": "spells.lightning",
         "sounds": [

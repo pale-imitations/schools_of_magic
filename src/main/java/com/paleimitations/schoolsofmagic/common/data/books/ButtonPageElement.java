@@ -14,10 +14,10 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import javax.annotation.Nullable;
 
-public class PageElementPageButton extends PageElement {
+public class ButtonPageElement extends PageElement {
     public final int pageNumber, width, height;
 
-    public PageElementPageButton(int pageNumber, int x, int y, int target, int width, int height){
+    public ButtonPageElement(int pageNumber, int x, int y, int target, int width, int height){
         super(x,y,target);
         this.pageNumber = pageNumber;
         this.width = width;

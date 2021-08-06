@@ -6,11 +6,11 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
-public class PageElementImageColorized extends PageElementImage {
+public class ColorizedImagePageElement extends ImagePageElement {
 
 	public final float red, green, blue, alpha;
 	
-	public PageElementImageColorized(ResourceLocation imageLocation, int x, int y, int xUV, int yUV, int width, int height, float scale, int color) {
+	public ColorizedImagePageElement(ResourceLocation imageLocation, int x, int y, int xUV, int yUV, int width, int height, float scale, int color) {
 		super(imageLocation, x, y, xUV, yUV, width, height, scale, false);
         if ((color & -67108864) == 0)
         {

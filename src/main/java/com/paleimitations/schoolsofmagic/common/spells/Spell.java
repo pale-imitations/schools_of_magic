@@ -1,21 +1,17 @@
 package com.paleimitations.schoolsofmagic.common.spells;
 
 import com.google.common.collect.Lists;
-import com.google.common.collect.Maps;
 import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.IMagicType;
 import com.paleimitations.schoolsofmagic.common.MagicElement;
 import com.paleimitations.schoolsofmagic.common.MagicSchool;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.IMagicData;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.MagicDataProvider;
-import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
-import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.SpellRegistry;
 import com.paleimitations.schoolsofmagic.common.spells.events.SpellEvent;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMaterialComponents;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasMultiUses;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.Modifier;
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.LivingEntity;
@@ -24,20 +20,15 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemUseContext;
 import net.minecraft.item.UseAction;
 import net.minecraft.nbt.CompoundNBT;
-import net.minecraft.nbt.IntNBT;
 import net.minecraft.nbt.ListNBT;
 import net.minecraft.nbt.StringNBT;
 import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.util.text.StringTextComponent;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.INBTSerializable;
 
 import java.util.List;
-import java.util.Map;
-import java.util.Random;
-import java.util.function.Predicate;
 
 public class Spell implements INBTSerializable<CompoundNBT> {
 

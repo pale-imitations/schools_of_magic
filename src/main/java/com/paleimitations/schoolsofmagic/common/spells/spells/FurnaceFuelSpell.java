@@ -4,6 +4,7 @@ import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.MagicData;
 import com.paleimitations.schoolsofmagic.common.registries.MagicElementRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.MagicSchoolRegistry;
+import com.paleimitations.schoolsofmagic.common.registries.SoundRegistry;
 import com.paleimitations.schoolsofmagic.common.spells.Spell;
 import com.paleimitations.schoolsofmagic.common.spells.events.SpellEvent;
 import com.paleimitations.schoolsofmagic.common.spells.modifiers.IHasPower;
@@ -15,6 +16,8 @@ import net.minecraft.tileentity.AbstractFurnaceTileEntity;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.ActionResultType;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
+import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.MinecraftForge;
 
 public class FurnaceFuelSpell extends Spell implements IHasPower {
@@ -59,6 +62,8 @@ public class FurnaceFuelSpell extends Spell implements IHasPower {
             if(state.getBlock() instanceof AbstractFurnaceBlock) {
                 state = state.setValue(AbstractFurnaceBlock.LIT, true);
             }
+            context.getLevel().playSound(null, context.getClickedPos().getX(), context.getClickedPos().getY(), context.getClickedPos().getZ(),
+                    SoundEvents.FLINTANDSTEEL_USE, SoundCategory.PLAYERS, 1f, context.getPlayer().getRandom().nextFloat() * 0.4F + 0.8F);
             tileEntity.load(state, nbt);
             tileEntity.setChanged();
             context.getLevel().setBlockAndUpdate(context.getClickedPos(), state);

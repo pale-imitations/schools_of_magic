@@ -84,7 +84,7 @@
   "item.schoolsofmagic.yellow_clay_teapot": "Yellow Clay Teapot",
   "item.schoolsofmagic.lime_clay_teapot": "Lime Clay Teapot",
   "item.schoolsofmagic.white_clay_teapot": "White Clay Teapot",
-  "item.schoolsofmagic.white_clay_plate": "White Clay Plate",
+  "item.schoolsofmagic.white_clay_teaplate": "White Clay Plate",
   "item.schoolsofmagic.white_clay_teacup": "White Clay Teacup",
   "item.schoolsofmagic.white_terracotta_teacup": "White Terracotta Teacup",
   "item.schoolsofmagic.white_teacup": "White Glazed Teacup",
@@ -154,6 +154,8 @@
   "page.basic_arcana_page7.title": "Brazier",
   "page.basic_arcana_page8.title": "Mortar & Pestle",
   "page.basic_arcana_page9.title": "Herbal Twine",
+  "page.tea_brewing.title": "Tea Brewing",
+  "page.tea_brewing_2.title": "Tea Effects",
 
   "_comment": "spells",
   "spell.blaze.name": "Blaze",
@@ -178,6 +180,7 @@
   "page.summon_bee.desc": "Summons bees to attack a target",
   "spell.rumor.name": "Rumor",
   "page.rumor.desc": "Corrupt a mind with a rumor",
+  "page.spell_rumor": "  The caster of this spell corrupts the mind of a creature using an insidious rumor.<~><~>  To cast this spell select an attacker you wish to enchant, this can be done from a distance of up to 20 blocks. Next select the target of the rumor.<~><~>  Once both are selected the spell is cast and the enchanted creature will be drawn to attack the target.<~><~>  This spell cannot enchant all creatures, passive creatures are naturally immune. Additionally, creatures of high health require higher spell charges to enchant.<~><~>  Refer here for the minimum spell charge required to enchant a mob based on it's health:<~>     1st level: 8 health<~>     2nd level: 16 health<~>     3rd level: 32 health<~>     4th level: 48 health<~>     5th level: 64 health<~>     6th level: 100 health<~>     7th level: 150 health<~>     8th level: 200 health<~>     9th level: Any health",
   "spell.fast_forward.name": "Fast Forward",
   "page.fast_forward.desc": "Channels time through a subject",
   "spell.furnace_fuel.name": "Fuel Furnace",
@@ -240,5 +243,11 @@
   "advancements.schoolsofmagic.podium.title": "Show Off",
   "advancements.schoolsofmagic.podium.description": "Acquire a Podium.",
   "advancements.schoolsofmagic.make_tea.title": "Yummy Leaf Water",
-  "advancements.schoolsofmagic.make_tea.description": "Make a cup of tea."
+  "advancements.schoolsofmagic.make_tea.description": "Make a cup of tea.",
+
+  "_comment": "commands",
+  "command.schoolsofmagic.add_magic_xp_message": "Added %s magician experience to %s",
+  "command.schoolsofmagic.remove_magic_xp_message": "Removed %s magician experience from %s",
+  "command.schoolsofmagic.set_magic_xp_message": "Set the magician experience of %s to %s"
+
 }

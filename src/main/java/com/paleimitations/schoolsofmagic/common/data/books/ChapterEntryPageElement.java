@@ -10,12 +10,12 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 
 import java.awt.*;
 
-public class PageElementChapterEntry extends PageElementPageButton {
+public class ChapterEntryPageElement extends ButtonPageElement {
 
 	public final String[] text;
 	public final String desc;
 
-	public PageElementChapterEntry(String[] text, String desc, int pageNumber, int x, int y, int target, int width, int height) {
+	public ChapterEntryPageElement(String[] text, String desc, int pageNumber, int x, int y, int target, int width, int height) {
 		super(pageNumber, x, y, target, width, height);
 		this.text = text;
 		this.desc = desc;

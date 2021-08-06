@@ -1,0 +1,6 @@
+  Tea brewing is a useful method of getting multiple potion effects.
+<~><~>  To get started you will need a variety of tools: Herbal Twine for drying herbs, a Mortar and Pestle for crushing dried herbs, Tea Cups, and a Tea Pot.
+<~><~>  First you will want a Mortar and Pestle, this can be crafted from Andesite, Diorite, or Granite in a Stone Cutter. This will be used for crushing dried herbs, however it is also necessary for making a teapot.
+<~><~>  Shown here is the recipe for making a White Clay Teapot, this will need to be fired into a White Terracotta Teapot in a furnace before it can be used. It's important to note this isn't using standard Clay, shown is White Clay. White Clay is made by crushing White Terracotta into White Clay Powder in a Mortar. This Clay Powder is then mixed with Water to make White Clay.
+<~><~>  White Clay is also used to make Tea Cups and Tea Plates. All must be cooked in a Furnace before use.
+<~><~>  Herbal Twine is the last thing you will need. The recipe is shown here. The twine is placed on the bottoms of blocks and you right click it with an herb to start the drying process.

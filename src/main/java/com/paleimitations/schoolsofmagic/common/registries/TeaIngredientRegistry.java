@@ -19,7 +19,7 @@ public class TeaIngredientRegistry {
         INGREDIENTS.add(new TeaIngredient(TeaRegistry.getTea("blue_orchid"), Ingredient.of(ItemRegistry.CRUSHED_BLUE_ORCHID.get())));
         INGREDIENTS.add(new TeaIngredient(TeaRegistry.getTea("cornflower"), Ingredient.of(ItemRegistry.CRUSHED_CORNFLOWER.get())));
         INGREDIENTS.add(new TeaIngredient(TeaRegistry.getTea("dandelion"), Ingredient.of(ItemRegistry.CRUSHED_DANDELION.get())));
-        INGREDIENTS.add(new TeaIngredient(TeaRegistry.getTea("lilly_of_the_valley"), Ingredient.of(ItemRegistry.CRUSHED_LILY_OF_THE_VALLY.get())));
+        INGREDIENTS.add(new TeaIngredient(TeaRegistry.getTea("lily_of_the_valley"), Ingredient.of(ItemRegistry.CRUSHED_LILY_OF_THE_VALLY.get())));
         INGREDIENTS.add(new TeaIngredient(TeaRegistry.getTea("poppy_seed"), Ingredient.of(ItemRegistry.POPPY_SEEDS.get())));
         INGREDIENTS.add(new TeaIngredient(TeaRegistry.getTea("cocoa_bean"), Ingredient.of(Items.COCOA_BEANS)));
         INGREDIENTS.add(new TeaIngredient(TeaRegistry.getTea("sugar"), Ingredient.of(Items.SUGAR)));

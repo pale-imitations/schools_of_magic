@@ -3,32 +3,21 @@ package com.paleimitations.schoolsofmagic.client.screen;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.paleimitations.schoolsofmagic.References;
-import com.paleimitations.schoolsofmagic.common.data.BindingType;
-import com.paleimitations.schoolsofmagic.common.data.BookUtils;
 import com.paleimitations.schoolsofmagic.common.data.books.BookPage;
-import com.paleimitations.schoolsofmagic.common.data.books.PageElement;
-import com.paleimitations.schoolsofmagic.common.data.books.PageElementPageButton;
-import com.paleimitations.schoolsofmagic.common.data.capabilities.book_data.BookData;
-import com.paleimitations.schoolsofmagic.common.data.capabilities.book_data.BookDataProvider;
 import com.paleimitations.schoolsofmagic.common.network.LetterPacket;
 import com.paleimitations.schoolsofmagic.common.network.PacketHandler;
 import com.paleimitations.schoolsofmagic.common.registries.BookPageRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.ItemRegistry;
 import net.minecraft.client.Minecraft;
-import net.minecraft.client.audio.SimpleSound;
-import net.minecraft.client.audio.SoundHandler;
 import net.minecraft.client.gui.chat.NarratorChatListener;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.widget.button.Button;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.DyeColor;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.util.*;
 import net.minecraft.util.text.StringTextComponent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
-import org.lwjgl.opengl.GL11;
 
 @OnlyIn(Dist.CLIENT)
 public class LetterScreen extends Screen {
