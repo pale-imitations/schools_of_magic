@@ -144,7 +144,7 @@ public class LetterScreen extends Screen {
             this.minecraft.getTextureManager().bind(LETTER);
             this.blit(matrix,offsetWidth, offsetHeight - yOffset,0,0, imageWidth, imageHeight);
             if(letter!=null)
-                letter.drawPage(matrix, mouseX - offsetWidth, mouseY - offsetHeight - yOffset, offsetWidth, offsetHeight - yOffset, 20f, true, 0, 15728880);
+                letter.drawPage(matrix, mouseX - offsetWidth, mouseY - offsetHeight - yOffset, offsetWidth, offsetHeight - yOffset, 20f, true, 0, 15728880, null);
         }
         else {
             if(this.phase == 0) {

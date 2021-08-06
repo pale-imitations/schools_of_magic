@@ -222,7 +222,7 @@ public class GrimoireScreen extends Screen {
         int page = nbt.getInt("page");
         int subpage = nbt.getInt("subpage");
         if(data!=null && !data.getBookPages().isEmpty() && data.getBookPage(page)!=null) {
-            data.getBookPage(page).drawPage(matrix, mouseX - leftPos, mouseY - topPos, leftPos, topPos, 0, true, subpage, 15728880);
+            data.getBookPage(page).drawPage(matrix, mouseX - leftPos, mouseY - topPos, leftPos, topPos, 0, true, subpage, 15728880, null);
         }
 
     }

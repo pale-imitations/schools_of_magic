@@ -63,6 +63,11 @@ public class PageElement {
 	}
 
 	@OnlyIn(Dist.CLIENT)
+	public void drawElement(MatrixStack matrixStack, float mouseX, float mouseY, int x, int y, float zLevel, boolean isGUI, int subpage, int light, IRenderTypeBuffer buffer) {
+		this.drawElement(matrixStack, mouseX, mouseY, x, y, zLevel, isGUI, subpage, light);
+	}
+
+	@OnlyIn(Dist.CLIENT)
 	public static void drawString(FontRenderer font, String s, float x, float y, int color, MatrixStack matrix, int light) {
 		IRenderTypeBuffer.Impl irendertypebuffer$impl = IRenderTypeBuffer.immediate(Tessellator.getInstance().getBuilder());
 		font.drawInBatch(s, x, y, color, false, matrix.last().pose(), irendertypebuffer$impl,false, 0, light);
@@ -141,7 +146,7 @@ public class PageElement {
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	public void drawItemStack(MatrixStack matrix, ItemStack stack, int x, int y, boolean isGUI) {
+	public void drawItemStack(MatrixStack matrix, ItemStack stack, int x, int y, boolean isGUI, int light, IRenderTypeBuffer buffer) {
 		Minecraft minecraft = Minecraft.getInstance();
 		ItemRenderer itemRender = minecraft.getItemRenderer();
 		if(stack!=null) {
@@ -155,9 +160,7 @@ public class PageElement {
 				matrix.translate(8.0F, 8.0F, 0.0F);
 				matrix.scale(16F, -16F, -16F);
 				matrix.mulPose(Vector3f.YP.rotationDegrees(180.0F));
-				IRenderTypeBuffer.Impl renderType = IRenderTypeBuffer.immediate(Tessellator.getInstance().getBuilder());
-				int combinedLight = 15728880;
-				itemRender.renderStatic(stack, ItemCameraTransforms.TransformType.FIXED, combinedLight, OverlayTexture.NO_OVERLAY, matrix, renderType);
+				itemRender.renderStatic(stack, ItemCameraTransforms.TransformType.FIXED, light, OverlayTexture.NO_OVERLAY, matrix, buffer);
 				matrix.popPose();
 
 				//stack.getItem().getItemStackTileEntityRenderer().renderByItem(stack, ItemCameraTransforms.TransformType.FIXED, matrix, renderType, combinedLight, OverlayTexture.NO_OVERLAY);

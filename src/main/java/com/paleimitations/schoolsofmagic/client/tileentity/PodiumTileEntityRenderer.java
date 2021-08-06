@@ -110,28 +110,28 @@ public class PodiumTileEntityRenderer extends TileEntityRenderer<PodiumTileEntit
                             nbt.contains("dye") ? DyeColor.values()[nbt.getInt("dye")].getName() : "tan"
                     ) + ".png"));
                     IVertexBuilder vertexBuilder = buffer.getBuffer(renderType);
-                    model.render(pte, pte.animationTick, matrix, vertexBuilder, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
+                    model.render(pte, pte.animationTick, matrix, vertexBuilder, buffer, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
                 }
 
                 if(nbt.contains("binding")) {
                     RenderType renderType = RenderType.entityTranslucent(new ResourceLocation(References.MODID, "textures/entity/book/binding_"+
                             nbt.getString("binding")+".png"));
                     IVertexBuilder vertexBuilder = buffer.getBuffer(renderType);
-                    model.render(pte, pte.animationTick, matrix, vertexBuilder, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
+                    model.render(pte, pte.animationTick, matrix, vertexBuilder, buffer, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
                 }
 
                 if(nbt.contains("decor")) {
                     RenderType renderType = RenderType.entityTranslucent(new ResourceLocation(References.MODID, "textures/entity/book/decor_"+
                             nbt.getString("decor")+".png"));
                     IVertexBuilder vertexBuilder = buffer.getBuffer(renderType);
-                    model.render(pte, pte.animationTick, matrix, vertexBuilder, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
+                    model.render(pte, pte.animationTick, matrix, vertexBuilder, buffer, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
                 }
 
                 if(nbt.contains("decor_sec")) {
                     RenderType renderType = RenderType.entityTranslucent(new ResourceLocation(References.MODID, "textures/entity/book/decor_"+
                             nbt.getString("decor_sec")+".png"));
                     IVertexBuilder vertexBuilder = buffer.getBuffer(renderType);
-                    model.render(pte, pte.animationTick, matrix, vertexBuilder, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
+                    model.render(pte, pte.animationTick, matrix, vertexBuilder, buffer, combinedLightIn, combinedOverlayIn, 1f, 1f, 1f, 1f);
                 }
                 matrix.popPose();
             }

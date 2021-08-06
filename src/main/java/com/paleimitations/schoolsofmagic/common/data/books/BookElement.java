@@ -2,6 +2,7 @@ package com.paleimitations.schoolsofmagic.common.data.books;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import net.minecraft.client.renderer.BufferBuilder;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.vertex.DefaultVertexFormats;
 import net.minecraftforge.api.distmarker.Dist;
@@ -26,6 +27,11 @@ public class BookElement {
 
     @OnlyIn(Dist.CLIENT)
     public void drawElement(float mouseX, float mouseY, int x, int y, float zLevel, boolean isGUI, int subpage, int page) {
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public void drawElement(float mouseX, float mouseY, int x, int y, float zLevel, boolean isGUI, int subpage, int page, IRenderTypeBuffer buffer) {
+        this.drawElement(mouseX, mouseY, x, y, zLevel, isGUI, subpage, page);
     }
 
     @OnlyIn(Dist.CLIENT)

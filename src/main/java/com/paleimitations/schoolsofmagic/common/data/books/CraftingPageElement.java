@@ -4,6 +4,7 @@ import com.mojang.blaze3d.matrix.MatrixStack;
 import com.paleimitations.schoolsofmagic.References;
 import it.unimi.dsi.fastutil.objects.Reference2ShortArrayMap;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.ICraftingRecipe;
@@ -33,16 +34,22 @@ public class CraftingPageElement extends PageElement {
     }
 
     @Override
-    public void drawElement(MatrixStack matrixStack, float mouseX, float mouseY, int xIn, int yIn, float zLevel, boolean isGUI, int subpage, int light) {
+    @OnlyIn(Dist.CLIENT)
+    public void drawElement(MatrixStack matrixStack, float mouseX, float mouseY, int x, int y, float zLevel, boolean isGUI, int subpage, int light) {
+        this.drawElement(matrixStack, mouseX, mouseY, x, y, zLevel, isGUI, subpage, light, null);
+    }
+
+    @Override
+    public void drawElement(MatrixStack matrixStack, float mouseX, float mouseY, int xIn, int yIn, float zLevel, boolean isGUI, int subpage, int light, IRenderTypeBuffer buffer) {
         Minecraft.getInstance().getTextureManager().bind(new ResourceLocation(References.MODID, "textures/gui/books/crafting_recipe.png"));
         //Random rand = Minecraft.getInstance().player.getRandom();
         PlayerEntity player =  Minecraft.getInstance().player;
         this.drawTexturedModalRect(matrixStack, x+xIn, y+yIn, 0, 0, 54, 76, zLevel, light);
         for(int i = 0; i < recipe.getIngredients().size(); ++i) {
             Ingredient ing = recipe.getIngredients().get(i);
-            if(ing!=null && !ing.isEmpty()) this.drawItemStack(matrixStack, ing.getItems()[player.tickCount / 60 % ing.getItems().length], x+xIn+1+((i%3)*18), y+yIn+1+((i/3)*18), isGUI);
+            if(ing!=null && !ing.isEmpty()) this.drawItemStack(matrixStack, ing.getItems()[player.tickCount / 60 % ing.getItems().length], x+xIn+1+((i%3)*18), y+yIn+1+((i/3)*18), isGUI, light, buffer);
         }
-        this.drawItemStack(matrixStack, recipe.getResultItem(), x+xIn+19, y+yIn+59, isGUI);
+        this.drawItemStack(matrixStack, recipe.getResultItem(), x+xIn+19, y+yIn+59, isGUI, light, buffer);
         /*if(!inputs.isEmpty() && !inputs.get(0).isEmpty())this.drawItemStack(matrixStack, inputs.get(0), x+xIn+1, y+yIn+1, isGUI);
         if(inputs.size()>1 && !inputs.get(1).isEmpty())this.drawItemStack(matrixStack, inputs.get(1), x+xIn+19, y+yIn+1, isGUI);
         if(inputs.size()>2 && !inputs.get(2).isEmpty())this.drawItemStack(matrixStack, inputs.get(2), x+xIn+37, y+yIn+1, isGUI);

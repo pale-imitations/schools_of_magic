@@ -7,6 +7,7 @@ import com.mojang.blaze3d.vertex.IVertexBuilder;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.book_data.BookData;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.book_data.BookDataProvider;
 import com.paleimitations.schoolsofmagic.common.tileentities.PodiumTileEntity;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraft.client.renderer.WorldRenderer;
 import net.minecraft.client.renderer.entity.model.EntityModel;
 import net.minecraft.client.renderer.model.ModelRenderer;
@@ -53,7 +54,7 @@ public class GrimoireModel extends EntityModel<Entity> {
 
 	}
 
-	public void render(PodiumTileEntity te, int tick, MatrixStack matrixStack, IVertexBuilder buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
+	public void render(PodiumTileEntity te, int tick, MatrixStack matrixStack, IVertexBuilder builder, IRenderTypeBuffer buffer, int packedLight, int packedOverlay, float red, float green, float blue, float alpha){
 		float progress = 0;
 		this.page_bone.visible = false;
 		PodiumTileEntity.BookState bookstate = te.bookState;
@@ -91,7 +92,7 @@ public class GrimoireModel extends EntityModel<Entity> {
 		}
 		matrixStack.pushPose();
 		matrixStack.scale(0.16f, 0.16f, 0.16f);
-		book_bone.render(matrixStack, buffer, packedLight, packedOverlay);
+		book_bone.render(matrixStack, builder, packedLight, packedOverlay);
 		matrixStack.popPose();
 
 		if(bookstate == PodiumTileEntity.BookState.OPEN){
@@ -104,7 +105,7 @@ public class GrimoireModel extends EntityModel<Entity> {
 				int page = nbt.contains("page")? nbt.getInt("page") : 0;
 				int subpage = nbt.contains("subpage")? nbt.getInt("subpage") : 0;
 				if(book!=null && book.getBookPage(page)!=null) {
-					book.getBookPage(page).drawPage(matrixStack, 0, 0, 0, 0, 0f, false, subpage, this.getLightColor(te));
+					book.getBookPage(page).drawPage(matrixStack, 0, 0, 0, 0, 0f, false, subpage, this.getLightColor(te), buffer);
 				}
 			}
 			matrixStack.popPose();

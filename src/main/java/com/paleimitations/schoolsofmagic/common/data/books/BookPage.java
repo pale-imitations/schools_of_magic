@@ -3,6 +3,7 @@ package com.paleimitations.schoolsofmagic.common.data.books;
 import com.mojang.blaze3d.matrix.MatrixStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.paleimitations.schoolsofmagic.common.registries.BookPageRegistry;
+import net.minecraft.client.renderer.IRenderTypeBuffer;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 
@@ -24,11 +25,11 @@ public class BookPage {
 	}
 
 	@OnlyIn(Dist.CLIENT)
-	public void drawPage(MatrixStack matrix, float mouseX, float mouseY, int x, int y, float zLevel, boolean isGUI, int subpage, int light) {
+	public void drawPage(MatrixStack matrix, float mouseX, float mouseY, int x, int y, float zLevel, boolean isGUI, int subpage, int light, IRenderTypeBuffer buffer) {
 		for(PageElement element : elements) {
 			if(element.isTarget(subpage)) {
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
-				element.drawElement(matrix, mouseX, mouseY, x, y, zLevel, isGUI, subpage, light);
+				element.drawElement(matrix, mouseX, mouseY, x, y, zLevel, isGUI, subpage, light, buffer);
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 			}
 		}
