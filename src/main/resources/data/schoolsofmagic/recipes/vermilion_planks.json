@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "schoolsofmagic:vermilion_logs"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:vermilion_planks",
+    "count": 4
+  }
+}

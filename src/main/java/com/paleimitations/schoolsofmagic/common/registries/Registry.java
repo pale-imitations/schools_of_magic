@@ -1,5 +1,7 @@
 package com.paleimitations.schoolsofmagic.common.registries;
 
+import com.google.common.collect.ImmutableSet;
+import com.google.common.collect.Lists;
 import com.mojang.brigadier.CommandDispatcher;
 import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.SchoolsOfMagicMod;
@@ -10,6 +12,8 @@ import com.paleimitations.schoolsofmagic.common.data.loottables.LootInjecter;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.book_data.BookDataProvider;
 import com.paleimitations.schoolsofmagic.common.network.*;
 import net.minecraft.block.Block;
+import net.minecraft.block.RotatedPillarBlock;
+import net.minecraft.block.WoodType;
 import net.minecraft.command.CommandSource;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraft.item.Item;
@@ -21,8 +25,10 @@ import net.minecraft.util.SoundEvent;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.ToolType;
 import net.minecraftforge.event.RegisterCommandsEvent;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -31,6 +37,8 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.lang.reflect.Field;
+import java.util.Arrays;
+import java.util.List;
 
 @Mod.EventBusSubscriber(modid = References.MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class Registry {
@@ -81,6 +89,36 @@ public class Registry {
         SchoolsOfMagicMod.getProxy().postInit();
         BlockRegistry.init();
         ItemRegistry.init();
+    }
+
+    @SubscribeEvent
+    public void onStrip(BlockEvent.BlockToolInteractEvent event) {
+        if(event.getToolType() == ToolType.AXE) {
+            if(event.getFinalState().getBlock() == BlockRegistry.ACOLYTE_LOG.get())
+                event.setFinalState(BlockRegistry.STRIPPED_ACOLYTE_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS,
+                        event.getFinalState().getValue(RotatedPillarBlock.AXIS)));
+            if(event.getFinalState().getBlock() == BlockRegistry.ACOLYTE_WOOD.get())
+                event.setFinalState(BlockRegistry.STRIPPED_ACOLYTE_WOOD.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS,
+                        event.getFinalState().getValue(RotatedPillarBlock.AXIS)));
+            if(event.getFinalState().getBlock() == BlockRegistry.BASTION_LOG.get())
+                event.setFinalState(BlockRegistry.STRIPPED_BASTION_LOG.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS,
+                        event.getFinalState().getValue(RotatedPillarBlock.AXIS)));
+            if(event.getFinalState().getBlock() == BlockRegistry.BASTION_WOOD.get())
+                event.setFinalState(BlockRegistry.STRIPPED_BASTION_WOOD.get().defaultBlockState().setValue(RotatedPillarBlock.AXIS,
+                        event.getFinalState().getValue(RotatedPillarBlock.AXIS)));
+        }
+    }
+
+    @SubscribeEvent
+    public static void registerTileEntity(final RegistryEvent.Register<SoundEvent> event) {
+        List<Block> blockList = Lists.newArrayList(BlockRegistry.ACOLYTE_SIGN.get(), BlockRegistry.ACOLYTE_WALL_SIGN.get(),
+                BlockRegistry.BASTION_SIGN.get(), BlockRegistry.BASTION_WALL_SIGN.get(),
+                BlockRegistry.EVERMORE_SIGN.get(), BlockRegistry.EVERMORE_WALL_SIGN.get(),
+                BlockRegistry.JUBILEE_SIGN.get(), BlockRegistry.JUBILEE_WALL_SIGN.get(),
+                BlockRegistry.VERMILION_SIGN.get(), BlockRegistry.VERMILION_WALL_SIGN.get(),
+                BlockRegistry.WARTWOOD_SIGN.get(), BlockRegistry.WARTWOOD_WALL_SIGN.get());
+        TileEntityType.SIGN.validBlocks.forEach(sign -> blockList.add(sign));
+        TileEntityType.SIGN.validBlocks = ImmutableSet.copyOf(blockList);
     }
 
     @SubscribeEvent

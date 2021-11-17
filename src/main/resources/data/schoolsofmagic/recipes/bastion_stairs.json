@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "PP ",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "schoolsofmagic:bastion_planks"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:bastion_stairs",
+    "count": 4
+  }
+}

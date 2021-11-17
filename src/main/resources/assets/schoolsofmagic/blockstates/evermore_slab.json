@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "schoolsofmagic:block/evermore_slab_top"
+    },
+    "type=bottom": {
+      "model": "schoolsofmagic:block/evermore_slab"
+    },
+    "type=double": {
+      "model": "schoolsofmagic:block/evermore_planks"
+    }
+  }
+}

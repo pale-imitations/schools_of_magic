@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "schoolsofmagic:block/evermore_wood",
+    "end": "schoolsofmagic:block/evermore_wood_top"
+  }
+}

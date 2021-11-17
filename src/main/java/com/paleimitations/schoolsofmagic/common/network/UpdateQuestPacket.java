@@ -1,5 +1,6 @@
 package com.paleimitations.schoolsofmagic.common.network;
 
+import com.paleimitations.schoolsofmagic.common.config.Config;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.quest_data.IQuestData;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.quest_data.QuestDataProvider;
 import com.paleimitations.schoolsofmagic.common.quests.Quest;
@@ -41,18 +42,21 @@ public class UpdateQuestPacket<MSG> {
             if(ctx.getDirection().getReceptionSide().isClient()) {
                 Entity entity = Minecraft.getInstance().level.getEntity(pkt.entityID);
                 if (entity instanceof PlayerEntity) {
-                    System.out.println("Quest recieved for: " + ((PlayerEntity)entity).getGameProfile().getName());
+                    if(Config.Client.SHOW_PACKET_MESSAGES.get())
+                        System.out.println("Quest recieved for: " + ((PlayerEntity)entity).getGameProfile().getName());
                     IQuestData data = entity.getCapability(QuestDataProvider.QUEST_DATA_CAPABILITY, null).orElseThrow(IllegalStateException::new);
                     Quest quest = data.getQuestbyQuestGiver(pkt.questGiver);
                     if(quest!=null) {
                         quest.deserializeNBT(pkt.data);
                     }
                     else {
-                        System.out.println("ERROR: Missing Quest");
+                        if(Config.Client.SHOW_PACKET_MESSAGES.get())
+                            System.out.println("ERROR: Missing Quest");
                     }
                 }
                 else {
-                    System.out.println("ERROR: Broken Packet");
+                    if(Config.Client.SHOW_PACKET_MESSAGES.get())
+                        System.out.println("ERROR: Broken Packet");
                 }
             }
             else {

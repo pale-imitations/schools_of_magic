@@ -3,6 +3,7 @@ package com.paleimitations.schoolsofmagic.common.registries;
 import com.google.common.collect.Maps;
 import com.paleimitations.schoolsofmagic.common.data.loottables.LootInjecter;
 import com.paleimitations.schoolsofmagic.common.items.*;
+import net.minecraft.block.Blocks;
 import net.minecraft.item.*;
 import net.minecraftforge.fml.RegistryObject;
 
@@ -18,10 +19,10 @@ public class ItemRegistry {
     //public static final RegistryObject<Item> COPPER_INGOT = Registry.ITEMS.register("copper_ingot", ()-> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
     //public static final RegistryObject<Item> ALLORITE_INGOT = Registry.ITEMS.register("allorite_ingot", ()-> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
     //public static final RegistryObject<Item> TENEBRIUM_INGOT = Registry.ITEMS.register("tenebrium_ingot", ()-> new Item(new Item.Properties().tab(ItemGroup.TAB_MATERIALS)));
-    public static final RegistryObject<Item> APPRENTICE_WAND_1 = Registry.ITEMS.register("apprentice_wand_1", ()-> new WandBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB), 1));
-    public static final RegistryObject<Item> APPRENTICE_WAND_2 = Registry.ITEMS.register("apprentice_wand_2", ()-> new WandBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB), 2));
-    public static final RegistryObject<Item> APPRENTICE_WAND_3 = Registry.ITEMS.register("apprentice_wand_3", ()-> new WandBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB), 3));
-    public static final RegistryObject<Item> APPRENTICE_WAND_4 = Registry.ITEMS.register("apprentice_wand_4", ()-> new WandBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB), 4));
+    public static final RegistryObject<Item> APPRENTICE_WAND_1 = Registry.ITEMS.register("apprentice_wand_1", ()-> new WandBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB)));
+    public static final RegistryObject<Item> APPRENTICE_WAND_2 = Registry.ITEMS.register("apprentice_wand_2", ()-> new WandBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB)));
+    public static final RegistryObject<Item> APPRENTICE_WAND_3 = Registry.ITEMS.register("apprentice_wand_3", ()-> new WandBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB)));
+    public static final RegistryObject<Item> APPRENTICE_WAND_4 = Registry.ITEMS.register("apprentice_wand_4", ()-> new WandBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB)));
     public static final RegistryObject<Item> BASIC_ARCANA = Registry.ITEMS.register("basic_arcana", ()-> new BookBaseItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB)));
     public static final RegistryObject<Item> QUEST_NOTE = Registry.ITEMS.register("quest_note", ()-> new QuestNoteItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB)));
     public static final RegistryObject<Item> LETTER_CCW = Registry.ITEMS.register("letter_ccw", ()-> new LetterItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB)));
@@ -83,8 +84,23 @@ public class ItemRegistry {
     public static final RegistryObject<Item> FILLED_WHITE_TERRACOTTA_TEACUP = Registry.ITEMS.register("filled_white_terracotta_teacup", ()-> new TeacupItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB), true, WHITE_TERRACOTTA_TEACUP.get()));
     public static final RegistryObject<Item> WHITE_TEACUP = Registry.ITEMS.register("white_teacup", ()-> new TeacupItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB), false, Items.AIR));
     public static final RegistryObject<Item> FILLED_WHITE_TEACUP = Registry.ITEMS.register("filled_white_teacup", ()-> new TeacupItem(new Item.Properties().tab(Registry.EQUIPMENT_TAB), true, WHITE_TEACUP.get()));
+    public static final RegistryObject<Item> ACOLYTE_SIGN = Registry.ITEMS.register("acolyte_sign", ()-> new SignItem(
+            (new Item.Properties()).stacksTo(16).tab(Registry.EQUIPMENT_TAB), BlockRegistry.ACOLYTE_SIGN.get(), BlockRegistry.ACOLYTE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> BASTION_SIGN = Registry.ITEMS.register("bastion_sign", ()-> new SignItem(
+            (new Item.Properties()).stacksTo(16).tab(Registry.EQUIPMENT_TAB), BlockRegistry.BASTION_SIGN.get(), BlockRegistry.BASTION_WALL_SIGN.get()));
+    public static final RegistryObject<Item> VERMILION_SIGN = Registry.ITEMS.register("vermilion_sign", ()-> new SignItem(
+            (new Item.Properties()).stacksTo(16).tab(Registry.EQUIPMENT_TAB), BlockRegistry.VERMILION_SIGN.get(), BlockRegistry.VERMILION_WALL_SIGN.get()));
+    public static final RegistryObject<Item> WARTWOOD_SIGN = Registry.ITEMS.register("wartwood_sign", ()-> new SignItem(
+            (new Item.Properties()).stacksTo(16).tab(Registry.EQUIPMENT_TAB), BlockRegistry.WARTWOOD_SIGN.get(), BlockRegistry.WARTWOOD_WALL_SIGN.get()));
+    public static final RegistryObject<Item> JUBILEE_SIGN = Registry.ITEMS.register("jubilee_sign", ()-> new SignItem(
+            (new Item.Properties()).stacksTo(16).tab(Registry.EQUIPMENT_TAB), BlockRegistry.JUBILEE_SIGN.get(), BlockRegistry.JUBILEE_WALL_SIGN.get()));
+    public static final RegistryObject<Item> EVERMORE_SIGN = Registry.ITEMS.register("evermore_sign", ()-> new SignItem(
+            (new Item.Properties()).stacksTo(16).tab(Registry.EQUIPMENT_TAB), BlockRegistry.EVERMORE_SIGN.get(), BlockRegistry.EVERMORE_WALL_SIGN.get()));
+
+
 
     public static void register() {
+
     }
 
     public static void init() {

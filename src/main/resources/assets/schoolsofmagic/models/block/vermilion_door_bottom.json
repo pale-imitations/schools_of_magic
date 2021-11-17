@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom",
+  "textures": {
+    "bottom": "schoolsofmagic:block/vermilion_door_bottom",
+    "top": "schoolsofmagic:block/vermilion_door_top"
+  }
+}

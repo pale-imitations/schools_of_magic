@@ -14,6 +14,12 @@ public class TagRegistry {
         public static final ITag.INamedTag<Block> MORTARS = mod("mortars");
         public static final ITag.INamedTag<Block> TWINES = mod("twines");
         public static final ITag.INamedTag<Block> TEAPOTS = mod("teapots");
+        public static final ITag.INamedTag<Block> ACOLYTE_LOGS = mod("acolyte_logs");
+        public static final ITag.INamedTag<Block> BASTION_LOGS = mod("bastion_logs");
+        public static final ITag.INamedTag<Block> VERMILION_LOGS = mod("vermilion_logs");
+        public static final ITag.INamedTag<Block> WARTWOOD_LOGS = mod("wartwood_logs");
+        public static final ITag.INamedTag<Block> JUBILEE_LOGS = mod("jubilee_logs");
+        public static final ITag.INamedTag<Block> EVERMORE_LOGS = mod("evermore_logs");
 
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.createOptional(new ResourceLocation("forge", path));
@@ -30,6 +36,12 @@ public class TagRegistry {
         public static final ITag.INamedTag<Item> MORTARS = mod("mortars");
         public static final ITag.INamedTag<Item> TWINES = mod("twines");
         public static final ITag.INamedTag<Item> TEAPOTS = mod("teapots");
+        public static final ITag.INamedTag<Item> ACOLYTE_LOGS = mod("acolyte_logs");
+        public static final ITag.INamedTag<Item> BASTION_LOGS = mod("bastion_logs");
+        public static final ITag.INamedTag<Item> VERMILION_LOGS = mod("vermilion_logs");
+        public static final ITag.INamedTag<Item> WARTWOOD_LOGS = mod("wartwood_logs");
+        public static final ITag.INamedTag<Item> JUBILEE_LOGS = mod("jubilee_logs");
+        public static final ITag.INamedTag<Item> EVERMORE_LOGS = mod("evermore_logs");
         public static final ITag.INamedTag<Item> UNCOOKED_TEAPOTS = mod("uncooked_teapots");
         public static final ITag.INamedTag<Item> CLAY_POWDERS = mod("clay_powders");
         public static final ITag.INamedTag<Item> CLAYS = mod("clays");

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LL",
+    "LL"
+  ],
+  "key": {
+    "L": {
+      "item": "schoolsofmagic:bastion_log"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:bastion_wood",
+    "count": 3
+  }
+}

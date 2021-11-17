@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:acolyte_wood"
+    ]
+  },
+  "criteria": {
+    "has_acolyte_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:acolyte_log"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:acolyte_wood"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_acolyte_log",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,7 +1,10 @@
 package com.paleimitations.schoolsofmagic;
 
 import com.paleimitations.schoolsofmagic.client.ClientProxy;
+import com.paleimitations.schoolsofmagic.common.registries.BlockRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.Registry;
+import net.minecraft.block.Block;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.ModContainer;
@@ -15,6 +18,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import java.util.Arrays;
 import java.util.stream.Collectors;
 
 @Mod(References.MODID)

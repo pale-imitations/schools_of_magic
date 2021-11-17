@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "schoolsofmagic:bastion_logs"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:bastion_planks",
+    "count": 4
+  }
+}

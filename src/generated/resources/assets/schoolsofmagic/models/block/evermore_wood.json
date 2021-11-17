@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "schoolsofmagic:block/evermore_log",
+    "end": "schoolsofmagic:block/evermore_log"
+  }
+}

@@ -1,6 +1,7 @@
 package com.paleimitations.schoolsofmagic.common.data.capabilities.quest_data;
 
 import com.paleimitations.schoolsofmagic.References;
+import com.paleimitations.schoolsofmagic.common.config.Config;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.IMagicData;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.MagicData;
 import com.paleimitations.schoolsofmagic.common.network.PacketHandler;
@@ -99,7 +100,8 @@ public class QuestDataProvider implements ICapabilitySerializable<INBT> {
         @SubscribeEvent
         public static void onRespawn(PlayerEvent.PlayerRespawnEvent event) {
             if(event.getPlayer() instanceof ServerPlayerEntity) {
-                System.out.println("Quest Data sent For: " + event.getPlayer().getGameProfile().getName() + ", To: all tracking, Reason: respawn");
+                if(Config.Common.SHOW_PACKET_MESSAGES.get())
+                    System.out.println("Quest Data sent For: " + event.getPlayer().getGameProfile().getName() + ", To: all tracking, Reason: respawn");
                 IQuestData data = event.getPlayer().getCapability(QUEST_DATA_CAPABILITY, null).orElseThrow(() -> new IllegalArgumentException("LazyOptional must not be empty!"));
                 PacketHandler.sendToTracking(new UpdateQuestDataPacket(event.getPlayer().getId(), data.serializeNBT()), (ServerPlayerEntity) event.getPlayer());
             }
@@ -108,7 +110,8 @@ public class QuestDataProvider implements ICapabilitySerializable<INBT> {
         @SubscribeEvent
         public static void joinGame(PlayerEvent.PlayerLoggedInEvent event) {
             if(event.getPlayer() instanceof ServerPlayerEntity) {
-                System.out.println("Quest Data sent For: " + event.getPlayer().getGameProfile().getName()+", To: all tracking, Reason: join game");
+                if(Config.Common.SHOW_PACKET_MESSAGES.get())
+                    System.out.println("Quest Data sent For: " + event.getPlayer().getGameProfile().getName()+", To: all tracking, Reason: join game");
                 IQuestData data = event.getPlayer().getCapability(QUEST_DATA_CAPABILITY, null).orElseThrow(() -> new IllegalArgumentException("LazyOptional must not be empty!"));
                 PacketHandler.sendToTracking(new UpdateQuestDataPacket(event.getPlayer().getId(), data.serializeNBT()), (ServerPlayerEntity) event.getPlayer());
             }
@@ -117,7 +120,8 @@ public class QuestDataProvider implements ICapabilitySerializable<INBT> {
         @SubscribeEvent
         public static void changeDimEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
             if(event.getPlayer() instanceof ServerPlayerEntity) {
-                System.out.println("Quest Data sent For: " + event.getPlayer().getGameProfile().getName() + ", To: all tracking, Reason: dimension change");
+                if(Config.Common.SHOW_PACKET_MESSAGES.get())
+                    System.out.println("Quest Data sent For: " + event.getPlayer().getGameProfile().getName() + ", To: all tracking, Reason: dimension change");
                 IQuestData data = event.getPlayer().getCapability(QUEST_DATA_CAPABILITY, null).orElseThrow(() -> new IllegalArgumentException("LazyOptional must not be empty!"));
                 PacketHandler.sendToTracking(new UpdateQuestDataPacket(event.getPlayer().getId(), data.serializeNBT()), (ServerPlayerEntity) event.getPlayer());
             }
@@ -128,7 +132,8 @@ public class QuestDataProvider implements ICapabilitySerializable<INBT> {
             if(event.getPlayer() instanceof ServerPlayerEntity) {
                 if(event.getTarget() instanceof PlayerEntity) {
                     PlayerEntity target = (PlayerEntity) event.getTarget();
-                    System.out.println("Quest Data sent For: " + target.getGameProfile().getName() + ", To: "+event.getPlayer().getGameProfile().getName()+", Reason: start tracking");
+                    if(Config.Common.SHOW_PACKET_MESSAGES.get())
+                        System.out.println("Quest Data sent For: " + target.getGameProfile().getName() + ", To: "+event.getPlayer().getGameProfile().getName()+", Reason: start tracking");
                     IQuestData data = event.getPlayer().getCapability(QUEST_DATA_CAPABILITY, null).orElseThrow(() -> new IllegalArgumentException("LazyOptional must not be empty!"));
                     PacketHandler.sendTo(new UpdateQuestDataPacket(target.getId(), data.serializeNBT()), (ServerPlayerEntity) event.getPlayer());
                 }
@@ -140,8 +145,10 @@ public class QuestDataProvider implements ICapabilitySerializable<INBT> {
             LivingEntity entity = event.getEntityLiving();
             if(entity instanceof PlayerEntity) {
                 LazyOptional<IQuestData> lazyOptional = entity.getCapability(QuestDataProvider.QUEST_DATA_CAPABILITY);
-                IQuestData data = lazyOptional.orElseThrow(IllegalStateException::new);
-                data.updateQuests((PlayerEntity) entity);
+                if(lazyOptional.isPresent()) {
+                    IQuestData data = lazyOptional.orElseThrow(IllegalStateException::new);
+                    data.updateQuests((PlayerEntity) entity);
+                }
             }
         }
 

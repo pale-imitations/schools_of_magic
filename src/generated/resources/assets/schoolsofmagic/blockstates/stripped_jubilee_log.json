@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "schoolsofmagic:block/stripped_jubilee_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "schoolsofmagic:block/stripped_jubilee_log"
+    },
+    "axis=z": {
+      "model": "schoolsofmagic:block/stripped_jubilee_log_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:evermore_planks"
+    ]
+  },
+  "criteria": {
+    "has_NamedTag[evermore_logs]": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "schoolsofmagic:evermore_logs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:evermore_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_NamedTag[evermore_logs]",
+      "has_the_recipe"
+    ]
+  ]
+}

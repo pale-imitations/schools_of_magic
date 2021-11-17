@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:vermilion_fence_gate"
+    ]
+  },
+  "criteria": {
+    "has_vermilion_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:vermilion_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:vermilion_fence_gate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_vermilion_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

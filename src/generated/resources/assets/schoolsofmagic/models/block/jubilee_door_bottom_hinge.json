@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_rh",
+  "textures": {
+    "bottom": "schoolsofmagic:block/jubilee_door_bottom",
+    "top": "schoolsofmagic:block/jubilee_door_top"
+  }
+}

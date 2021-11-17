@@ -1,11 +1,15 @@
 package com.paleimitations.schoolsofmagic.common.registries;
 
-import com.paleimitations.schoolsofmagic.common.tileentities.MortarTileEntity;
-import com.paleimitations.schoolsofmagic.common.tileentities.PodiumTileEntity;
-import com.paleimitations.schoolsofmagic.common.tileentities.TeaplateTileEntity;
-import com.paleimitations.schoolsofmagic.common.tileentities.TeapotTileEntity;
+import com.paleimitations.schoolsofmagic.common.tileentities.*;
+import net.minecraft.block.Block;
+import net.minecraft.tileentity.SignTileEntity;
 import net.minecraft.tileentity.TileEntityType;
+import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.RegistryObject;
+
+import java.util.Arrays;
+import java.util.Set;
 
 public class TileEntityRegistry {
 
@@ -32,6 +36,5 @@ public class TileEntityRegistry {
             ).build(null));
 
     public static void register() {
-
     }
 }

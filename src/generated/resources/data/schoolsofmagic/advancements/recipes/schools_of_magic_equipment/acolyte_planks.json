@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:acolyte_planks"
+    ]
+  },
+  "criteria": {
+    "has_NamedTag[acolyte_logs]": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "schoolsofmagic:acolyte_logs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:acolyte_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_NamedTag[acolyte_logs]",
+      "has_the_recipe"
+    ]
+  ]
+}

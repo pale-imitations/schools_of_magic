@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:acolyte_door",
+    "schoolsofmagic:bastion_door",
+    "schoolsofmagic:evermore_door",
+    "schoolsofmagic:jubilee_door",
+    "schoolsofmagic:vermilion_door",
+    "schoolsofmagic:wartwood_door"
+  ]
+}

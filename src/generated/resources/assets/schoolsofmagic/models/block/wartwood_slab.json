@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "side": "schoolsofmagic:block/wartwood_planks",
+    "bottom": "schoolsofmagic:block/wartwood_planks",
+    "top": "schoolsofmagic:block/wartwood_planks"
+  }
+}

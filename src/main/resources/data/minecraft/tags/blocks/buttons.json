@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:acolyte_button",
+    "schoolsofmagic:bastion_button",
+    "schoolsofmagic:evermore_button",
+    "schoolsofmagic:jubilee_button",
+    "schoolsofmagic:vermilion_button",
+    "schoolsofmagic:wartwood_button"
+  ]
+}

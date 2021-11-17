@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:bastion_planks"
+    ]
+  },
+  "criteria": {
+    "has_NamedTag[bastion_logs]": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "schoolsofmagic:bastion_logs"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:bastion_planks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_NamedTag[bastion_logs]",
+      "has_the_recipe"
+    ]
+  ]
+}

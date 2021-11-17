@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:wartwood_log",
+    "schoolsofmagic:stripped_wartwood_log",
+    "schoolsofmagic:wartwood_wood",
+    "schoolsofmagic:stripped_wartwood_wood"
+  ]
+}

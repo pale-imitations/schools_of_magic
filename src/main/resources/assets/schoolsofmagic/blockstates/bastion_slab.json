@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "schoolsofmagic:block/bastion_slab_top"
+    },
+    "type=bottom": {
+      "model": "schoolsofmagic:block/bastion_slab"
+    },
+    "type=double": {
+      "model": "schoolsofmagic:block/bastion_planks"
+    }
+  }
+}

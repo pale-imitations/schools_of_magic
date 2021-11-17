@@ -48,6 +48,7 @@ public class MortarTileEntity extends LockableTileEntity implements ITickableTil
             switch(id) {
                 case 0:
                     MortarTileEntity.this.crush = value;
+                    MortarTileEntity.this.finishRecipe();
                     break;
                 case 1:
                     MortarTileEntity.this.maxCrush = value;
@@ -90,18 +91,26 @@ public class MortarTileEntity extends LockableTileEntity implements ITickableTil
 
     @Override
     public void tick() {
+        this.updateRecipe();
+    }
+
+    public void updateRecipe() {
         if(this.recipe != this.getRecipe()) {
             this.recipe = this.getRecipe();
             this.crush = 0;
             this.maxCrush = this.recipe!=null? recipe.getCrush() : 0;
             this.setChanged();
         }
+    }
+
+    public boolean finishRecipe() {
         if(this.crush >= this.maxCrush && this.recipe != null) {
             this.crush = 0;
             this.setItem(0, this.recipe.assemble(this));
             this.setItem(1, this.recipe.assembleSecondary(this));
-            this.setChanged();
+            return true;
         }
+        return false;
     }
 
     public void load(BlockState state, CompoundNBT nbt) {

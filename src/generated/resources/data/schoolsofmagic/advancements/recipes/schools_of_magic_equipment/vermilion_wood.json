@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:vermilion_wood"
+    ]
+  },
+  "criteria": {
+    "has_vermilion_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:vermilion_log"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:vermilion_wood"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_vermilion_log",
+      "has_the_recipe"
+    ]
+  ]
+}

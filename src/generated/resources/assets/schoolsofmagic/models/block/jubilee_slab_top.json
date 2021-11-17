@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "schoolsofmagic:block/jubilee_planks",
+    "bottom": "schoolsofmagic:block/jubilee_planks",
+    "top": "schoolsofmagic:block/jubilee_planks"
+  }
+}

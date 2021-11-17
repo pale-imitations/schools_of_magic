@@ -24,13 +24,12 @@ import net.minecraft.util.*;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
+import javax.annotation.Nullable;
+
 public class WandBaseItem extends Item {
 
-    private final int slotLimit;
-
-    public WandBaseItem(Properties properties, int slotLimit) {
+    public WandBaseItem(Properties properties) {
         super(properties.stacksTo(1));
-        this.slotLimit = slotLimit;
     }
 
     @Override
@@ -93,17 +92,52 @@ public class WandBaseItem extends Item {
 
     @Override
     public void onCraftedBy(ItemStack stack1, World world, PlayerEntity player) {
-        if(stack1.getItem() == ItemRegistry.APPRENTICE_WAND_1.get()) {
-            addSlotLimit(stack1, 1);
+        setSlotLimit(stack1);
+    }
+
+    @Nullable
+    @Override
+    public CompoundNBT getShareTag(ItemStack stack) {
+        fixSlotLimit(stack);
+        return super.getShareTag(stack);
+    }
+
+    public static ItemStack fixSlotLimit(ItemStack stack) {
+        if(stack.getItem() == ItemRegistry.APPRENTICE_WAND_1.get()) {
+            if(!(stack.hasTag() && stack.getTag().contains("slotLimit") && stack.getTag().getInt("slotLimit") == 1)) {
+                addSlotLimit(stack, 1);
+            }
         }
-        else if(stack1.getItem() == ItemRegistry.APPRENTICE_WAND_2.get()) {
-            addSlotLimit(stack1, 2);
+        if(stack.getItem() == ItemRegistry.APPRENTICE_WAND_2.get()) {
+            if(!(stack.hasTag() && stack.getTag().contains("slotLimit") && stack.getTag().getInt("slotLimit") == 2)) {
+                addSlotLimit(stack, 2);
+            }
         }
-        else if(stack1.getItem() == ItemRegistry.APPRENTICE_WAND_3.get()) {
-            addSlotLimit(stack1, 3);
+        if(stack.getItem() == ItemRegistry.APPRENTICE_WAND_3.get()) {
+            if(!(stack.hasTag() && stack.getTag().contains("slotLimit") && stack.getTag().getInt("slotLimit") == 3)) {
+                addSlotLimit(stack, 3);
+            }
         }
-        else if(stack1.getItem() == ItemRegistry.APPRENTICE_WAND_4.get()) {
-            addSlotLimit(stack1, 4);
+        if(stack.getItem() == ItemRegistry.APPRENTICE_WAND_4.get()) {
+            if(!(stack.hasTag() && stack.getTag().contains("slotLimit") && stack.getTag().getInt("slotLimit") == 4)) {
+                addSlotLimit(stack, 4);
+            }
+        }
+        return stack;
+    }
+
+    public static void setSlotLimit(ItemStack stack) {
+        if(stack.getItem() == ItemRegistry.APPRENTICE_WAND_1.get()) {
+            addSlotLimit(stack, 1);
+        }
+        else if(stack.getItem() == ItemRegistry.APPRENTICE_WAND_2.get()) {
+            addSlotLimit(stack, 2);
+        }
+        else if(stack.getItem() == ItemRegistry.APPRENTICE_WAND_3.get()) {
+            addSlotLimit(stack, 3);
+        }
+        else if(stack.getItem() == ItemRegistry.APPRENTICE_WAND_4.get()) {
+            addSlotLimit(stack, 4);
         }
     }
 

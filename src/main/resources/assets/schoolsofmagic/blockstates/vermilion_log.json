@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "schoolsofmagic:block/vermilion_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "schoolsofmagic:block/vermilion_log"
+    },
+    "axis=z": {
+      "model": "schoolsofmagic:block/vermilion_log_horizontal",
+      "x": 90
+    }
+  }
+}

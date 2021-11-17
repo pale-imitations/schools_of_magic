@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:acolyte_planks"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:acolyte_button"
+  }
+}

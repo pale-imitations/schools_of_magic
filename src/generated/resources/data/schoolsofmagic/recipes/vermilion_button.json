@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:vermilion_planks"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:vermilion_button"
+  }
+}

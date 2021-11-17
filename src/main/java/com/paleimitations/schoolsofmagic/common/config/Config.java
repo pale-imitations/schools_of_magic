@@ -13,6 +13,7 @@ public final class Config {
 
     public static final class Common {
         static final ForgeConfigSpec spec;
+        public static final ForgeConfigSpec.BooleanValue SHOW_PACKET_MESSAGES;
         public static final ForgeConfigSpec.IntValue MAX_LEVEL, MAX_SPELL_STORAGE;
         public static final ForgeConfigSpec.IntValue SPELL_CHARGE_1_RELOAD, SPELL_CHARGE_2_RELOAD, SPELL_CHARGE_3_RELOAD, SPELL_CHARGE_4_RELOAD, SPELL_CHARGE_5_RELOAD,
                 SPELL_CHARGE_6_RELOAD, SPELL_CHARGE_7_RELOAD, SPELL_CHARGE_8_RELOAD, SPELL_CHARGE_9_RELOAD;
@@ -97,6 +98,14 @@ public final class Config {
                         .defineInRange("spell_charge_9_reload", 8400, 20, 28800);
                 builder.pop();
             }
+            {
+                builder.comment("Debug");
+                builder.push("showPacketMessages");
+                SHOW_PACKET_MESSAGES = builder
+                        .comment("Used to display server/client messages in logs for debug purposes, default true, switching to false will hide these messages.")
+                        .define("show_packet_messages", true);
+                builder.pop();
+            }
 
             spec = builder.build();
         }
@@ -108,6 +117,7 @@ public final class Config {
         static final ForgeConfigSpec spec;
         public static final ForgeConfigSpec.EnumValue<SpellGuiPosition> SPELL_GUI_POSITION;
         public static final ForgeConfigSpec.DoubleValue BOOK_FONT_SCALE;
+        public static final ForgeConfigSpec.BooleanValue SHOW_PACKET_MESSAGES;
 
         static {
             ForgeConfigSpec.Builder builder = new ForgeConfigSpec.Builder();
@@ -120,6 +130,14 @@ public final class Config {
                 builder.comment("Scale of the font in schools of magic books");
                 builder.push("bookFontScale");
                 BOOK_FONT_SCALE = builder.defineInRange("book_font_scale", 0.75d, 0.05d, 5d);
+                builder.pop();
+            }
+            {
+                builder.comment("Debug");
+                builder.push("showPacketMessages");
+                SHOW_PACKET_MESSAGES = builder
+                        .comment("Used to display server/client messages in logs for debug purposes, default true, switching to false will hide these messages.")
+                        .define("show_packet_messages", true);
                 builder.pop();
             }
 

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "schoolsofmagic:jubilee_logs"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:jubilee_planks",
+    "count": 4
+  }
+}

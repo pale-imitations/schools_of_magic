@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:acolyte_fence_gate",
+    "schoolsofmagic:bastion_fence_gate",
+    "schoolsofmagic:evermore_fence_gate",
+    "schoolsofmagic:jubilee_fence_gate",
+    "schoolsofmagic:vermilion_fence_gate",
+    "schoolsofmagic:wartwood_fence_gate"
+  ]
+}

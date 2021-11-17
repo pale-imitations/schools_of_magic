@@ -1,6 +1,7 @@
 package com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data;
 
 import com.paleimitations.schoolsofmagic.References;
+import com.paleimitations.schoolsofmagic.common.config.Config;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.quest_data.IQuestData;
 import com.paleimitations.schoolsofmagic.common.network.*;
 import net.minecraft.entity.Entity;
@@ -89,7 +90,8 @@ public class MagicDataProvider implements ICapabilitySerializable<INBT> {
         @SubscribeEvent
         public static void onRespawn(PlayerEvent.PlayerRespawnEvent event) {
             if(event.getPlayer() instanceof ServerPlayerEntity) {
-                System.out.println("Magic Data sent For: " + event.getPlayer().getGameProfile().getName() + ", To: all tracking, Reason: respawn");
+                if(Config.Common.SHOW_PACKET_MESSAGES.get())
+                    System.out.println("Magic Data sent For: " + event.getPlayer().getGameProfile().getName() + ", To: all tracking, Reason: respawn");
                 IMagicData data = event.getPlayer().getCapability(MAGIC_DATA_CAPABILITY, null).orElseThrow(() -> new IllegalArgumentException("LazyOptional must not be empty!"));
                 PacketHandler.sendToTracking(new UpdateMagicDataPacket(event.getPlayer().getId(), data.serializeNBT()), (ServerPlayerEntity) event.getPlayer());
             }
@@ -98,7 +100,8 @@ public class MagicDataProvider implements ICapabilitySerializable<INBT> {
         @SubscribeEvent
         public static void joinGame(PlayerEvent.PlayerLoggedInEvent event) {
             if(event.getPlayer() instanceof ServerPlayerEntity) {
-                System.out.println("Magic Data sent For: " + event.getPlayer().getGameProfile().getName()+", To: all tracking, Reason: join game");
+                if(Config.Common.SHOW_PACKET_MESSAGES.get())
+                    System.out.println("Magic Data sent For: " + event.getPlayer().getGameProfile().getName()+", To: all tracking, Reason: join game");
                 IMagicData data = event.getPlayer().getCapability(MAGIC_DATA_CAPABILITY, null).orElseThrow(() -> new IllegalArgumentException("LazyOptional must not be empty!"));
                 PacketHandler.sendToTracking(new UpdateMagicDataPacket(event.getPlayer().getId(), data.serializeNBT()), (ServerPlayerEntity) event.getPlayer());
             }
@@ -107,7 +110,8 @@ public class MagicDataProvider implements ICapabilitySerializable<INBT> {
         @SubscribeEvent
         public static void changeDimEvent(PlayerEvent.PlayerChangedDimensionEvent event) {
             if(event.getPlayer() instanceof ServerPlayerEntity) {
-                System.out.println("Magic Data sent For: " + event.getPlayer().getGameProfile().getName() + ", To: all tracking, Reason: dimension change");
+                if(Config.Common.SHOW_PACKET_MESSAGES.get())
+                    System.out.println("Magic Data sent For: " + event.getPlayer().getGameProfile().getName() + ", To: all tracking, Reason: dimension change");
                 IMagicData data = event.getPlayer().getCapability(MAGIC_DATA_CAPABILITY, null).orElseThrow(() -> new IllegalArgumentException("LazyOptional must not be empty!"));
                 PacketHandler.sendToTracking(new UpdateMagicDataPacket(event.getPlayer().getId(), data.serializeNBT()), (ServerPlayerEntity) event.getPlayer());
             }
@@ -118,7 +122,8 @@ public class MagicDataProvider implements ICapabilitySerializable<INBT> {
             if(event.getPlayer() instanceof ServerPlayerEntity) {
                 if(event.getTarget() instanceof PlayerEntity) {
                     PlayerEntity target = (PlayerEntity) event.getTarget();
-                    System.out.println("Magic Data sent For: " + target.getGameProfile().getName() + ", To: "+event.getPlayer().getGameProfile().getName()+", Reason: start tracking");
+                    if(Config.Common.SHOW_PACKET_MESSAGES.get())
+                        System.out.println("Magic Data sent For: " + target.getGameProfile().getName() + ", To: "+event.getPlayer().getGameProfile().getName()+", Reason: start tracking");
                     IMagicData data = event.getPlayer().getCapability(MAGIC_DATA_CAPABILITY, null).orElseThrow(() -> new IllegalArgumentException("LazyOptional must not be empty!"));
                     PacketHandler.sendTo(new UpdateMagicDataPacket(target.getId(), data.serializeNBT()), (ServerPlayerEntity) event.getPlayer());
                 }

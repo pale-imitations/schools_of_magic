@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "schoolsofmagic:block/bastion_log",
+    "end": "schoolsofmagic:block/bastion_log_top"
+  }
+}

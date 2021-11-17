@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:acolyte_stairs",
+    "schoolsofmagic:bastion_stairs",
+    "schoolsofmagic:evermore_stairs",
+    "schoolsofmagic:jubilee_stairs",
+    "schoolsofmagic:vermilion_stairs",
+    "schoolsofmagic:wartwood_stairs"
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "schoolsofmagic:block/wartwood_slab_top"
+    },
+    "type=bottom": {
+      "model": "schoolsofmagic:block/wartwood_slab"
+    },
+    "type=double": {
+      "model": "schoolsofmagic:block/wartwood_planks"
+    }
+  }
+}

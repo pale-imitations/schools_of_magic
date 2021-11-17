@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "schoolsofmagic:bastion_planks"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:bastion_trapdoor",
+    "count": 2
+  }
+}

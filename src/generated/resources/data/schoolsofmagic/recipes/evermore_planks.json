@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "schoolsofmagic:evermore_logs"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:evermore_planks",
+    "count": 4
+  }
+}

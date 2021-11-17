@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:wartwood_planks"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:wartwood_button"
+  }
+}

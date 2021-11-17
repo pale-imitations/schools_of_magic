@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PP"
+  ],
+  "key": {
+    "P": {
+      "item": "schoolsofmagic:acolyte_planks"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:acolyte_pressure_plate"
+  }
+}

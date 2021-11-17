@@ -1,0 +1,17 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:acolyte_sign",
+    "schoolsofmagic:acolyte_wall_sign",
+    "schoolsofmagic:bastion_sign",
+    "schoolsofmagic:bastion_wall_sign",
+    "schoolsofmagic:evermore_sign",
+    "schoolsofmagic:evermore_wall_sign",
+    "schoolsofmagic:jubilee_sign",
+    "schoolsofmagic:jubilee_wall_sign",
+    "schoolsofmagic:vermilion_sign",
+    "schoolsofmagic:vermilion_wall_sign",
+    "schoolsofmagic:wartwood_sign",
+    "schoolsofmagic:wartwood_wall_sign"
+  ]
+}

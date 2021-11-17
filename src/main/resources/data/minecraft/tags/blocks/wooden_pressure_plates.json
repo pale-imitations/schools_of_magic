@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:acolyte_pressure_plate",
+    "schoolsofmagic:bastion_pressure_plate",
+    "schoolsofmagic:evermore_pressure_plate",
+    "schoolsofmagic:jubilee_pressure_plate",
+    "schoolsofmagic:vermilion_pressure_plate",
+    "schoolsofmagic:wartwood_pressure_plate"
+  ]
+}

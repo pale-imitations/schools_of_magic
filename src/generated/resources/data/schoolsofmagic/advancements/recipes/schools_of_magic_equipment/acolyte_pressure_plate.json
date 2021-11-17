@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:acolyte_pressure_plate"
+    ]
+  },
+  "criteria": {
+    "has_acolyte_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:acolyte_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:acolyte_pressure_plate"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_acolyte_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

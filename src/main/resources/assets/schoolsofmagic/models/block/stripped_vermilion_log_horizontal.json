@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "side": "schoolsofmagic:block/stripped_vermilion_log",
+    "end": "schoolsofmagic:block/stripped_vermilion_log_top"
+  }
+}

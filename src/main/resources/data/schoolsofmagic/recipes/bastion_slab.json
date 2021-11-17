@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "schoolsofmagic:bastion_planks"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:bastion_slab",
+    "count": 6
+  }
+}

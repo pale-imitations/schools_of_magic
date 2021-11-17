@@ -1,5 +1,6 @@
 package com.paleimitations.schoolsofmagic.common.network;
 
+import com.paleimitations.schoolsofmagic.common.config.Config;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.IMagicData;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.magic_data.MagicDataProvider;
 import com.paleimitations.schoolsofmagic.common.data.capabilities.quest_data.IQuestData;
@@ -39,12 +40,14 @@ public class UpdateQuestDataPacket<MSG> {
             if(ctx.getDirection().getReceptionSide().isClient()) {
                 Entity entity = Minecraft.getInstance().level.getEntity(pkt.entityID);
                 if (entity instanceof PlayerEntity) {
-                    System.out.println("Quest Data recieved for: " + ((PlayerEntity)entity).getGameProfile().getName());
+                    if(Config.Client.SHOW_PACKET_MESSAGES.get())
+                        System.out.println("Quest Data recieved for: " + ((PlayerEntity)entity).getGameProfile().getName());
                     IQuestData data = entity.getCapability(QuestDataProvider.QUEST_DATA_CAPABILITY, null).orElseThrow(IllegalStateException::new);
                     data.deserializeNBT(pkt.data);
                 }
                 else {
-                    System.out.println("Broken Packet");
+                    if(Config.Client.SHOW_PACKET_MESSAGES.get())
+                        System.out.println("Broken Packet");
                 }
             }
             else {

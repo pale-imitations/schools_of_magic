@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:acolyte_trapdoor",
+    "schoolsofmagic:bastion_trapdoor",
+    "schoolsofmagic:evermore_trapdoor",
+    "schoolsofmagic:jubilee_trapdoor",
+    "schoolsofmagic:vermilion_trapdoor",
+    "schoolsofmagic:wartwood_trapdoor"
+  ]
+}

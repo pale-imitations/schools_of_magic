@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "schoolsofmagic:block/vermilion_slab_top"
+    },
+    "type=bottom": {
+      "model": "schoolsofmagic:block/vermilion_slab"
+    },
+    "type=double": {
+      "model": "schoolsofmagic:block/vermilion_planks"
+    }
+  }
+}

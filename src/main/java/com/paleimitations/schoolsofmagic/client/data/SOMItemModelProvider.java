@@ -17,6 +17,92 @@ public class SOMItemModelProvider extends ItemModelProvider {
         //withExistingParent("silver_block", modLoc("block/silver_block"));
         //withExistingParent("silver_ore", modLoc("block/silver_ore"));
 
+        withExistingParent("acolyte_planks", modLoc("block/acolyte_planks"));
+        withExistingParent("vermilion_planks", modLoc("block/vermilion_planks"));
+        withExistingParent("bastion_planks", modLoc("block/bastion_planks"));
+        withExistingParent("evermore_planks", modLoc("block/evermore_planks"));
+        withExistingParent("wartwood_planks", modLoc("block/wartwood_planks"));
+        withExistingParent("jubilee_planks", modLoc("block/jubilee_planks"));
+
+        withExistingParent("acolyte_stairs", modLoc("block/acolyte_stairs"));
+        withExistingParent("vermilion_stairs", modLoc("block/vermilion_stairs"));
+        withExistingParent("bastion_stairs", modLoc("block/bastion_stairs"));
+        withExistingParent("evermore_stairs", modLoc("block/evermore_stairs"));
+        withExistingParent("wartwood_stairs", modLoc("block/wartwood_stairs"));
+        withExistingParent("jubilee_stairs", modLoc("block/jubilee_stairs"));
+
+        withExistingParent("acolyte_slab", modLoc("block/acolyte_slab"));
+        withExistingParent("vermilion_slab", modLoc("block/vermilion_slab"));
+        withExistingParent("bastion_slab", modLoc("block/bastion_slab"));
+        withExistingParent("evermore_slab", modLoc("block/evermore_slab"));
+        withExistingParent("wartwood_slab", modLoc("block/wartwood_slab"));
+        withExistingParent("jubilee_slab", modLoc("block/jubilee_slab"));
+
+        withExistingParent("acolyte_fence", modLoc("block/acolyte_fence_inventory"));
+        withExistingParent("vermilion_fence", modLoc("block/vermilion_fence_inventory"));
+        withExistingParent("bastion_fence", modLoc("block/bastion_fence_inventory"));
+        withExistingParent("evermore_fence", modLoc("block/evermore_fence_inventory"));
+        withExistingParent("wartwood_fence", modLoc("block/wartwood_fence_inventory"));
+        withExistingParent("jubilee_fence", modLoc("block/jubilee_fence_inventory"));
+
+        withExistingParent("acolyte_fence_gate", modLoc("block/acolyte_fence_gate"));
+        withExistingParent("vermilion_fence_gate", modLoc("block/vermilion_fence_gate"));
+        withExistingParent("bastion_fence_gate", modLoc("block/bastion_fence_gate"));
+        withExistingParent("evermore_fence_gate", modLoc("block/evermore_fence_gate"));
+        withExistingParent("wartwood_fence_gate", modLoc("block/wartwood_fence_gate"));
+        withExistingParent("jubilee_fence_gate", modLoc("block/jubilee_fence_gate"));
+
+        withExistingParent("acolyte_trapdoor", modLoc("block/acolyte_trapdoor_bottom"));
+        withExistingParent("vermilion_trapdoor", modLoc("block/vermilion_trapdoor_bottom"));
+        withExistingParent("bastion_trapdoor", modLoc("block/bastion_trapdoor_bottom"));
+        withExistingParent("evermore_trapdoor", modLoc("block/evermore_trapdoor_bottom"));
+        withExistingParent("wartwood_trapdoor", modLoc("block/wartwood_trapdoor_bottom"));
+        withExistingParent("jubilee_trapdoor", modLoc("block/jubilee_trapdoor_bottom"));
+
+        withExistingParent("acolyte_pressure_plate", modLoc("block/acolyte_pressure_plate"));
+        withExistingParent("vermilion_pressure_plate", modLoc("block/vermilion_pressure_plate"));
+        withExistingParent("bastion_pressure_plate", modLoc("block/bastion_pressure_plate"));
+        withExistingParent("evermore_pressure_plate", modLoc("block/evermore_pressure_plate"));
+        withExistingParent("wartwood_pressure_plate", modLoc("block/wartwood_pressure_plate"));
+        withExistingParent("jubilee_pressure_plate", modLoc("block/jubilee_pressure_plate"));
+
+        withExistingParent("acolyte_planks", modLoc("block/acolyte_planks"));
+        withExistingParent("vermilion_planks", modLoc("block/vermilion_planks"));
+        withExistingParent("bastion_planks", modLoc("block/bastion_planks"));
+        withExistingParent("evermore_planks", modLoc("block/evermore_planks"));
+        withExistingParent("wartwood_planks", modLoc("block/wartwood_planks"));
+        withExistingParent("jubilee_planks", modLoc("block/jubilee_planks"));
+
+        withExistingParent("acolyte_log", modLoc("block/acolyte_log"));
+        withExistingParent("stripped_acolyte_log", modLoc("block/stripped_acolyte_log"));
+        withExistingParent("acolyte_wood", modLoc("block/acolyte_wood"));
+        withExistingParent("stripped_acolyte_wood", modLoc("block/stripped_acolyte_wood"));
+
+        withExistingParent("bastion_log", modLoc("block/bastion_log"));
+        withExistingParent("stripped_bastion_log", modLoc("block/stripped_bastion_log"));
+        withExistingParent("bastion_wood", modLoc("block/bastion_wood"));
+        withExistingParent("stripped_bastion_wood", modLoc("block/stripped_bastion_wood"));
+
+        withExistingParent("vermilion_log", modLoc("block/vermilion_log"));
+        withExistingParent("stripped_vermilion_log", modLoc("block/stripped_vermilion_log"));
+        withExistingParent("vermilion_wood", modLoc("block/vermilion_wood"));
+        withExistingParent("stripped_vermilion_wood", modLoc("block/stripped_vermilion_wood"));
+
+        withExistingParent("evermore_log", modLoc("block/evermore_log"));
+        withExistingParent("stripped_evermore_log", modLoc("block/stripped_evermore_log"));
+        withExistingParent("evermore_wood", modLoc("block/evermore_wood"));
+        withExistingParent("stripped_evermore_wood", modLoc("block/stripped_evermore_wood"));
+
+        withExistingParent("wartwood_log", modLoc("block/wartwood_log"));
+        withExistingParent("stripped_wartwood_log", modLoc("block/stripped_wartwood_log"));
+        withExistingParent("wartwood_wood", modLoc("block/wartwood_wood"));
+        withExistingParent("stripped_wartwood_wood", modLoc("block/stripped_wartwood_wood"));
+
+        withExistingParent("jubilee_log", modLoc("block/jubilee_log"));
+        withExistingParent("stripped_jubilee_log", modLoc("block/stripped_jubilee_log"));
+        withExistingParent("jubilee_wood", modLoc("block/jubilee_wood"));
+        withExistingParent("stripped_jubilee_wood", modLoc("block/stripped_jubilee_wood"));
+
         withExistingParent("red_sandstone_podium", modLoc("block/red_sandstone_podium"));
         withExistingParent("sandstone_podium", modLoc("block/sandstone_podium"));
         withExistingParent("basalt_podium", modLoc("block/basalt_podium"));
@@ -108,6 +194,18 @@ public class SOMItemModelProvider extends ItemModelProvider {
         builder(itemGenerated,"white_clay_teacup");
         builder(itemGenerated,"white_terracotta_teacup");
         builder(itemGenerated,"white_teacup");
+        builder(itemGenerated, "acolyte_door");
+        builder(itemGenerated, "vermilion_door");
+        builder(itemGenerated, "evermore_door");
+        builder(itemGenerated, "bastion_door");
+        builder(itemGenerated, "wartwood_door");
+        builder(itemGenerated, "jubilee_door");
+        builder(itemGenerated, "acolyte_sign");
+        builder(itemGenerated, "vermilion_sign");
+        builder(itemGenerated, "evermore_sign");
+        builder(itemGenerated, "bastion_sign");
+        builder(itemGenerated, "wartwood_sign");
+        builder(itemGenerated, "jubilee_sign");
         builderMultiLayerSetOverlay(itemGenerated,"filled_white_terracotta_teacup", "filled_teacup_overlay");
         builderMultiLayerSetOverlay(itemGenerated,"filled_white_teacup", "filled_teacup_overlay");
         //builder(itemGenerated,"white_clay_teapot");

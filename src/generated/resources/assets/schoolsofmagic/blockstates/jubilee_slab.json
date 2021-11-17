@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=top": {
+      "model": "schoolsofmagic:block/jubilee_slab_top"
+    },
+    "type=bottom": {
+      "model": "schoolsofmagic:block/jubilee_slab"
+    },
+    "type=double": {
+      "model": "schoolsofmagic:block/jubilee_planks"
+    }
+  }
+}

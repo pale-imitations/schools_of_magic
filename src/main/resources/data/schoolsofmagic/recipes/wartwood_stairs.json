@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "P  ",
+    "PP ",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "schoolsofmagic:wartwood_planks"
+    }
+  },
+  "result": {
+    "item": "schoolsofmagic:wartwood_stairs",
+    "count": 4
+  }
+}

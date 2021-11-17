@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:wartwood_trapdoor"
+    ]
+  },
+  "criteria": {
+    "has_wartwood_planks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:wartwood_planks"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:wartwood_trapdoor"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wartwood_planks",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "schoolsofmagic:acolyte_logs"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:acolyte_planks",
+    "count": 4
+  }
+}

@@ -35,25 +35,17 @@ public class MagicData implements IMagicData, INBTSerializable<CompoundNBT> {
 
     private Spell[] spells = new Spell[MAX_SPELLS];
     private int spellSlot;
-    private int[] charges;
-    private float magicianXP;
-    private float[] elementXP;
-    private float[] schoolXP;
-    private float spellXP;
-    private float potionXP;
-    private float ritualXP;
-    private int[] countdowns;
+    private int[] charges = new int[MAX_CHARGE_LEVEL];
+    private float magicianXP = 0f;
+    private float[] elementXP = new float[MagicElementRegistry.ELEMENTS.size()];
+    private float[] schoolXP = new float[MagicSchoolRegistry.SCHOOLS.size()];
+    private float spellXP = 0f;
+    private float potionXP = 0f;
+    private float ritualXP = 0f;
+    private int[] countdowns = new int[MAX_CHARGE_LEVEL];
     private boolean dirty = false;
 
     public MagicData() {
-        this.charges = new int[MAX_CHARGE_LEVEL];
-        this.countdowns = new int[MAX_CHARGE_LEVEL];
-        this.magicianXP=0f;
-        this.elementXP=new float[MagicElementRegistry.ELEMENTS.size()];
-        this.schoolXP=new float[MagicSchoolRegistry.SCHOOLS.size()];
-        this.spellXP=0f;
-        this.potionXP=0f;
-        this.ritualXP=0f;
     }
 
     @Override
@@ -119,12 +111,13 @@ public class MagicData implements IMagicData, INBTSerializable<CompoundNBT> {
 
     @Override
     public Spell getSpell(int index) {
-        return this.spells[index];
+        return index < this.spells.length && index >= 0 ? this.spells[index] : null;
     }
 
     @Override
     public void setSpell(int index, Spell spell) {
-        this.spells[index] = spell;
+        if(index < this.spells.length && index >= 0)
+            this.spells[index] = spell;
     }
 
     @Override
@@ -206,7 +199,7 @@ public class MagicData implements IMagicData, INBTSerializable<CompoundNBT> {
             if (level >= 26) slots++;
             if (level >= 31) slots+= (level-29/2);
             if (level >= 50) slots++;
-            return slots;
+            return slots < this.spells.length? slots : this.spells.length - 1;
         }
     }
 

@@ -88,6 +88,102 @@ public class SOMLootTableProvider extends LootTableProvider {
             this.dropSelf(BlockRegistry.BLACKSTONE_PODIUM.get());
             this.dropSelf(BlockRegistry.OBSIDIAN_PODIUM.get());
             this.dropSelf(BlockRegistry.SANDSTONE_PODIUM.get());
+
+            this.add(BlockRegistry.ACOLYTE_DOOR.get(), BlockLootTables::createDoorTable);
+            this.dropSelf(BlockRegistry.ACOLYTE_FENCE_GATE.get());
+            this.dropSelf(BlockRegistry.ACOLYTE_FENCE.get());
+            this.dropSelf(BlockRegistry.ACOLYTE_LOG.get());
+            this.dropSelf(BlockRegistry.ACOLYTE_BUTTON.get());
+            this.dropSelf(BlockRegistry.ACOLYTE_PLANKS.get());
+            this.dropSelf(BlockRegistry.ACOLYTE_PRESSURE_PLATE.get());
+            this.add(BlockRegistry.ACOLYTE_SLAB.get(), BlockLootTables::createSlabItemTable);
+            this.dropSelf(BlockRegistry.ACOLYTE_STAIRS.get());
+            this.dropSelf(BlockRegistry.ACOLYTE_TRAPDOOR.get());
+            this.dropSelf(BlockRegistry.ACOLYTE_WOOD.get());
+            this.dropSelf(BlockRegistry.STRIPPED_ACOLYTE_LOG.get());
+            this.dropSelf(BlockRegistry.STRIPPED_ACOLYTE_WOOD.get());
+            this.dropOther(BlockRegistry.ACOLYTE_SIGN.get(), ItemRegistry.ACOLYTE_SIGN.get());
+            this.dropOther(BlockRegistry.ACOLYTE_WALL_SIGN.get(), ItemRegistry.ACOLYTE_SIGN.get());
+
+            this.add(BlockRegistry.VERMILION_DOOR.get(), BlockLootTables::createDoorTable);
+            this.dropSelf(BlockRegistry.VERMILION_FENCE_GATE.get());
+            this.dropSelf(BlockRegistry.VERMILION_FENCE.get());
+            this.dropSelf(BlockRegistry.VERMILION_LOG.get());
+            this.dropSelf(BlockRegistry.VERMILION_BUTTON.get());
+            this.dropSelf(BlockRegistry.VERMILION_PLANKS.get());
+            this.dropSelf(BlockRegistry.VERMILION_PRESSURE_PLATE.get());
+            this.add(BlockRegistry.VERMILION_SLAB.get(), BlockLootTables::createSlabItemTable);
+            this.dropSelf(BlockRegistry.VERMILION_STAIRS.get());
+            this.dropSelf(BlockRegistry.VERMILION_TRAPDOOR.get());
+            this.dropSelf(BlockRegistry.VERMILION_WOOD.get());
+            this.dropSelf(BlockRegistry.STRIPPED_VERMILION_LOG.get());
+            this.dropSelf(BlockRegistry.STRIPPED_VERMILION_WOOD.get());
+            this.dropOther(BlockRegistry.VERMILION_SIGN.get(), ItemRegistry.VERMILION_SIGN.get());
+            this.dropOther(BlockRegistry.VERMILION_WALL_SIGN.get(), ItemRegistry.VERMILION_SIGN.get());
+
+            this.add(BlockRegistry.WARTWOOD_DOOR.get(), BlockLootTables::createDoorTable);
+            this.dropSelf(BlockRegistry.WARTWOOD_FENCE_GATE.get());
+            this.dropSelf(BlockRegistry.WARTWOOD_FENCE.get());
+            this.dropSelf(BlockRegistry.WARTWOOD_LOG.get());
+            this.dropSelf(BlockRegistry.WARTWOOD_BUTTON.get());
+            this.dropSelf(BlockRegistry.WARTWOOD_PLANKS.get());
+            this.dropSelf(BlockRegistry.WARTWOOD_PRESSURE_PLATE.get());
+            this.add(BlockRegistry.WARTWOOD_SLAB.get(), BlockLootTables::createSlabItemTable);
+            this.dropSelf(BlockRegistry.WARTWOOD_STAIRS.get());
+            this.dropSelf(BlockRegistry.WARTWOOD_TRAPDOOR.get());
+            this.dropSelf(BlockRegistry.WARTWOOD_WOOD.get());
+            this.dropSelf(BlockRegistry.STRIPPED_WARTWOOD_LOG.get());
+            this.dropSelf(BlockRegistry.STRIPPED_WARTWOOD_WOOD.get());
+            this.dropOther(BlockRegistry.WARTWOOD_SIGN.get(), ItemRegistry.WARTWOOD_SIGN.get());
+            this.dropOther(BlockRegistry.WARTWOOD_WALL_SIGN.get(), ItemRegistry.WARTWOOD_SIGN.get());
+
+            this.add(BlockRegistry.EVERMORE_DOOR.get(), BlockLootTables::createDoorTable);
+            this.dropSelf(BlockRegistry.EVERMORE_FENCE_GATE.get());
+            this.dropSelf(BlockRegistry.EVERMORE_FENCE.get());
+            this.dropSelf(BlockRegistry.EVERMORE_LOG.get());
+            this.dropSelf(BlockRegistry.EVERMORE_BUTTON.get());
+            this.dropSelf(BlockRegistry.EVERMORE_PLANKS.get());
+            this.dropSelf(BlockRegistry.EVERMORE_PRESSURE_PLATE.get());
+            this.add(BlockRegistry.EVERMORE_SLAB.get(), BlockLootTables::createSlabItemTable);
+            this.dropSelf(BlockRegistry.EVERMORE_STAIRS.get());
+            this.dropSelf(BlockRegistry.EVERMORE_TRAPDOOR.get());
+            this.dropSelf(BlockRegistry.EVERMORE_WOOD.get());
+            this.dropSelf(BlockRegistry.STRIPPED_EVERMORE_LOG.get());
+            this.dropSelf(BlockRegistry.STRIPPED_EVERMORE_WOOD.get());
+            this.dropOther(BlockRegistry.EVERMORE_SIGN.get(), ItemRegistry.EVERMORE_SIGN.get());
+            this.dropOther(BlockRegistry.EVERMORE_WALL_SIGN.get(), ItemRegistry.EVERMORE_SIGN.get());
+
+            this.add(BlockRegistry.JUBILEE_DOOR.get(), BlockLootTables::createDoorTable);
+            this.dropSelf(BlockRegistry.JUBILEE_FENCE_GATE.get());
+            this.dropSelf(BlockRegistry.JUBILEE_FENCE.get());
+            this.dropSelf(BlockRegistry.JUBILEE_LOG.get());
+            this.dropSelf(BlockRegistry.JUBILEE_BUTTON.get());
+            this.dropSelf(BlockRegistry.JUBILEE_PLANKS.get());
+            this.dropSelf(BlockRegistry.JUBILEE_PRESSURE_PLATE.get());
+            this.add(BlockRegistry.JUBILEE_SLAB.get(), BlockLootTables::createSlabItemTable);
+            this.dropSelf(BlockRegistry.JUBILEE_STAIRS.get());
+            this.dropSelf(BlockRegistry.JUBILEE_TRAPDOOR.get());
+            this.dropSelf(BlockRegistry.JUBILEE_WOOD.get());
+            this.dropSelf(BlockRegistry.STRIPPED_JUBILEE_LOG.get());
+            this.dropSelf(BlockRegistry.STRIPPED_JUBILEE_WOOD.get());
+            this.dropOther(BlockRegistry.JUBILEE_SIGN.get(), ItemRegistry.JUBILEE_SIGN.get());
+            this.dropOther(BlockRegistry.JUBILEE_WALL_SIGN.get(), ItemRegistry.JUBILEE_SIGN.get());
+
+            this.add(BlockRegistry.BASTION_DOOR.get(), BlockLootTables::createDoorTable);
+            this.dropSelf(BlockRegistry.BASTION_FENCE_GATE.get());
+            this.dropSelf(BlockRegistry.BASTION_FENCE.get());
+            this.dropSelf(BlockRegistry.BASTION_LOG.get());
+            this.dropSelf(BlockRegistry.BASTION_BUTTON.get());
+            this.dropSelf(BlockRegistry.BASTION_PLANKS.get());
+            this.dropSelf(BlockRegistry.BASTION_PRESSURE_PLATE.get());
+            this.add(BlockRegistry.BASTION_SLAB.get(), BlockLootTables::createSlabItemTable);
+            this.dropSelf(BlockRegistry.BASTION_STAIRS.get());
+            this.dropSelf(BlockRegistry.BASTION_TRAPDOOR.get());
+            this.dropSelf(BlockRegistry.BASTION_WOOD.get());
+            this.dropSelf(BlockRegistry.STRIPPED_BASTION_LOG.get());
+            this.dropSelf(BlockRegistry.STRIPPED_BASTION_WOOD.get());
+            this.dropOther(BlockRegistry.BASTION_SIGN.get(), ItemRegistry.BASTION_SIGN.get());
+            this.dropOther(BlockRegistry.BASTION_WALL_SIGN.get(), ItemRegistry.BASTION_SIGN.get());
         }
     }
 

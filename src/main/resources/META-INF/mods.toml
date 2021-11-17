@@ -26,7 +26,7 @@ modId="schoolsofmagic" #mandatory
 # The version number of the mod - there's a few well known ${} variables useable here or just hardcode it
 # ${file.jarVersion} will substitute the value of the Implementation-Version as read from the mod's JAR file metadata
 # see the associated build.gradle script for how to populate this completely automatically during a build
-version="2.1.02" #mandatory
+version="2.1.03" #mandatory
 
  # A display name for the mod
 displayName="Schools of Magic: Second Semester" #mandatory

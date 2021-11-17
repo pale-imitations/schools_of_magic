@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "side": "schoolsofmagic:block/acolyte_planks",
+    "bottom": "schoolsofmagic:block/acolyte_planks",
+    "top": "schoolsofmagic:block/acolyte_planks"
+  }
+}

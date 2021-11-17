@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "schoolsofmagic:jubilee_planks"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:jubilee_button"
+  }
+}

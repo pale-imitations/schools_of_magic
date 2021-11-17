@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_top",
+  "textures": {
+    "bottom": "schoolsofmagic:block/bastion_door_bottom",
+    "top": "schoolsofmagic:block/bastion_door_top"
+  }
+}

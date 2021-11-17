@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "schoolsofmagic:stripped_wartwood_wood"
+    ]
+  },
+  "criteria": {
+    "has_stripped_wartwood_log": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "schoolsofmagic:stripped_wartwood_log"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "schoolsofmagic:stripped_wartwood_wood"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_stripped_wartwood_log",
+      "has_the_recipe"
+    ]
+  ]
+}

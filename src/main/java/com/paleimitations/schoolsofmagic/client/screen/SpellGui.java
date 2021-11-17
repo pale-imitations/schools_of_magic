@@ -102,9 +102,9 @@ public class SpellGui extends AbstractGui {
     public void render(MatrixStack matrix, float partialTicks) {
         PlayerEntity player = minecraft.player;
         ItemStack stack = player!=null? player.getMainHandItem() : ItemStack.EMPTY;
-        if(player.getCapability(MagicDataProvider.MAGIC_DATA_CAPABILITY).isPresent()) {
+        if(player.getCapability(MagicDataProvider.MAGIC_DATA_CAPABILITY).isPresent() && !player.isDeadOrDying()) {
             IMagicData data = player.getCapability(MagicDataProvider.MAGIC_DATA_CAPABILITY).orElseThrow(IllegalStateException::new);
-            if (stack.getItem() instanceof WandBaseItem) {
+            if (stack.getItem() instanceof WandBaseItem && data.getCountdowns().length>0 && data.getCountdowns().length>0) {
                 int screenWidth = this.minecraft.getWindow().getGuiScaledWidth();
                 int screenHeight = this.minecraft.getWindow().getGuiScaledHeight();
                 int xPos = (screenWidth / 2) - (texWidth / 2);

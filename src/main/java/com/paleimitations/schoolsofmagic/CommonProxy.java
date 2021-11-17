@@ -3,9 +3,9 @@ package com.paleimitations.schoolsofmagic;
 import com.paleimitations.schoolsofmagic.common.data.books.BookPage;
 import com.paleimitations.schoolsofmagic.common.quests.Quest;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.Hand;
-import net.minecraftforge.eventbus.api.IEventBus;
 
 public class CommonProxy {
 

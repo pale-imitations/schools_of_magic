@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "side": "schoolsofmagic:block/vermilion_planks",
+    "bottom": "schoolsofmagic:block/vermilion_planks",
+    "top": "schoolsofmagic:block/vermilion_planks"
+  }
+}

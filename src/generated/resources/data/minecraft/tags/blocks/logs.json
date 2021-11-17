@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:acolyte_log",
+    "schoolsofmagic:acolyte_wood",
+    "schoolsofmagic:bastion_log",
+    "schoolsofmagic:bastion_wood",
+    "schoolsofmagic:evermore_log",
+    "schoolsofmagic:evermore_wood",
+    "schoolsofmagic:jubilee_log",
+    "schoolsofmagic:jubilee_wood",
+    "schoolsofmagic:stripped_acolyte_log",
+    "schoolsofmagic:stripped_acolyte_wood",
+    "schoolsofmagic:stripped_bastion_log",
+    "schoolsofmagic:stripped_bastion_wood",
+    "schoolsofmagic:stripped_evermore_log",
+    "schoolsofmagic:stripped_evermore_wood",
+    "schoolsofmagic:stripped_jubilee_log",
+    "schoolsofmagic:stripped_jubilee_wood",
+    "schoolsofmagic:stripped_vermilion_log",
+    "schoolsofmagic:stripped_vermilion_wood",
+    "schoolsofmagic:stripped_wartwood_log",
+    "schoolsofmagic:stripped_wartwood_wood",
+    "schoolsofmagic:vermilion_log",
+    "schoolsofmagic:vermilion_wood",
+    "schoolsofmagic:wartwood_log",
+    "schoolsofmagic:wartwood_wood"
+  ]
+}

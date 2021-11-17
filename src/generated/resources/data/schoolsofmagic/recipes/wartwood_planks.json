@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "schoolsofmagic:wartwood_logs"
+    }
+  ],
+  "result": {
+    "item": "schoolsofmagic:wartwood_planks",
+    "count": 4
+  }
+}

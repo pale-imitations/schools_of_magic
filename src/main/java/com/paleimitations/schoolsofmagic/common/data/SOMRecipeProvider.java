@@ -4,11 +4,16 @@ import com.paleimitations.schoolsofmagic.References;
 import com.paleimitations.schoolsofmagic.common.crafting.MortarRecipeBuilder;
 import com.paleimitations.schoolsofmagic.common.registries.BlockRegistry;
 import com.paleimitations.schoolsofmagic.common.registries.ItemRegistry;
+import com.paleimitations.schoolsofmagic.common.registries.TagRegistry;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.*;
+import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.tags.ITag;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.Tags;
 
 import java.util.function.Consumer;
 
@@ -302,6 +307,76 @@ public class SOMRecipeProvider extends RecipeProvider {
                 .save(recipeConsumer, new ResourceLocation(References.MODID,"blackstone_podium_from_blackstone_stonecutting"));
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(Blocks.END_STONE), BlockRegistry.ENDSTONE_PODIUM.get()).unlocks("has_end_stone", has(Blocks.END_STONE))
                 .save(recipeConsumer, new ResourceLocation(References.MODID,"endstone_podium_from_end_stone_stonecutting"));
+        addWoodRecipes(recipeConsumer, TagRegistry.Items.ACOLYTE_LOGS, BlockRegistry.ACOLYTE_LOG.get(), BlockRegistry.ACOLYTE_WOOD.get(),
+                BlockRegistry.STRIPPED_ACOLYTE_LOG.get(), BlockRegistry.STRIPPED_ACOLYTE_WOOD.get(), BlockRegistry.ACOLYTE_PLANKS.get(),
+                BlockRegistry.ACOLYTE_STAIRS.get(), BlockRegistry.ACOLYTE_SLAB.get(), BlockRegistry.ACOLYTE_DOOR.get(), BlockRegistry.ACOLYTE_TRAPDOOR.get(),
+                BlockRegistry.ACOLYTE_FENCE.get(), BlockRegistry.ACOLYTE_FENCE_GATE.get(), BlockRegistry.ACOLYTE_BUTTON.get(),
+                BlockRegistry.ACOLYTE_PRESSURE_PLATE.get(), ItemRegistry.ACOLYTE_SIGN.get());
+        addWoodRecipes(recipeConsumer, TagRegistry.Items.BASTION_LOGS, BlockRegistry.BASTION_LOG.get(), BlockRegistry.BASTION_WOOD.get(),
+                BlockRegistry.STRIPPED_BASTION_LOG.get(), BlockRegistry.STRIPPED_BASTION_WOOD.get(), BlockRegistry.BASTION_PLANKS.get(),
+                BlockRegistry.BASTION_STAIRS.get(), BlockRegistry.BASTION_SLAB.get(), BlockRegistry.BASTION_DOOR.get(), BlockRegistry.BASTION_TRAPDOOR.get(),
+                BlockRegistry.BASTION_FENCE.get(), BlockRegistry.BASTION_FENCE_GATE.get(), BlockRegistry.BASTION_BUTTON.get(),
+                BlockRegistry.BASTION_PRESSURE_PLATE.get(), ItemRegistry.BASTION_SIGN.get());
+        addWoodRecipes(recipeConsumer, TagRegistry.Items.VERMILION_LOGS, BlockRegistry.VERMILION_LOG.get(), BlockRegistry.VERMILION_WOOD.get(),
+                BlockRegistry.STRIPPED_VERMILION_LOG.get(), BlockRegistry.STRIPPED_VERMILION_WOOD.get(), BlockRegistry.VERMILION_PLANKS.get(),
+                BlockRegistry.VERMILION_STAIRS.get(), BlockRegistry.VERMILION_SLAB.get(), BlockRegistry.VERMILION_DOOR.get(),
+                BlockRegistry.VERMILION_TRAPDOOR.get(), BlockRegistry.VERMILION_FENCE.get(), BlockRegistry.VERMILION_FENCE_GATE.get(),
+                BlockRegistry.VERMILION_BUTTON.get(), BlockRegistry.VERMILION_PRESSURE_PLATE.get(), ItemRegistry.VERMILION_SIGN.get());
+        addWoodRecipes(recipeConsumer, TagRegistry.Items.WARTWOOD_LOGS, BlockRegistry.WARTWOOD_LOG.get(), BlockRegistry.WARTWOOD_WOOD.get(),
+                BlockRegistry.STRIPPED_WARTWOOD_LOG.get(), BlockRegistry.STRIPPED_WARTWOOD_WOOD.get(), BlockRegistry.WARTWOOD_PLANKS.get(),
+                BlockRegistry.WARTWOOD_STAIRS.get(), BlockRegistry.WARTWOOD_SLAB.get(), BlockRegistry.WARTWOOD_DOOR.get(), BlockRegistry.WARTWOOD_TRAPDOOR.get(),
+                BlockRegistry.WARTWOOD_FENCE.get(), BlockRegistry.WARTWOOD_FENCE_GATE.get(), BlockRegistry.WARTWOOD_BUTTON.get(),
+                BlockRegistry.WARTWOOD_PRESSURE_PLATE.get(), ItemRegistry.WARTWOOD_SIGN.get());
+        addWoodRecipes(recipeConsumer, TagRegistry.Items.JUBILEE_LOGS, BlockRegistry.JUBILEE_LOG.get(), BlockRegistry.JUBILEE_WOOD.get(),
+                BlockRegistry.STRIPPED_JUBILEE_LOG.get(), BlockRegistry.STRIPPED_JUBILEE_WOOD.get(), BlockRegistry.JUBILEE_PLANKS.get(),
+                BlockRegistry.JUBILEE_STAIRS.get(), BlockRegistry.JUBILEE_SLAB.get(), BlockRegistry.JUBILEE_DOOR.get(), BlockRegistry.JUBILEE_TRAPDOOR.get(),
+                BlockRegistry.JUBILEE_FENCE.get(), BlockRegistry.JUBILEE_FENCE_GATE.get(), BlockRegistry.JUBILEE_BUTTON.get(),
+                BlockRegistry.JUBILEE_PRESSURE_PLATE.get(), ItemRegistry.JUBILEE_SIGN.get());
+        addWoodRecipes(recipeConsumer, TagRegistry.Items.EVERMORE_LOGS, BlockRegistry.EVERMORE_LOG.get(), BlockRegistry.EVERMORE_WOOD.get(),
+                BlockRegistry.STRIPPED_EVERMORE_LOG.get(), BlockRegistry.STRIPPED_EVERMORE_WOOD.get(),BlockRegistry.EVERMORE_PLANKS.get(),
+                BlockRegistry.EVERMORE_STAIRS.get(), BlockRegistry.EVERMORE_SLAB.get(), BlockRegistry.EVERMORE_DOOR.get(),
+                BlockRegistry.EVERMORE_TRAPDOOR.get(), BlockRegistry.EVERMORE_FENCE.get(), BlockRegistry.EVERMORE_FENCE_GATE.get(),
+                BlockRegistry.EVERMORE_BUTTON.get(), BlockRegistry.EVERMORE_PRESSURE_PLATE.get(), ItemRegistry.EVERMORE_SIGN.get());
 
+    }
+
+    public void addWoodRecipes(Consumer<IFinishedRecipe> recipeConsumer, ITag<Item> logTag, Block log, Block wood, Block strippedLog, Block strippedWood,
+                               Block planks, Block stairs, Block slab, Block door, Block trapdoor, Block fence, Block fencegate, Block button, Block plate, Item sign) {
+        ShapedRecipeBuilder.shaped(wood, 3).define('L', log).pattern("LL").pattern("LL")
+                .unlockedBy("has_"+log.getRegistryName().getPath(), has(log))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(strippedWood, 3).define('L', strippedLog).pattern("LL").pattern("LL")
+                .unlockedBy("has_"+strippedLog.getRegistryName().getPath(), has(strippedLog))
+                .save(recipeConsumer);
+        ShapelessRecipeBuilder.shapeless(planks, 4).requires(Ingredient.of(logTag))
+                .unlockedBy("has_"+logTag.toString().replace(References.MODID+":", ""), has(logTag))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(stairs, 4).define('P', planks).pattern("P  ").pattern("PP ").pattern("PPP")
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(slab, 6).define('P', planks).pattern("PPP")
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(plate).define('P', planks).pattern("PP")
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(door, 3).define('P', planks).pattern("PP").pattern("PP").pattern("PP")
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(trapdoor, 2).define('P', planks).pattern("PPP").pattern("PPP")
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(fence, 3).define('P', planks).define('S', Tags.Items.RODS_WOODEN).pattern("PSP").pattern("PSP")
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(fencegate).define('P', planks).define('S', Tags.Items.RODS_WOODEN).pattern("SPS").pattern("SPS")
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
+        ShapelessRecipeBuilder.shapeless(button).requires(planks)
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
+        ShapedRecipeBuilder.shaped(sign).define('P', planks).define('S', Tags.Items.RODS_WOODEN).pattern("PPP").pattern("PPP").pattern(" S ")
+                .unlockedBy("has_"+planks.getRegistryName().getPath(), has(planks))
+                .save(recipeConsumer);
     }
 }

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "schoolsofmagic:bastion_log",
+    "schoolsofmagic:stripped_bastion_log",
+    "schoolsofmagic:bastion_wood",
+    "schoolsofmagic:stripped_bastion_wood"
+  ]
+}
